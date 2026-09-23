@@ -1,0 +1,262 @@
+/* Detailed exhibition inspector. Camera content sits between, never below, its controls. */
+.spatial-stage.detailed-stage {
+  --model-top-space: 128px;
+  --model-bottom-space: 142px;
+  height: clamp(520px, calc(100svh - 275px), 670px);
+  min-height: 520px;
+  max-height: none;
+  border-radius: 8px;
+  background: radial-gradient(ellipse at 52% 44%, #24404f70, transparent 65%), #0b1721;
+}
+.detailed-stage .spatial-stage-top {
+  left: 18px;
+  right: 18px;
+  top: 16px;
+  min-height: 48px;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+.detailed-stage .spatial-stage-top .glass-chip {
+  display: inline-flex;
+  flex-shrink: 0;
+  min-height: 36px;
+  font-size: 8px;
+  padding: 9px 11px;
+  gap: 7px;
+}
+.model-stage-actions { display: flex; align-items: center; gap: 8px; }
+.detailed-stage .model-switch { margin: 0; padding: 3px; }
+.detailed-stage .model-switch button {
+  min-width: 61px;
+  min-height: 44px;
+  padding: 9px 10px;
+  font-size: 9px;
+}
+.model-expand-button, .model-dialog-close, .model-close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 10px;
+  border: 1px solid #7d9fb665;
+  border-radius: 4px;
+  background: #192d3be8;
+  color: #d8eff9;
+  font-size: 10px;
+  transition: background .2s, border-color .2s;
+}
+.model-expand-button:hover, .model-dialog-close:hover, .model-close-button:hover {
+  background: #304f62;
+  border-color: #95c4db;
+}
+.model-expand-button:focus-visible, .model-view-tabs button:focus-visible { outline-offset: 3px; }
+.model-view-tabs {
+  position: absolute;
+  z-index: 4;
+  left: 18px;
+  right: 18px;
+  top: 78px;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 5px;
+  padding: 0;
+}
+.model-view-tabs button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-width: 0;
+  min-height: 44px;
+  padding: 9px 6px;
+  border: 1px solid #7593a34d;
+  border-radius: 4px;
+  background: #112330ee;
+  color: #c2d3df;
+  font-size: 10px;
+  line-height: 1.35;
+  text-align: center;
+  transition: color .2s, background .2s, border-color .2s;
+}
+.model-view-tabs button > svg { flex-shrink: 0; width: 14px; height: 14px; }
+.model-view-tabs button:hover { background: #243d4e; color: #f1f8fc; border-color: #8fb9ce; }
+.model-view-tabs button[aria-pressed=true], .model-view-tabs button[aria-selected=true] {
+  background: #274f62;
+  color: #effbff;
+  border-color: #8cd7ef;
+  box-shadow: inset 0 -2px 0 #8cd7ef;
+}
+.model-view-tabs button:disabled { opacity: .55; cursor: wait; }
+.detailed-stage .model-viewport {
+  inset: var(--model-top-space) 0 var(--model-bottom-space);
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background: transparent;
+  will-change: auto;
+}
+.detailed-stage .model-viewport model-viewer {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  background: transparent;
+  outline-offset: -6px;
+  --poster-color: transparent;
+}
+.detailed-stage .model-viewport .model-poster {
+  padding: 0 12px;
+  opacity: 1;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  filter: none;
+}
+.detailed-stage .model-caption {
+  left: 18px;
+  right: 18px;
+  bottom: 65px;
+  min-height: 66px;
+  padding: 9px 16px;
+  gap: 20px;
+  background: linear-gradient(120deg, #172c3de8, #08131df2);
+  border-color: #accadd38;
+}
+.detailed-stage .model-caption > div { min-width: 0; }
+.detailed-stage .model-caption > div > span { font-size: 8px; color: #b8cedc; letter-spacing: .11em; }
+.detailed-stage .model-caption h3 { margin-top: 3px; font-size: 20px; line-height: 1.2; letter-spacing: -.01em; color: #eef6fb; }
+.detailed-stage .model-caption h3 em { font-size: 22px; }
+.detailed-stage .model-caption p { max-width: 62ch; margin-top: 4px; font-size: 10px; line-height: 1.6; color: #bfd0db; }
+.detailed-stage .model-dimension { font-size: 19px; color: #d9eaf4; }
+.detailed-stage .model-dimension small { font-size: 7px; color: #aec4d2; }
+.detailed-stage .model-toolbar { left: 18px; right: 18px; bottom: 15px; min-height: 44px; gap: 12px; }
+.detailed-stage .model-toolbar > span { font-size: 10px; line-height: 1.5; max-width: none; color: #b9ccd8; }
+.detailed-stage .model-toolbar > div { gap: 6px; flex-shrink: 0; }
+.detailed-stage .model-toolbar button { width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
+.detailed-stage .model-toolbar button:disabled { opacity: .5; }
+.detailed-stage .model-loading { inset: 40% 18px auto; z-index: 2; }
+.model-progress-card {
+  width: min(300px, 100%);
+  padding: 16px 18px;
+  background: #0b1a26ed;
+  border: 1px solid #9fbed44d;
+  border-radius: 5px;
+  box-shadow: 0 12px 36px #00000030;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.model-progress-card > span { display: flex; justify-content: space-between; gap: 15px; font-size: 11px; color: #d1e2ec; }
+.model-progress-card > span > span { font-variant-numeric: tabular-nums; color: #a7e6fa; }
+.model-progress-card small { display: block; margin-top: 8px; font-size: 9px; color: #a8bdcc; }
+.model-load-track { height: 2px; width: 100%; margin-top: 12px; overflow: hidden; background: #789cb242; }
+.model-load-track > span { display: block; height: 100%; width: 100%; background: #79d4f1; transform-origin: left; transition: transform .2s ease-out; }
+
+.model-dialog {
+  width: calc(100vw - 48px);
+  height: calc(100dvh - 48px);
+  max-width: 1800px;
+  max-height: none;
+  margin: auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #9bbfd44d;
+  border-radius: 10px;
+  background: #0b1721;
+  color: #edf3f7;
+  box-shadow: 0 40px 120px #00000080;
+}
+.model-dialog::backdrop { background: #02070ded; backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+.model-dialog .spatial-stage.detailed-stage.model-expanded {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: inherit;
+  --model-top-space: 134px;
+  --model-bottom-space: 156px;
+}
+.model-expanded .spatial-stage-top { left: 26px; right: 26px; top: 20px; }
+.model-expanded .model-view-tabs { top: 82px; left: 26px; right: 26px; max-width: 850px; margin-inline: auto; }
+.model-expanded .model-caption, .model-expanded .model-toolbar { left: 26px; right: 26px; }
+.model-expanded .model-caption p { max-width: 85ch; }
+.model-expanded .model-viewport .model-poster { padding: 0 30px; }
+.spatial-stage.model-inline-placeholder { position: relative; width: 100%; height: clamp(520px, calc(100svh - 230px), 670px); min-height: 520px; display: flex; align-items: center; justify-content: center; }
+.model-inline-placeholder > img { object-fit: contain; padding: 60px 20px; opacity: .65; }
+.model-inline-placeholder > button { position: relative; z-index: 2; }
+.model-inline-placeholder > span { position: relative; z-index: 2; margin: 20px; padding: 14px 20px; border: 1px solid #9fc6dc4d; border-radius: 4px; background: #0b1a29e8; color: #d2e7f2; font-size: 12px; text-align: center; }
+
+@media (max-width: 1100px) and (min-width: 768px) {
+  .detailed-stage .spatial-stage-top .glass-chip { display: none; }
+  .model-stage-actions { width: 100%; justify-content: space-between; }
+  .model-view-tabs button { font-size: 9px; padding-inline: 3px; }
+  .model-view-tabs button > svg { display: none; }
+  .detailed-stage .model-caption p { font-size: 10px; }
+  .detailed-stage .model-dimension { font-size: 16px; }
+  .detailed-stage .model-toolbar > span { max-width: 145px; font-size: 9px; }
+  .model-expanded .spatial-stage-top .glass-chip { display: inline-flex; }
+  .model-expanded .model-stage-actions { width: auto; }
+}
+@media (max-width: 767px) {
+  .spatial-stage.detailed-stage {
+    --model-top-space: 180px;
+    --model-bottom-space: 164px;
+    width: calc(100% + 20px);
+    margin-inline: -10px;
+    height: 690px;
+    min-height: 690px;
+    border-radius: 7px;
+  }
+  .detailed-stage .spatial-stage-top { left: 12px; right: 12px; top: 12px; gap: 6px; }
+  .detailed-stage .spatial-stage-top .glass-chip { padding: 8px; font-size: 7px; gap: 5px; }
+  .detailed-stage .spatial-stage-top .glass-chip > svg { width: 12px; }
+  .model-stage-actions { gap: 5px; }
+  .detailed-stage .model-switch { padding: 2px; gap: 2px; }
+  .detailed-stage .model-switch button { min-width: 52px; font-size: 8px; padding: 8px 7px; }
+  .model-expand-button > span { display: none; }
+  .model-view-tabs { top: 74px; left: 12px; right: 12px; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 5px; }
+  .model-view-tabs button { font-size: 10px; }
+  .detailed-stage .model-caption { bottom: 73px; left: 12px; right: 12px; min-height: 81px; padding: 12px; gap: 12px; }
+  .detailed-stage .model-caption h3 { font-size: 20px; }
+  .detailed-stage .model-caption > div > span { font-size: 7px; }
+  .detailed-stage .model-caption p { font-size: 11px; line-height: 1.55; }
+  .detailed-stage .model-dimension { font-size: 16px; }
+  .detailed-stage .model-dimension small { font-size: 6px; }
+  .detailed-stage .model-toolbar { bottom: 15px; left: 12px; right: 12px; gap: 10px; }
+  .detailed-stage .model-toolbar > span { max-width: 155px; font-size: 9px; gap: 6px; }
+  .detailed-stage .model-toolbar > span > svg { flex-shrink: 0; }
+  .detailed-stage .model-toolbar > div { gap: 4px; }
+  .model-dialog {
+    width: 100vw;
+    height: 100dvh;
+    max-width: none;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  }
+  .model-dialog .spatial-stage.detailed-stage.model-expanded { --model-top-space: 180px; --model-bottom-space: 164px; border-radius: 0; }
+  .model-expanded .model-view-tabs { top: 74px; left: 12px; right: 12px; }
+  .model-expanded .model-viewport .model-poster { padding: 0 8px; }
+  .spatial-stage.model-inline-placeholder { width: calc(100% + 20px); margin-inline: -10px; height: 690px; min-height: 690px; }
+}
+@media (max-width: 360px) {
+  .detailed-stage .spatial-stage-top .glass-chip { letter-spacing: 0; font-size: 6px; }
+  .detailed-stage .model-caption { gap: 8px; }
+  .detailed-stage .model-dimension { font-size: 14px; }
+  .model-view-tabs button { font-size: 9px; }
+}
+@media (max-height: 620px) and (min-width: 768px) {
+  .model-dialog .spatial-stage.detailed-stage.model-expanded { --model-top-space: 114px; --model-bottom-space: 109px; }
+  .model-expanded .spatial-stage-top { top: 10px; }
+  .model-expanded .model-view-tabs { top: 66px; }
+  .model-expanded .model-caption { bottom: 62px; min-height: 40px; padding-block: 7px; }
+  .model-expanded .model-caption > div > span, .model-expanded .model-caption p, .model-expanded .model-dimension small { display: none; }
+  .model-expanded .model-caption h3 { font-size: 17px; margin: 0; }
+  .model-expanded .model-toolbar { bottom: 10px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .model-load-track > span, .model-view-tabs button, .model-expand-button { transition: none; }
+}

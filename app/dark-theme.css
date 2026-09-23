@@ -1,0 +1,182 @@
+/* Midnight architecture: dark surfaces, silver typography and a single cyan accent. */
+:root {
+  color-scheme: dark;
+  --paper: #0b1015;
+  --ink: #edf1f4;
+  --muted: #a6b3bf;
+  --line: #2b3945;
+  --blue: #53c4eb;
+  --blue-dark: #6dcdef;
+  --surface: #101820;
+  --surface-raised: #16212b;
+  --silver: #c5d0d9;
+}
+
+html, body { background: var(--paper); }
+body { color: var(--ink); }
+::selection { background: #83d8f3; color: #07131d; }
+:focus-visible { outline-color: #7bd7f5; }
+.skip-link { background: var(--surface-raised); color: var(--ink); border: 1px solid var(--blue); }
+
+/* The header stays transparent over the film and becomes smoked glass over content. */
+.header:not(.header-solid) {
+  background: linear-gradient(110deg, #080e17ba, #080e174a);
+  border-color: #d0e2ef24;
+}
+.header-solid {
+  background: #0b121aec;
+  color: var(--ink);
+  border-color: #c5d5e527;
+  box-shadow: 0 10px 35px #00000026;
+}
+.header-solid .header-contact { border-color: #c5d5e52d; }
+.brand-type { color: #f2f5f7; }
+.brand-type > span { color: #becbd5; }
+.desktop-nav > a { color: #c0ccd6; }
+.desktop-nav > a:hover, .desktop-nav > a[aria-current=page] { color: #fff; }
+.header-contact, .menu-toggle { color: #e6edf2; }
+.header-contact:hover { color: var(--blue); }
+.mobile-menu {
+  background: radial-gradient(ellipse at 100% 0, #173244, transparent 55%), #0b1219;
+  color: var(--ink);
+}
+.mobile-menu::backdrop { background: #070b10f2; }
+.mobile-menu nav a { border-color: #c5d5e527; }
+.mobile-menu > p { color: var(--muted); }
+
+/* Buttons retain clear hierarchy without large white panels. */
+.button { color: var(--ink); }
+.button-light {
+  background: #142532df;
+  border: 1px solid #c6e5f365;
+  color: #f3f8fb;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+.button-light:hover { background: #1d3646; border-color: #9ee3fb; }
+.button-blue { background: var(--blue); color: #071722; border: 1px solid transparent; }
+.button-blue:hover { background: #8bdef7; color: #071722; }
+.button::before {
+  background: radial-gradient(circle at var(--shine-x, 50%) var(--shine-y, 50%), #d0efff24, transparent 65%);
+}
+.button:hover { box-shadow: 0 14px 30px #00000036; }
+.text-link, .text-link.light { color: #e6eef4; border-color: #69c9eaa1; }
+.text-link:hover, .text-link.light:hover { color: #87dcf6; }
+.text-link > svg, .text-link.light > svg { color: var(--blue); }
+.glass-panel, .glass-chip {
+  background: linear-gradient(125deg, #223645a3, #09141ddb);
+  border-color: #c1d9e438;
+  box-shadow: inset 0 1px 0 #ffffff0c, 0 12px 36px #00000024;
+}
+.hero-description {
+  background: linear-gradient(115deg, #0b1726b0, #0b17265c);
+  border-color: #c9eaff32;
+}
+.hero-description p { color: #c6d2dc; }
+.hero-3d-link:hover { background: #213847e8; }
+.hero-chapter h1 em { color: #c6e5f1; }
+
+/* Content surfaces are layered through luminance rather than bright color blocks. */
+.section-heading h2 em, .page-intro h1 em { color: #a6b8c6; }
+.section-intro, .section-intro .thai { color: var(--muted); }
+.section-intro .thai { color: #d8e1e8; }
+.eyebrow { color: #b5c7d4; }
+.services-section, .process-section, .gallery-section { background: var(--paper); }
+.service-image, .project-image, .journal-image { background: #17232e; }
+.service-image { border: 1px solid #ccdeeb1f; }
+.service-image > span { background: #08131bc9; border: 1px solid #d1e1ec29; }
+.service-arrow { background: #111f2be8; color: #d9f2fc; border: 1px solid #91cbe04d; }
+.service-card:hover .service-arrow { background: #28536a; color: #fff; }
+.service-card h3 { color: #e8edf2; }
+.service-card p { color: var(--muted); }
+.kinetic-band { background: #0b1015; border-color: #c6d7e526; }
+.kinetic-band-track > span { color: #dce5eb; }
+.kinetic-band-track > em { -webkit-text-stroke-color: #829bab; }
+.kinetic-band-track > i { color: #62bfde; }
+.about-section { background: #101923; }
+.about-copy .eyebrow, .about-copy h2 em { color: #aec3d2; }
+.about-description { color: #b3c0cc; }
+.about-signature { color: #a2b5c4; }
+.about-image .image-caption { background: linear-gradient(125deg, #0b1625b3, #09141de8); }
+
+.projects-section { background: #10171e; }
+.project-card:not(.bento-card) .project-meta { border-top: 1px solid #c8d7e321; margin-top: 14px; }
+.project-meta h3 { color: #ebf0f4; }
+.project-meta p { color: #aabac8; }
+.project-meta > svg, .project-arrow { color: #b5cbd9; }
+.project-card[data-pointer-active] { box-shadow: 0 24px 44px #0000003b; }
+.bento-card { background: #111d28; border: 1px solid #c8ddeb24; }
+.bento-card .project-meta {
+  background: linear-gradient(120deg, #162b3bdf, #08131de8);
+  border-color: #c5deed47;
+}
+.bento-card .project-meta p { color: #d1e0ea; }
+.bento-card .project-tag, .project-tag { background: #08131bc9; border-color: #d4e8f341; }
+.bento-card .project-arrow { color: #d8edf7; border-color: #d0e6f05c; }
+.concept-note, .concept-disclosure { color: #a9b8c5; border-color: var(--line); }
+.project-filters button { color: #b8c6d1; background: #101923; border-color: #405463; }
+.project-filters button:hover { background: #1c303f; border-color: #8ec1d5; color: #f0f5f7; }
+.project-filters button[aria-pressed=true] {
+  color: #c9effc;
+  background: #1c3b4d;
+  border-color: #68bddb;
+  box-shadow: inset 0 0 0 1px #c8edfa0d, 0 6px 18px #00000024;
+}
+
+.statistics { background: #14222e; border-block: 1px solid #bad1e021; }
+.stat > svg { color: #bad3e3; }
+.stat p { color: #b0c0cd; }
+.process-track { background: #415361; }
+.process-icon { background: #17232e; border-color: #617e91; color: #d2e2ed; }
+.process-list li:hover .process-icon { background: #233e50; color: #8de0f9; box-shadow: 0 8px 20px #00000036; }
+.process-number, .process-list .thai, .process-copy { color: #a6b7c4; }
+.cta-shade { background: linear-gradient(90deg, #070e17ed, #0b1725ba); }
+.cta-content h2 em { color: #bfd8e7; }
+
+/* Editorial and detail routes share the same material palette. */
+.page-intro { background: var(--paper); }
+.company-story, .service-details, .project-detail-intro, .project-detail-notes, .journal-grid, .contact-section { background: var(--paper); }
+.service-detail-copy ul { color: #c5d2dc; }
+.service-detail-copy .service-thai { color: #e1e9ef !important; }
+.values-grid span, .journal-card > .eyebrow { color: #8ad5ed; }
+.journal-card h2, .article h1, .article > section h2 { color: #edf1f4; }
+.journal-image { border: 1px solid #bcd3e125; }
+.image-credit { background: #06101ade; border: 1px solid #c5d9e12b; }
+.project-detail-notes span, .next-project > span { color: #a5b8c6; }
+.next-project { border-color: #40515f; }
+.next-project strong { color: #ecf2f6; }
+.contact-method, .contact-address { border-color: #354652; }
+.contact-method:hover strong { color: #a2e0f4; }
+.contact-method strong { transition: color .25s; }
+.contact-method > svg:first-child, .contact-address > svg { color: #86cbe3; }
+.brief-note {
+  background: linear-gradient(120deg, #182632, #121e28);
+  border: 1px solid #b8d1e024;
+  border-left: 2px solid #70c7e4;
+}
+.brief-note h2 { color: #e0eaf1; }
+.brief-note p { color: #b2c1cc; }
+
+/* The exhibit viewer is framed like a dark presentation studio. */
+.spatial-experience { background: #0b131c; }
+.spatial-sticky { background: radial-gradient(ellipse at 80% 40%, #16334480, transparent 62%), #0b131c; }
+.spatial-stage {
+  background: radial-gradient(ellipse at 55% 40%, #28455740, transparent 65%), linear-gradient(140deg, #152532, #0a131d);
+  border-color: #b7d0e239;
+  box-shadow: inset 0 1px 0 #ffffff08, 0 40px 70px #00000036;
+}
+.spatial-narrative h2 em { color: #abc7d8; }
+.spatial-intro, .spatial-chapter p { color: #b4c6d3; }
+.spatial-counter, .spatial-bottom { color: #a4bdce; }
+.model-switch { background: #08131ad9; border-color: #d8eeff30; }
+.model-switch button { color: #b2c8d7; }
+.model-switch button[aria-pressed=true] { background: #284557; color: #e7f8ff; }
+.model-caption { background: linear-gradient(120deg, #172c3dde, #08131deb); }
+.model-toolbar > span { color: #b4ccd9; }
+.model-toolbar button { background: #192d3be8; border-color: #799bad66; color: #d8eff9; }
+.model-toolbar button:hover:not(:disabled) { background: #304f62; }
+
+.footer { background: #080e14; color: #b6c3cd; border-top: 1px solid #b7cddd20; }
+.footer-brand > span { color: #a6b7c4; }
+.footer-contact svg { color: #9ec4da; }
+.footer-bottom { color: #a1b4c2; border-color: #c1d6e129; }
