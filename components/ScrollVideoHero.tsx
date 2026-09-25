@@ -3,7 +3,9 @@ import { useMotionPreference } from './useMotionPreference';
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform, type MotionValue } from 'framer-motion';
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
+import { Chars } from './SplitChars';
+const enter=(seconds:number)=>({'--ac-d':`${seconds}s`}) as React.CSSProperties;
 
 function HeroLine({progress,children,direction=1}:{progress:MotionValue<number>;children:React.ReactNode;direction?:number}) {
   const reduced=useMotionPreference();
@@ -15,7 +17,11 @@ function HeroLine({progress,children,direction=1}:{progress:MotionValue<number>;
 function Chapter({progress, start, end, children, first=false}: {progress:MotionValue<number>;start:number;end:number;children:React.ReactNode;first?:boolean}) {
   const opacity=useTransform(progress, first?[0,end-.035,end]:end===1?[start,start+.015,1]:[start,start+.025,end-.025,end], first?[1,1,0]:end===1?[0,1,1]:[0,1,1,0]);
   const y=useTransform(progress,[start,end],[12,-18]);
-  return <motion.div className={`hero-chapter ${first?'hero-chapter-first':''}`} style={{opacity,y}} aria-hidden={!first}>{children}</motion.div>;
+  // The chapter on screen gets data-active, which (re)plays its letter-by-letter rise.
+  const isOn=(p:number)=>first?p<end-.02:p>=start+.005&&(end===1||p<end-.005);
+  const [active,setActive]=useState(()=>isOn(progress.get()));
+  useMotionValueEvent(progress,'change',p=>{const on=isOn(p);setActive(current=>current===on?current:on);});
+  return <motion.div className={`hero-chapter ${first?'hero-chapter-first':''}`} style={{opacity,y}} aria-hidden={!first} data-active={active?'':undefined}>{children}</motion.div>;
 }
 
 export default function ScrollVideoHero(){
@@ -60,24 +66,26 @@ export default function ScrollVideoHero(){
   // identical before and after hydration. Only video failure changes this class.
   return <section id="hero" ref={container} className={`hero-scroll ${failed?'hero-static':''}`} aria-label="From idea to reality — scroll to explore">
     <div className="hero-sticky">
+      <div className="hero-media">
       <Image className="hero-poster" src="/images/hero-poster.jpg" alt="Completed Time Service exhibition booth inside a convention hall" fill priority sizes="100vw"/>
       {!reduced && !failed && <video ref={video} className="hero-video" muted playsInline preload="auto" poster="/images/hero-poster.jpg" aria-hidden="true" onLoadedMetadata={()=>{video.current?.pause();sync();}} onPlay={()=>video.current?.pause()} onError={()=>setFailed(true)}/>}
+      </div>
       <div className="hero-shade"/>
-      <div className="hero-topline"><span>SPACES WITH PURPOSE. EXPERIENCES THAT STAY.</span><span>BANGKOK · THAILAND</span></div>
+      <div className="hero-topline site-enter" style={enter(.1)}><span>EXHIBITION · EVENT · CONSTRUCTION</span><span>BANGKOK · THAILAND</span></div>
       <div className="hero-story">
-        <Chapter progress={storyProgress} start={0} end={.20} first><h1><HeroLine progress={storyProgress} direction={-1}>Space.</HeroLine><HeroLine progress={storyProgress}><em>Ideas.</em></HeroLine><HeroLine progress={storyProgress} direction={-.5}>Experiences.</HeroLine></h1></Chapter>
-        <Chapter progress={storyProgress} start={.20} end={.40}><p className="chapter-kicker">FROM CONCEPT TO COMPLETION</p><h2>Exhibition<br/><em>by design.</em></h2></Chapter>
-        <Chapter progress={storyProgress} start={.40} end={.60}><h2>Design.<br/>Production.<br/><em>Installation.</em></h2></Chapter>
-        <Chapter progress={storyProgress} start={.60} end={.80}><p className="chapter-kicker">WE DON’T JUST DESIGN IT.</p><h2>We<br/><em>build it.</em></h2></Chapter>
-        <Chapter progress={storyProgress} start={.80} end={.955}><h2>Building ideas<br/><em>into reality.</em></h2></Chapter>
-        <Chapter progress={storyProgress} start={.955} end={1}><p className="chapter-kicker">THE NEXT CHAPTER</p><h2>Discover<br/><em>our world.</em></h2></Chapter>
+        <Chapter progress={storyProgress} start={0} end={.20} first><h1 aria-label="Space Ideas Experiences"><HeroLine progress={storyProgress} direction={-1}><Chars text="Space"/></HeroLine><HeroLine progress={storyProgress}><em><Chars text="Ideas" start={5}/></em></HeroLine><HeroLine progress={storyProgress} direction={-.5}><Chars text="Experiences" start={10}/></HeroLine></h1></Chapter>
+        <Chapter progress={storyProgress} start={.20} end={.40}><p className="chapter-kicker">FROM CONCEPT TO COMPLETION</p><h2 aria-label="Exhibition by design"><Chars text="Exhibition"/><br/><em><Chars text="by design" start={10}/></em></h2></Chapter>
+        <Chapter progress={storyProgress} start={.40} end={.60}><h2 aria-label="Design Production Installation"><Chars text="Design"/><br/><Chars text="Production" start={6}/><br/><em><Chars text="Installation" start={16}/></em></h2></Chapter>
+        <Chapter progress={storyProgress} start={.60} end={.80}><p className="chapter-kicker">WE DON’T JUST DESIGN IT</p><h2 aria-label="We build it"><Chars text="We"/><br/><em><Chars text="build it" start={2}/></em></h2></Chapter>
+        <Chapter progress={storyProgress} start={.80} end={.955}><h2 aria-label="Building ideas into reality"><Chars text="Building ideas"/><br/><em><Chars text="into reality" start={13}/></em></h2></Chapter>
+        <Chapter progress={storyProgress} start={.955} end={1}><p className="chapter-kicker">THE NEXT CHAPTER</p><h2 aria-label="Discover our world"><Chars text="Discover"/><br/><em><Chars text="our world" start={8}/></em></h2></Chapter>
       </div>
-      <a className="hero-3d-link glass-chip" href="#experience"><span className="hero-3d-orbit" aria-hidden="true"/> Explore in 3D <ArrowUpRight size={15}/></a>
+      <a className="hero-3d-link glass-chip site-enter" style={enter(1.15)} href="#experience"><span className="hero-project-label"><small>A DIFFERENT PERSPECTIVE</small><strong>Explore our spaces</strong><span>Interactive 3D experience</span></span><span className="hero-project-arrow"><ArrowUpRight size={20}/></span></a>
       <div className="hero-bottom">
-        <div className="hero-description"><strong>We build more than structures.<br/>We build your success.</strong><p>Your partner in exhibition, event and construction.<br/>From the first idea to the final detail.</p></div>
-        <a className="button button-light" href="#projects">Explore our work <ArrowUpRight size={18}/></a>
+        <div className="hero-description site-enter" style={enter(.85)}><strong>We build more than structures<br/>We build your success</strong><p>Your partner in exhibition, event and construction<br/>From the first idea to the final detail</p></div>
+        <div className="hero-actions site-enter" style={enter(1)}><a className="button button-light" href="#projects">Explore our work <ArrowRight size={18}/></a></div>
       </div>
-      <div className="hero-footer"><a href="#services"><ArrowDown size={15}/><span>SCROLL TO EXPLORE</span></a><div className="hero-progress"><span>IDEA</span><div><motion.span style={{scaleX}}/></div><span>REALITY</span><span ref={progressLabel} className="progress-value">00%</span></div><span className="hero-index">01 — 06</span></div>
+      <div className="hero-footer site-enter" style={enter(1.3)}><a href="#services"><ArrowDown size={15}/><span>SCROLL TO EXPLORE</span></a><div className="hero-progress"><span>IDEA</span><div><motion.span style={{scaleX}}/></div><span>REALITY</span><span ref={progressLabel} className="progress-value">00%</span></div><span className="hero-index">01 — 06</span></div>
     </div>
   </section>;
 }

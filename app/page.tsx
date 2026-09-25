@@ -7,4 +7,5 @@ import Process from '@/components/Process';
 import CTA from '@/components/CTA';
 import SpatialExperience from '@/components/SpatialExperience';
 import KineticBand from '@/components/KineticBand';
-export default function Home(){return <><ScrollVideoHero/><Services/><KineticBand/><About/><SpatialExperience/><Projects/><Statistics/><Process/><CTA/></>;}
+import FeaturedProject from '@/components/FeaturedProject';
+export default function Home(){return <><ScrollVideoHero/><Services/><FeaturedProject/><SpatialExperience/><Projects/><KineticBand/><About/><Statistics/><Process/><CTA/></>;}

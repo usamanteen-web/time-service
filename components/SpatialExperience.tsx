@@ -6,19 +6,20 @@ import Image from 'next/image';
 import { useInView } from 'framer-motion';
 import * as Scrollytelling from '@bsmnt/scrollytelling';
 import type { ModelViewerElement } from '@google/model-viewer';
-import { ArrowUpRight, Box, Hand, Maximize2, Minus, Plus, RotateCcw, Scan, X } from 'lucide-react';
+import { ArrowRight, ArrowUpRight, Box, Hand, Maximize2, Minus, Plus, RotateCcw, Scan, X } from 'lucide-react';
 import { exhibitionModels as models, type ModelView } from '@/lib/exhibition-models';
 import '@/app/model-detail.css';
+import SplitChars from './SplitChars';
 
-const SIMPLE_QUERY='(prefers-reduced-motion: reduce), (max-width: 767px)';
+const SIMPLE_QUERY='(prefers-reduced-motion: reduce), (max-width: 1023px), (max-height: 760px)';
 const subscribe=(notify:()=>void)=>{const media=window.matchMedia(SIMPLE_QUERY);media.addEventListener('change',notify);return()=>media.removeEventListener('change',notify);};
 const getSimple=()=>window.matchMedia(SIMPLE_QUERY).matches;
 const serverSimple=()=>true;
 const defaults={ease:'none'};
 const chapters=[
-  {title:'The complete composition.',copy:'Explore the architecture, graphic walls and suspended identity.'},
-  {title:'Details make the difference.',copy:'Move closer to the materials, furniture, displays and finishing touches.'},
-  {title:'Take a look inside.',copy:'Choose a viewpoint or expand the model to explore at your own pace.'},
+  {title:'The complete composition',copy:'Explore the architecture, graphic walls and suspended identity.'},
+  {title:'Details make the difference',copy:'Move closer to the materials, furniture, displays and finishing touches.'},
+  {title:'Take a look inside',copy:'Choose a viewpoint or expand the model to explore at your own pace.'},
 ];
 type CameraPose=Pick<ModelView,'target'|'orbit'|'fov'>;
 
@@ -27,7 +28,6 @@ export default function SpatialExperience(){
   const viewer=useRef<ModelViewerElement>(null);
   const dialog=useRef<HTMLDialogElement>(null);
   const expandButton=useRef<HTMLButtonElement>(null);
-  const progressText=useRef<HTMLSpanElement>(null);
   const loadText=useRef<HTMLSpanElement>(null);
   const loadBar=useRef<HTMLSpanElement>(null);
   const progress=useRef(0);
@@ -68,7 +68,6 @@ export default function SpatialExperience(){
   const takeControl=useCallback(()=>{scrollCamera.current=false;setFree(true);},[]);
   const callbacks=useMemo(()=>({onUpdate:(self:{progress:number})=>{
     progress.current=self.progress;
-    if(progressText.current)progressText.current.textContent=String(Math.round(self.progress*100)).padStart(2,'0');
     section.current?.style.setProperty('--spatial-progress',`${self.progress*100}%`);
     if(scrollCamera.current)setCamera(storyPose());
   }}),[setCamera,storyPose]);
@@ -110,9 +109,8 @@ export default function SpatialExperience(){
     if(!open)requestAnimationFrame(()=>expandButton.current?.focus({preventScroll:true}));
   };
 
-  const stage=<div className={`spatial-stage detailed-stage ${expanded?'model-expanded':''} ${viewId!=='overview'?'model-closeup':''}`}>
-    <div className="spatial-stage-grid" aria-hidden="true"/>
-    <div className="spatial-stage-top"><span className="glass-chip"><Box size={14}/> FULL DETAIL · 3D</span><div className="model-stage-actions">
+  const stage=<div className={`spatial-stage detailed-stage spatial-redesign-stage ${expanded?'model-expanded':''} ${viewId!=='overview'?'model-closeup':''}`}>
+    <div className="spatial-stage-top"><span className="glass-chip"><Box size={15}/> 3D View</span><div className="model-stage-actions">
       <div className="model-switch" role="group" aria-label="Choose exhibition model">{models.map((m,i)=><button key={m.id} onClick={()=>changeModel(i)} aria-pressed={modelIndex===i}>{m.name}</button>)}</div>
       {expanded?<button className="model-expand-button" aria-label="Close expanded 3D view" onClick={()=>toggleExpanded(false)}><X size={19}/></button>:<button ref={expandButton} className="model-expand-button" aria-label="Expand 3D view" title="Expand 3D view" onClick={()=>toggleExpanded(true)}><Maximize2 size={17}/></button>}
     </div></div>
@@ -133,14 +131,14 @@ export default function SpatialExperience(){
     <div className="model-toolbar"><span><Hand size={15}/>{expanded?'Drag · pinch or scroll to zoom':free||simple?'Drag to rotate · + to zoom':'Scroll to orbit · drag to explore'}</span><div role="group" aria-label="3D camera controls"><button aria-label="Zoom in" title="Zoom in" disabled={status!=='ready'} onClick={()=>zoom(.8)}><Plus size={19}/></button><button aria-label="Zoom out" title="Zoom out" disabled={status!=='ready'} onClick={()=>zoom(1.25)}><Minus size={19}/></button><button aria-label="Reset 3D view" title="Reset view" disabled={status!=='ready'} onClick={reset}><RotateCcw size={17}/></button></div></div>
   </div>;
   return <><Scrollytelling.Root start="top top" end="bottom bottom" scrub={true} disabled={simple} defaults={defaults} callbacks={callbacks}>
-    <section ref={section} className={`spatial-experience ${simple?'spatial-simple':''}`} id="experience" aria-labelledby="spatial-title"><div className="spatial-sticky">
-      <div className="spatial-topline"><p className="eyebrow"><span/> THE SPATIAL EXPERIENCE</p><span className="spatial-counter">EXPLORE / <span ref={progressText}>00</span><small>%</small></span></div>
-      <div className="spatial-layout"><div className="spatial-narrative"><h2 id="spatial-title">A closer <br/>look.<br/><em>Every detail.</em></h2><p className="spatial-intro" lang="th">สัมผัสงานออกแบบ ตั้งแต่ภาพรวมถึงรายละเอียด</p>
+    <section ref={section} className={`spatial-experience spatial-redesign ${simple?'spatial-simple':''}`} id="experience" aria-labelledby="spatial-title"><div className="spatial-sticky">
+      <div className="spatial-topline"><p className="eyebrow"><span/> EXPLORE IN 3D</p></div>
+      <div className="spatial-layout"><div className="spatial-narrative"><SplitChars as="h2" id="spatial-title" variant="reveal" lines={['A closer look',{text:'Every detail',italic:true}]} stagger={.03}/><p className="spatial-intro">Explore our work in an interactive 3D experience. See how ideas become reality from every angle.</p><p className="spatial-thai" lang="th">สัมผัสงานออกแบบ ตั้งแต่ภาพรวมถึงรายละเอียด</p><button className="spatial-explore-button" onClick={()=>toggleExpanded(true)}>Explore in 3D <ArrowRight size={16}/></button>
         <div className="spatial-chapters">{chapters.map((chapter,index)=><Scrollytelling.Animation key={chapter.title} tween={{start:index*30,end:index*30+20,fromTo:[{opacity:index===0?1:.65,y:index===0?0:16},{opacity:1,y:0,ease:'none'}]}} disabled={simple}><div className="spatial-chapter"><span>0{index+1}</span><div><h3>{chapter.title}</h3><p>{chapter.copy}</p></div></div></Scrollytelling.Animation>)}</div>
-      </div>{expanded?<div className="spatial-stage model-inline-placeholder"><Image src={model.poster} alt="" fill sizes="60vw"/><span>Exploring {model.name} in the expanded view</span></div>:stage}</div>
+      </div>{expanded?<div className="spatial-stage spatial-redesign-stage model-inline-placeholder"><Image src={model.poster} alt="" fill sizes="60vw"/><span>Exploring {model.name} in the expanded view</span></div>:stage}</div>
       <div className="spatial-bottom"><span><Scan size={13}/> Reconstructed from supplied drawings and photographs.</span><span>DESIGN IS IN THE DETAILS.</span></div>
     </div></section>
   </Scrollytelling.Root>
-    {expanded&&createPortal(<dialog ref={dialog} className="model-dialog" aria-label={`${model.name} detailed 3D explorer`} onCancel={event=>{event.preventDefault();toggleExpanded(false);}}>{stage}</dialog>,document.body)}
+    {expanded&&createPortal(<dialog ref={dialog} className="model-dialog spatial-redesign-dialog" aria-label={`${model.name} detailed 3D explorer`} onCancel={event=>{event.preventDefault();toggleExpanded(false);}}>{stage}</dialog>,document.body)}
   </>;
 }

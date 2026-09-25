@@ -2,6 +2,14 @@
 
 A complete bilingual company website built with Next.js 16.3.6, React 19.3.0, TypeScript, Tailwind CSS, Framer Motion and Lucide.
 
+## Redesign copy — September 2026
+
+This folder is the independent redesign in `time-service-web2`. The original `../time-service-web1/` is not modified. The presentation uses navy/white gradients, moderate 16–28px image corners, editorial typography and large project imagery. Shared overrides live in `app/redesign.css`, alongside separate navigation, featured-project and spatial-viewer stylesheets.
+
+Original pages, bilingual content, six scroll-video chapters, kinetic headings/band, parallax, project filters, statistics, process and both detailed 3D models remain. Added working local site search and a three-project featured slideshow. The hero video is controlled only by scrolling, with the original scroll duration and no playback button or video dialog. Its display frame crops the bottom 12% overscan, keeping the original media files intact. The 3D explorer retains its five real camera viewpoints, zoom/reset, model switching and expanded view. No unsupported media tabs or newsletter submission are fabricated.
+
+The development port is **3017**, separate from the original project's 3016. The copied hosting metadata is not a new deployment destination; review hosting identity before publishing this redesign. No publication is part of this change.
+
 ## Run locally
 
 ```sh
@@ -9,7 +17,7 @@ npm ci
 npm run dev
 ```
 
-The local preview opens at http://127.0.0.1:3016. `npm run build` exports the website into `out/`. `npm run typecheck` validates TypeScript. Deployment uses the existing identity in `.openai/hosting.json`; do not create a second Site.
+The local preview opens at http://127.0.0.1:3017. `npm run build` exports the website into `out/`. `npm run typecheck` validates TypeScript.
 
 Production builds use Next.js's Webpack compiler because Turbopack's CSS subprocess cannot bind a local port in this managed workspace. The development preview continues to use Turbopack.
 
@@ -22,7 +30,7 @@ Production builds use Next.js's Webpack compiler because Turbopack's CSS subproc
 
 ## Images and provenance
 
-Eight original architectural concept images were generated with the built-in GPT Image tool and saved in `public/images/`: pavilion, event, construction, lighting, interior, team, pavilion-blue and pavilion-green. They illustrate design possibilities and are explicitly identified as AI concepts where they could be mistaken for completed work. No suggested client brand names are presented as actual clients.
+Eight original architectural concept images were generated with the built-in GPT Image tool and saved in `public/images/`: pavilion, event, construction, lighting, interior, team, pavilion-blue and pavilion-green. They illustrate design possibilities. Source provenance is retained here; the homepage gallery note and featured caption follow the supplied presentation copy. No suggested client brand names are presented as actual clients.
 
 Original generated PNGs and exact generation prompts are preserved in `../output/time-service-images/`. See `prompt-manifest.json` and `asset-manifest.json` there. The logo was supplied by the user as `apple-touch-icon.png` and copied without alteration.
 
@@ -34,13 +42,13 @@ The supplied MP4 is preserved at `public/videos/hero-scroll.mp4`. The live hero 
 
 The video has no autoplay, loop, controls or calls to `play()`. A Framer Motion scroll value sets a target time; a bounded requestAnimationFrame loop seeks toward that time and stops. It works in both directions and returns to frame zero at the top. Text chapters use the same measured scroll position. Poster fallback is frame zero from the supplied video. Reduced-motion users receive a static poster and a normal-height hero; video loading failure also removes the long scroll region.
 
-Google Fonts are downloaded locally in `public/fonts/` (Cormorant Garamond, Manrope, Noto Sans Thai). Images use `next/image` with local files, lazy loading and reserved dimensions. Image optimization is done before deployment because the project is a portable static export without an image server.
+Google Fonts are downloaded locally in `public/fonts/` (Cormorant Garamond, Inter, Noto Sans Thai; legacy Manrope files are retained). Statistics replay a shared 1.8-second count when 45% of the section enters view and reset after fully leaving. They display 18+, 10,000+, 3,500+ and 98%, with Cormorant Garamond at 48px/500 (44px on small phones); body and interface text use Inter with the existing Thai fallback. Images use `next/image` with local files, lazy loading and reserved dimensions. Image optimization is done before deployment because the project is a portable static export without an image server.
 
 ## Motion and interactive 3D
 
 - [Basement Scrollytelling](https://github.com/basementstudio/scrollytelling) (`@bsmnt/scrollytelling` 0.3.3 with GSAP) drives the horizontal typography band and the three-chapter spatial experience. Scrolling orbits the camera; dragging or choosing a camera view gives the visitor control. Reset returns to the scroll perspective.
 - The full-detail GLB models, HILONG B103 (22.61 MB, 241,536 triangles, 20 embedded images) and JIULI R110 (14.36 MB, 200,213 triangles, 6 embedded images), are copied byte-for-byte from `../output/detailed-web-booths/models/`. The active viewer uses these full models at every screen size; it no longer uses the simplified, untextured models. Only the selected model loads near the section, with a progress indicator and a detailed poster/error fallback. They are reconstructed studies from supplied drawings and photographs, not evidence of a client relationship. Undocumented dimensions remain estimates; screen content is still imagery and some obscured graphics were reconstructed from the reference photos. See the source package README for provenance and limits.
-- The homepage project collection uses an asymmetric Bento grid with frosted captions, pointer tilt and a light reflection. Buttons respond subtly to the pointer; focus and touch controls remain available.
+- The homepage project collection uses an asymmetric grid with large images and legible gradient captions, pointer tilt and a light reflection. Buttons respond subtly to the pointer; focus and touch controls remain available.
 - Section headings reveal word by word; hero letters move with the existing paused video timeline. About and contact imagery use bounded parallax. The header, image captions and 3D controls use translucent glass surfaces. The original white theme is restored, with navy feature sections and the detailed 3D explorer retained.
 - Live `prefers-reduced-motion` changes disable decorative motion and collapse long scroll scenes. Mobile uses a normal-flow 3D section with manual camera controls. Overview, reception, interior, structure and booth-specific detail presets move the target as well as the camera. Zoom buttons work inline without trapping page scrolling; the expanded native dialog supports pinch/wheel zoom and panning, traps focus, closes with Escape and restores the prior camera view. Pointer effects run only on fine pointers; model rendering is handled on demand by model-viewer. All timers, media listeners and animation frames are cleaned up on unmount.
 
