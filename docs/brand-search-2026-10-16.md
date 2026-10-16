@@ -31,3 +31,23 @@
 - `time service design and construction`
 
 ก่อนเผยแพร่: time service / time services ยังไม่พบเว็บไซต์หลักในหน้าแรก; time service designs and construction พบ Business Profile พร้อมปุ่มเว็บไซต์ แต่ไม่พบผลเว็บไซต์ปกติในหน้าแรก; ชื่อเต็มพร้อม Co., Ltd. พบเว็บไซต์หน้าแรก ผลมาจากบัญชีที่ลงชื่อเข้าใช้ในกรุงเทพฯ
+
+## ผลตรวจคำค้นตั้งต้นและการส่ง Google
+
+Google Search Console ยืนยัน Indexing requested และนำ URL เข้าคิว priority crawl แล้ว ส่งครั้งเดียวหลังเผยแพร่ ไม่ใช่การยืนยันว่า Google อ่านข้อมูลใหม่แล้ว
+
+ตรวจผลหน้าแรกขณะลงชื่อเข้าใช้ในกรุงเทพฯ วันที่ 16 ตุลาคม 2026 ผลอาจเปลี่ยนตามผู้ใช้และเวลา
+
+| คำค้น | เว็บไซต์เป็นผลปกติหน้าแรก | ปุ่มเว็บไซต์ในโปรไฟล์ |
+|---|---|---|
+| time service | ยังไม่พบ | ไม่ได้ยืนยัน |
+| time services | ยังไม่พบ | ไม่ได้ยืนยัน |
+| time service design | ยังไม่พบ | ไม่ได้ยืนยัน |
+| time service designs and construction | ยังไม่พบ | พบ |
+| time services designs | ยังไม่พบ | พบ |
+| time services designs and | ยังไม่พบ | พบ |
+| time services designs and construction | ยังไม่พบ | พบ |
+| time services designs and constructions | ยังไม่พบ | พบ |
+| time service designs and constructions | ยังไม่พบ | พบ |
+| time service design and | ยังไม่พบ | พบ |
+| time service design and construction | ยังไม่พบ | พบ |
