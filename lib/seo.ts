@@ -1,3 +1,5 @@
+import { company } from './content';
+
 export const siteUrl = 'https://www.timeservices.co';
 export const companyName = 'Time Service Designs and Constructions';
 export const homeTitle = `${companyName} | ออกแบบและรับสร้างบูธครบวงจร`;
@@ -17,7 +19,9 @@ export const companyStructuredData = {
       logo: `${siteUrl}/images/company-logo.png`,
       description: homeDescription,
       telephone: '+66867933023',
+      address: company.postalAddress,
       sameAs: [
+        company.mapsHref,
         'https://www.facebook.com/p/Time-Service-Designs-and-Contructions-Co-LTD-100069467415377/',
       ],
     },

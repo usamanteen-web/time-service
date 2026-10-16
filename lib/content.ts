@@ -2,6 +2,14 @@ export const company = {
   name: 'Time Service Designs and Constructions Co., Ltd.',
   phone: '086 793 3023', phoneHref: 'tel:+66867933023',
   address: '124/24 Moo 12, Bang Phli Yai Subdistrict, Bang Phli District, Samut Prakan 10540, Thailand',
+  postalAddress: {
+    '@type': 'PostalAddress',
+    streetAddress: '124/24 Moo 12, Bang Phli Yai Subdistrict',
+    addressLocality: 'Bang Phli',
+    addressRegion: 'Samut Prakan',
+    postalCode: '10540',
+    addressCountry: 'TH',
+  },
   mapsHref: 'https://maps.app.goo.gl/yYFWpAZnEpDsw8Ey9',
 };
 export const people = [
