@@ -1,0 +1,23 @@
+{
+  "id": "art-toy",
+  "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Art Toy model/Art toy Cenematic/Orange_Ocean_Atelier_v5_Final.blend",
+  "src": "/models/catalog/art-toy.glb",
+  "bytes": 11685048,
+  "sourceMeshObjects": 1801,
+  "triangles": 1425879,
+  "materials": 237,
+  "bakedProceduralColors": 85,
+  "bounds": {
+    "min": [
+      -6.2225,
+      -0.0,
+      -5.4155
+    ],
+    "max": [
+      6.2225,
+      3.619,
+      5.4155
+    ]
+  },
+  "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."
+}

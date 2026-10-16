@@ -1,0 +1,32 @@
+/* The film retains the full construction sequence and follows the existing story. */
+.hero-scroll-film .hero-media { inset: 0; background: #04111f; pointer-events: none; }
+.hero-film { position: absolute; inset: 0; }
+.hero-film-poster,
+.hero-film-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.hero-film-video { opacity: 0; transition: opacity .24s ease; }
+.hero-film-video[data-ready] { opacity: 1; }
+.hero-film-video::-webkit-media-controls { display: none !important; }
+.hero-film-video::-webkit-media-controls-start-playback-button { display: none !important; }
+
+@media (min-width: 768px) {
+  /* Give the booth its own space to the right of the story, including its rigging. */
+  .hero-scroll-film .hero-film { inset: 50% -6% auto 18%; height: min(100%, 49.5vw); transform: translateY(-50%); mask-image: linear-gradient(90deg, transparent, #000 16%), linear-gradient(0deg, transparent, #000 9%, #000 94%, transparent); mask-composite: intersect; }
+  .hero-scroll-film .hero-film-poster,
+  .hero-scroll-film .hero-film-video { object-fit: contain; }
+  .hero-scroll-film .hero-shade { background: linear-gradient(90deg, #04111fee 0%, #04111fb3 22%, #04111f33 42%, transparent 60%), linear-gradient(0deg, #04111f66, transparent 25%, transparent 82%, #04111f55); }
+}
+
+@media (max-width: 767px) {
+  /* Show the whole booth on phones instead of cropping a landscape film to portrait. */
+  .hero-scroll-film .hero-film { inset: 30% 0 26%; }
+  .hero-scroll-film .hero-film-poster,
+  .hero-scroll-film .hero-film-video { object-fit: contain; }
+  .hero-scroll-film .hero-description strong { display: none; }
+  .hero-scroll-film .hero-description p { margin-top: 0; }
+  .hero-scroll-film .hero-shade { background: linear-gradient(180deg, #04111f99, #04111f40 31%, transparent 49%, #04111f99 73%, #04111f); }
+  .hero-scroll-film .hero-bottom::before { content: ''; position: absolute; inset: -20px calc(-1 * var(--gutter)) -22px; z-index: -1; pointer-events: none; background: linear-gradient(180deg, transparent, #04111fd9 25%, #04111f 85%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-film .hero-film-video { display: none; }
+}

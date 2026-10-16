@@ -1,11 +1,109 @@
 'use client';
 import { useMotionPreference } from './useMotionPreference';
 import { useEffect, useRef, useState } from 'react';
-import Image from 'next/image';
 import { motion, useMotionValue, useMotionValueEvent, useScroll, useTransform, type MotionValue } from 'framer-motion';
 import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
 import { Chars } from './SplitChars';
+import './ScrollVideoHero.css';
+
+const firstFrame='/images/hero/jiuli-video-poster.jpg';
+const completedFrame='/images/hero/jiuli-video-complete.jpg';
 const enter=(seconds:number)=>({'--ac-d':`${seconds}s`}) as React.CSSProperties;
+
+/** A paused, frame-seeked film: the visitor's scroll is the only playback control. */
+function ScrollFilm({progress}:{progress:MotionValue<number>}) {
+  const video=useRef<HTMLVideoElement>(null);
+  const reduced=useMotionPreference();
+  const [ready,setReady]=useState(false);
+  const [failed,setFailed]=useState(false);
+
+  useEffect(()=>{
+    const media=video.current;
+    if(!media||reduced)return;
+    let frame=0;
+    let previous=0;
+    let cursor=0;
+    let disposed=false;
+    const request=new AbortController();
+    let objectUrl:string|undefined;
+    const frameTime=1/24;
+    const target=()=>Math.max(0,Math.min(1,progress.get()))*Math.max(0,media.duration-frameTime);
+    const tick=(now:number)=>{
+      frame=0;
+      if(disposed||document.hidden||media.readyState<2||!Number.isFinite(media.duration))return;
+      const elapsed=previous?Math.min(64,now-previous):16;
+      previous=now;
+      const destination=target();
+      cursor+=(destination-cursor)*(1-Math.exp(-elapsed/100));
+      if(Math.abs(destination-cursor)<frameTime/2)cursor=destination;
+      // Do not interrupt the decoder with a new seek before the previous frame is ready.
+      if(!media.seeking&&Math.abs(media.currentTime-cursor)>frameTime/2)media.currentTime=cursor;
+      if(Math.abs(destination-cursor)>frameTime/2||Math.abs(destination-media.currentTime)>frameTime/2)frame=requestAnimationFrame(tick);
+    };
+    const wake=()=>{if(!frame&&!disposed&&!document.hidden){previous=0;frame=requestAnimationFrame(tick);}};
+    const loaded=()=>{setReady(true);wake();};
+    const error=()=>{setFailed(true);setReady(false);};
+    const visibility=()=>{
+      if(document.hidden){cancelAnimationFrame(frame);frame=0;}
+      else wake();
+    };
+    setReady(false);
+    setFailed(false);
+    media.addEventListener('loadeddata',loaded);
+    media.addEventListener('canplay',wake);
+    media.addEventListener('seeked',wake);
+    media.addEventListener('error',error);
+    document.addEventListener('visibilitychange',visibility);
+    const unsubscribe=progress.on('change',wake);
+    const source=window.matchMedia('(max-width: 767px)').matches?'/videos/jiuli/hero-scroll-540.mp4':'/videos/jiuli/hero-scroll-1080.mp4';
+    // Some static hosts (including Pages) ignore Range requests. A complete
+    // response becomes a local blob so the browser can still seek every frame.
+    // Hosts supporting ranges keep native progressive video loading.
+    const loadSource=async()=>{
+      try {
+        const response=await fetch(source,{headers:{Range:'bytes=0-0'},signal:request.signal});
+        if(!response.ok)throw new Error(`Video request failed: ${response.status}`);
+        let playableSource=source;
+        if(response.status===206){
+          await response.body?.cancel();
+        }else{
+          const data=await response.blob();
+          if(disposed)return;
+          objectUrl=URL.createObjectURL(data);
+          playableSource=objectUrl;
+        }
+        if(disposed)return;
+        media.src=playableSource;
+        media.load();
+      }catch{
+        if(!disposed)error();
+      }
+    };
+    void loadSource();
+    return()=>{
+      disposed=true;
+      request.abort();
+      cancelAnimationFrame(frame);
+      unsubscribe();
+      media.removeEventListener('loadeddata',loaded);
+      media.removeEventListener('canplay',wake);
+      media.removeEventListener('seeked',wake);
+      media.removeEventListener('error',error);
+      document.removeEventListener('visibilitychange',visibility);
+      media.pause();
+      media.removeAttribute('src');
+      media.load();
+      if(objectUrl)URL.revokeObjectURL(objectUrl);
+    };
+  },[progress,reduced]);
+
+  return <div className="hero-film" aria-hidden="true">
+    {/* Keep a real frame visible before decoding and when motion is disabled. */}
+    {/* eslint-disable-next-line @next/next/no-img-element */}
+    <img className="hero-film-poster" src={reduced||failed?completedFrame:firstFrame} alt="" width={1920} height={1080} fetchPriority="high"/>
+    <video ref={video} className="hero-film-video" data-ready={ready&&!reduced?'':undefined} poster={firstFrame} preload="auto" muted playsInline controls={false} disablePictureInPicture disableRemotePlayback tabIndex={-1}/>
+  </div>;
+}
 
 function HeroLine({progress,children,direction=1}:{progress:MotionValue<number>;children:React.ReactNode;direction?:number}) {
   const reduced=useMotionPreference();
@@ -15,60 +113,26 @@ function HeroLine({progress,children,direction=1}:{progress:MotionValue<number>;
 }
 
 function Chapter({progress, start, end, children, first=false}: {progress:MotionValue<number>;start:number;end:number;children:React.ReactNode;first?:boolean}) {
-  const opacity=useTransform(progress, first?[0,end-.035,end]:end===1?[start,start+.015,1]:[start,start+.025,end-.025,end], first?[1,1,0]:end===1?[0,1,1]:[0,1,1,0]);
+  const reduced=useMotionPreference();
   const y=useTransform(progress,[start,end],[12,-18]);
   // The chapter on screen gets data-active, which (re)plays its letter-by-letter rise.
-  const isOn=(p:number)=>first?p<end-.02:p>=start+.005&&(end===1||p<end-.005);
+  // Let the brief fade finish even if scrolling stops exactly at a chapter boundary.
+  const isOn=(p:number)=>p>=start&&(end===1||p<end);
   const [active,setActive]=useState(()=>isOn(progress.get()));
   useMotionValueEvent(progress,'change',p=>{const on=isOn(p);setActive(current=>current===on?current:on);});
-  return <motion.div className={`hero-chapter ${first?'hero-chapter-first':''}`} style={{opacity,y}} aria-hidden={!first} data-active={active?'':undefined}>{children}</motion.div>;
+  return <motion.div className={`hero-chapter ${first?'hero-chapter-first':''}`} initial={{opacity:first?1:0}} animate={{opacity:active?1:0}} transition={{duration:reduced?0:.22}} style={{y}} aria-hidden={!first} data-active={active?'':undefined}>{children}</motion.div>;
 }
 
 export default function ScrollVideoHero(){
   const container=useRef<HTMLElement>(null);
-  const video=useRef<HTMLVideoElement>(null);
-  const raf=useRef<number>(0);
-  const target=useRef(0);
-  const frame=useRef(0);
-  const progressLabel=useRef<HTMLSpanElement>(null);
-  const reduced=useMotionPreference();
-  const [failed,setFailed]=useState(false);
   const {scrollYProgress}=useScroll({target:container,offset:['start start','end end']});
-  // Keep the text and video on the same measured scroll position across browsers.
   const storyProgress=useMotionValue(0);
   const scaleX=useTransform(storyProgress,[0,1],[0,1]);
-  const sync=()=>{
-    const el=video.current;
-    if(!el || !Number.isFinite(el.duration) || reduced || failed) return;
-    target.current=Math.max(0,Math.min(scrollYProgress.get(),1))*Math.max(0,el.duration-1/24);
-    if(raf.current) return;
-    const step=()=>{
-      const v=video.current;
-      if(!v){raf.current=0;return;}
-      const diff=target.current-frame.current;
-      frame.current=Math.abs(diff)<.018?target.current:frame.current+diff*.26;
-      if(!v.seeking || Math.abs(diff)<.018) v.currentTime=frame.current;
-      if(Math.abs(target.current-frame.current)>.001) raf.current=requestAnimationFrame(step);
-      else {v.currentTime=target.current;raf.current=0;}
-    };
-    raf.current=requestAnimationFrame(step);
-  };
-  useMotionValueEvent(scrollYProgress,'change',(p)=>{storyProgress.set(p);if(progressLabel.current)progressLabel.current.textContent=`${String(Math.round(p*100)).padStart(2,'0')}%`;sync();});
-  useEffect(()=>{
-    const el=video.current;
-    if(!el || reduced) return;
-    el.src=window.matchMedia('(max-width: 767px)').matches?'/videos/hero-scroll-mobile.mp4':'/videos/hero-scroll-optimized.mp4';
-    el.load();
-    return ()=>{cancelAnimationFrame(raf.current);raf.current=0;};
-  },[reduced]);
-  useEffect(()=>()=>{cancelAnimationFrame(raf.current);raf.current=0;},[]);
-  // The media-query CSS owns reduced-motion height, keeping anchor positions
-  // identical before and after hydration. Only video failure changes this class.
-  return <section id="hero" ref={container} className={`hero-scroll ${failed?'hero-static':''}`} aria-label="From idea to reality — scroll to explore">
+  useMotionValueEvent(scrollYProgress,'change',p=>storyProgress.set(p));
+  return <section id="hero" ref={container} className="hero-scroll hero-scroll-film" aria-label="From idea to reality — scroll to explore JIULI">
     <div className="hero-sticky">
       <div className="hero-media">
-      <Image className="hero-poster" src="/images/hero-poster.jpg" alt="Completed Time Service exhibition booth inside a convention hall" fill priority sizes="100vw"/>
-      {!reduced && !failed && <video ref={video} className="hero-video" muted playsInline preload="auto" poster="/images/hero-poster.jpg" aria-hidden="true" onLoadedMetadata={()=>{video.current?.pause();sync();}} onPlay={()=>video.current?.pause()} onError={()=>setFailed(true)}/>}
+        <ScrollFilm progress={storyProgress}/>
       </div>
       <div className="hero-shade"/>
       <div className="hero-topline site-enter" style={enter(.1)}><span>EXHIBITION · EVENT · CONSTRUCTION</span><span>BANGKOK · THAILAND</span></div>
@@ -85,7 +149,7 @@ export default function ScrollVideoHero(){
         <div className="hero-description site-enter" style={enter(.85)}><strong>We build more than structures<br/>We build your success</strong><p>Your partner in exhibition, event and construction<br/>From the first idea to the final detail</p></div>
         <div className="hero-actions site-enter" style={enter(1)}><a className="button button-light" href="#projects">Explore our work <ArrowRight size={18}/></a></div>
       </div>
-      <div className="hero-footer site-enter" style={enter(1.3)}><a href="#services"><ArrowDown size={15}/><span>SCROLL TO EXPLORE</span></a><div className="hero-progress"><span>IDEA</span><div><motion.span style={{scaleX}}/></div><span>REALITY</span><span ref={progressLabel} className="progress-value">00%</span></div><span className="hero-index">01 — 06</span></div>
+      <div className="hero-footer site-enter" style={enter(1.3)}><a href="#services"><ArrowDown size={15}/><span>SCROLL TO EXPLORE</span></a><div className="hero-progress"><span>IDEA</span><div><motion.span style={{scaleX}}/></div><span>REALITY</span></div></div>
     </div>
   </section>;
 }

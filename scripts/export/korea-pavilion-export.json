@@ -1,0 +1,23 @@
+{
+  "id": "korea-pavilion",
+  "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Korean Pavilions/Korea_40Booths_v1/Korea_40Booths_v1.blend",
+  "src": "/models/catalog/korea-pavilion.glb",
+  "bytes": 8312860,
+  "sourceMeshObjects": 2334,
+  "triangles": 1581750,
+  "materials": 44,
+  "bakedProceduralColors": 4,
+  "bounds": {
+    "min": [
+      -16.55,
+      0.0,
+      -12.0175
+    ],
+    "max": [
+      16.55,
+      5.5219,
+      12.0175
+    ]
+  },
+  "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."
+}

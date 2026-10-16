@@ -16,8 +16,6 @@
 /* ---------- Shared: 3D stage ---------- */
 .ac-stage { position: relative; overflow: hidden; isolation: isolate; background: var(--ac-stage-bg); color: #eef3f7; }
 .ac-stage::after { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: radial-gradient(120% 85% at 50% 42%, transparent 58%, #1b222b73 100%); }
-/* Scroll-linked dip (--ac-cut, 0–1, written by the About camera) that hides the camera's cuts between views */
-.ac-stage::before { content: ''; position: absolute; inset: 0; z-index: 2; pointer-events: none; background: var(--ac-stage-bg); opacity: var(--ac-cut, 0); }
 /* cover: the poster crops like the close, full-bleed model framing, so the crossfade does not jump in scale */
 .ac-stage .ac-stage-poster { object-fit: cover; z-index: 0; transition: opacity 1s ease .15s; }
 .ac-stage[data-status=ready] .ac-stage-poster { opacity: 0; }
@@ -87,20 +85,47 @@
 .ac-about-stage-col { position: relative; padding: var(--ac-header) 0 0; }
 .ac-about-stage-pin { position: sticky; top: var(--ac-header); height: calc(100svh - var(--ac-header)); min-height: 440px; }
 .ac-about-stage { height: 100%; border-radius: 0; }
-.ac-about-content { min-width: 0; overflow-x: clip; padding: calc(var(--ac-header) + clamp(52px, 9vh, 108px)) clamp(32px, 5.6vw, 108px) clamp(100px, 14vh, 170px); }
+.ac-about-stage .ac-stage-label { font-size: 11px; letter-spacing: .1em; padding: 10px 15px; }
+.ac-about-stage .ac-stage-view { color: #fff; }
+.ac-stage-heading { position: absolute; z-index: 4; top: 28px; left: 28px; right: 28px; display: flex; justify-content: space-between; gap: 20px; pointer-events: none; color: #cfdae3; font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
+.ac-stage-heading span:first-child { color: #fff; font-weight: 600; }
+.ac-about-scroll-hint { display: flex; align-items: center; gap: 12px; margin-top: 36px; color: var(--ac-muted); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; }
+.ac-about-finale { margin-top: clamp(100px, 13vh, 160px); padding-top: 45px; border-top: 1px solid var(--ac-line); }
+.ac-about-finale > p:not(.eyebrow) { max-width: 45ch; margin-top: 26px; color: var(--ac-muted); font-size: 15px; line-height: 1.8; }
+.ac-about-finale-links { display: flex; align-items: center; flex-wrap: wrap; gap: 24px; margin-top: 36px; }
+.ac-intro-thai { max-width: 37ch; margin-top: 22px; color: var(--ac-muted); font-size: 16px; line-height: 1.85; }
+.ac-about-content { min-width: 0; overflow-x: clip; background: #fff; padding: calc(var(--ac-header) + clamp(52px, 9vh, 108px)) clamp(32px, 5.6vw, 108px) clamp(100px, 14vh, 170px); }
 .ac-about-content .eyebrow { color: #536e85; }
-.ac-about .ac-title { margin: 0; font-family: var(--serif); font-size: clamp(60px, 8vw, 150px); font-weight: 400; line-height: .86; letter-spacing: -.045em; color: var(--ac-ink); }
+.ac-about .ac-title { margin: 0; font-family: var(--serif); font-size: clamp(56px, 5.4vw, 96px); font-weight: 400; line-height: 1.04; letter-spacing: -.045em; color: var(--ac-ink); }
 .ac-about .ac-title em, .ac-about .ac-statement em { color: var(--ac-accent-deep); }
 /* Tight leading, but open a gap where the roman pair meets the italic pair so the "y" of "yours" clears "The" */
 .ac-about .ac-title span.ac-split-line + em.ac-split-line { margin-top: .12em; }
-.ac-lead { max-width: 30ch; margin-top: clamp(34px, 5.5vh, 60px); font-size: clamp(21px, 1.75vw, 29px); font-weight: 400; line-height: 1.32; letter-spacing: -.015em; color: var(--ac-ink); }
+.ac-lead { max-width: 34ch; margin-top: 36px; font-size: clamp(20px, 1.5vw, 25px); font-weight: 400; line-height: 1.5; letter-spacing: -.015em; color: var(--ac-ink); }
 .ac-figure-team { aspect-ratio: 16 / 10.5; margin-top: clamp(64px, 10vh, 120px); }
-.ac-figure-team .ac-figure-media img { object-position: 50% 42%; }
+.ac-figure-team .ac-figure-media img { object-position: 50% 58%; }
 .ac-about-block { margin-top: clamp(100px, 15vh, 180px); }
-.ac-about .ac-statement { margin: 0; font-family: var(--serif); font-size: clamp(54px, 6.6vw, 124px); font-weight: 400; line-height: .98; letter-spacing: -.04em; color: var(--ac-ink); }
+.ac-about .ac-statement { margin: 0; font-family: var(--serif); font-size: clamp(44px, 4.2vw, 74px); font-weight: 400; line-height: 1.06; letter-spacing: -.035em; color: var(--ac-ink); }
 .ac-columns { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(24px, 3.4vw, 60px); margin-top: clamp(40px, 6.5vh, 68px); }
 .ac-columns p { font-size: 14px; line-height: 1.85; color: var(--ac-muted); }
 .ac-columns .ac-body-thai { font-size: 15px; line-height: 1.8; color: var(--ac-ink); }
+.ac-about .ac-columns { grid-template-columns: minmax(0, 1fr); gap: 22px; margin-top: 32px; }
+.ac-about .ac-columns p { margin: 0; max-width: 57ch; font-size: 16px; line-height: 1.85; }
+.ac-about .ac-columns .ac-body-thai { font-size: 17px; }
+/* Reading stays immediate; the camera and photographs carry the scroll motion. */
+.ac-about [data-reveal=up], .ac-about li[data-reveal=line] { transition-duration: .65s, .85s; }
+.ac-about [data-reveal-armed] [data-reveal=up]:not([data-revealed]) { transform: translate3d(0, 28px, 0); }
+.ac-about :is(.ac-statement,.factory-vision h2) { scroll-margin-top: calc(var(--ac-header) + 32px); }
+.ac-about .ac-split-line { text-wrap: auto; }
+.ac-about .text-link { position: relative; }
+.ac-about .text-link::after { content: ''; position: absolute; bottom: -1px; inset-inline: 0; height: 1px; background: currentColor; transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ac-ease-out); }
+.ac-about .text-link:is(:hover,:focus-visible)::after { transform: scaleX(1); }
+.ac-values h3, .ac-step h3 { transition: color .35s, translate .45s var(--ac-ease-out); }
+.ac-about-scroll-hint { width: fit-content; min-height: 44px; }
+.ac-about-scroll-hint svg { transition: translate .3s var(--ac-ease-out); }
+.ac-about-scroll-hint:is(:hover,:focus-visible) svg { translate: 0 4px; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .ac-values li:hover h3, .ac-step:hover h3 { color: var(--ac-accent-deep); translate: 5px 0; }
+}
 .ac-values { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(18px, 2.4vw, 36px); margin: clamp(52px, 8vh, 88px) 0 0; padding: 0; list-style: none; }
 .ac-values li { padding-top: 22px; }
 .ac-value-number { display: block; font-size: 11px; letter-spacing: .1em; color: var(--blue-dark); font-variant-numeric: lining-nums; }
@@ -129,6 +154,10 @@
 .ac-step[data-active] h3 { color: var(--ac-ink); }
 .ac-step-copy [lang=th] { font-size: 14px; line-height: 1.7; color: var(--ac-ink); }
 .ac-step-copy p:last-child { margin-top: 3px; font-size: 13px; line-height: 1.7; color: var(--ac-muted); }
+.ac-about .ac-step { grid-template-columns: 32px minmax(0, 1fr); gap: 12px 16px; }
+.ac-about .ac-step-copy { grid-column: 2; }
+.ac-about .ac-step h3 { font-size: 34px; }
+.ac-about .ac-step-copy p { font-size: 15px; }
 
 @media (max-width: 1280px) and (min-width: 1024px) {
   .ac-values { grid-template-columns: minmax(0, 1fr); gap: 0; }
@@ -137,12 +166,24 @@
 }
 @media (max-width: 1023px) {
   .ac-about { display: block; }
-  .ac-about-stage-col { padding: calc(var(--ac-header) + 10px) 10px 0; }
-  .ac-about-stage-pin { position: relative; top: auto; height: 58svh; min-height: 340px; max-height: 640px; }
-  .ac-about-stage { border-radius: 20px; }
+  .ac-about-stage-col { position: sticky; top: var(--ac-header); z-index: 8; padding: 0; margin-top: var(--ac-header); background: var(--ac-stage-bg); }
+  .ac-about-stage-pin { position: relative; top: auto; height: 30svh; min-height: 200px; max-height: 300px; }
+  .ac-about-stage { border-radius: 0; }
+  .ac-about-stage .ac-stage-heading { top: 16px; left: 18px; right: 18px; font-size: 8px; }
+  .ac-about-stage .ac-stage-heading span:last-child { display: none; }
+  .ac-about-stage .ac-stage-caption { left: 12px; right: 12px; bottom: 10px; gap: 10px; }
+  .ac-about-stage .ac-stage-label { padding: 6px 9px; font-size: 7px; letter-spacing: .08em; }
+  .ac-about-stage .ac-stage-ticks { gap: 3px; }
+  .ac-about-stage .ac-stage-ticks li { width: 5px; }
+  .ac-about-stage .ac-stage-ticks li[data-active] { width: 13px; }
   .ac-about-content { padding: clamp(52px, 9vw, 80px) var(--gutter) clamp(84px, 14vw, 120px); }
-  .ac-about .ac-title { font-size: clamp(54px, 15vw, 100px); }
+  .ac-about .ac-title { font-size: clamp(44px, 12.6vw, 76px); }
   .ac-lead { font-size: clamp(19px, 4.4vw, 25px); }
+  .ac-about :is(.ac-statement,.factory-vision h2) { scroll-margin-top: calc(var(--ac-header) + clamp(200px, 30svh, 300px) + 24px); }
+}
+@media (max-width: 1023px) and (max-height: 560px) and (orientation: landscape) {
+  .ac-about-stage-col { position: relative; top: auto; }
+  .ac-about :is(.ac-statement,.factory-vision h2) { scroll-margin-top: calc(var(--ac-header) + 24px); }
 }
 @media (max-width: 767px) {
   .ac-about .ac-statement { font-size: clamp(42px, 11.4vw, 66px); }
@@ -221,4 +262,50 @@
   [data-reveal], [data-reveal]::before, .ac-figure-media img { opacity: 1 !important; transform: none !important; transition: none !important; }
   .ac-figure-clip { clip-path: none !important; transition: none !important; }
   .ac-credit { opacity: 1 !important; }
+}
+
+/* Contact people: position under the name, and chat links as outline pills in the site's navy/white theme. */
+.ac-person-name { display: grid; gap: 7px; min-width: 0; }
+.ac-person-role { margin: 0; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--ac-muted); }
+.ac-person-chat { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.ac-people .ac-person-chat a { gap: 6px; padding: 5px 10px 5px 12px; border: 1px solid var(--ac-line); border-radius: 999px; font-size: 10.5px; font-weight: 600; letter-spacing: .04em; line-height: 1.4; color: var(--ac-ink);
+  transition: background .3s ease, border-color .3s ease, color .3s ease; }
+.ac-people .ac-person-chat a svg { color: var(--ac-muted); transition: color .3s ease, transform .3s ease; }
+.ac-people .ac-person-chat a:hover { background: var(--ac-ink); border-color: var(--ac-ink); color: #fff; }
+.ac-people .ac-person-chat a:hover svg { color: #fff; transform: translate(1px, -1px); }
+
+/* MARUN recognition and the transport photographs continue the editorial collage. */
+.ac-recognition { padding: 36px 0; border-top: 1px solid var(--ac-line); border-bottom: 1px solid var(--ac-line); }
+.ac-recognition .ac-statement { font-size: clamp(48px, 5.1vw, 94px); }
+.ac-recognition-note { display: inline-flex; margin-top: 26px; padding: 9px 14px; border: 1px solid #bdcdd7; border-radius: 6px; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--ac-accent-deep); }
+.ac-recognition .ac-columns { margin-top: 26px; }
+.ac-recognition-link { margin-top: 22px; }
+.ac-collage .ac-figure:nth-child(5) { grid-column: 1 / 7; grid-row: 4; aspect-ratio: 3 / 4; margin-top: 14%; }
+.ac-collage .ac-figure:nth-child(6) { grid-column: 8 / 13; grid-row: 4; aspect-ratio: 4 / 5; margin-top: 40%; }
+.ac-collage .ac-figure:nth-child(5) img { object-position: 50% 76%; }
+.ac-figure-frame:hover .ac-figure-media img { transform: scale(1.035); }
+.ac-credit { max-width: calc(100% - 28px); }
+.hero-scroll-jiuli .hero-media { inset: 0; background: #152330; }
+.hero-scroll-jiuli .hero-jiuli-stage { position: absolute; inset: 0 0 0 17%; height: 100%; --ac-stage-bg: #152330; }
+.hero-jiuli-stage .ac-stage-poster { object-fit: contain; object-position: center; }
+.hero-jiuli-stage .ac-stage-load { display: none; }
+@media(max-width:1023px) {
+  .ac-collage .ac-figure:nth-child(5) { grid-column: 1 / 7; grid-row: 5; margin-top: 8%; }
+  .ac-collage .ac-figure:nth-child(6) { grid-column: 8 / 13; grid-row: 5; margin-top: 32%; }
+  .hero-scroll-jiuli .hero-jiuli-stage { inset: 0 -25% 0 0; }
+}
+@media(max-width:650px) {
+  .ac-recognition .ac-statement { font-size: clamp(40px, 11vw, 66px); }
+  .ac-collage .ac-credit { font-size: 8px; padding: 6px 8px; }
+  .hero-scroll-jiuli .hero-jiuli-stage { inset: 4% -72% 0 -8%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .ac-figure-frame:hover .ac-figure-media img { transform: none; }
+}
+
+/* The full MARUN architecture remains visible while its model loads. */
+.ac-about-stage .ac-stage-poster { object-fit: contain; }
+
+@media (pointer: coarse) {
+  .ac-contact-link, .ac-people a { min-height: 44px; }
 }

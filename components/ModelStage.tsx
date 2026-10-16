@@ -8,7 +8,7 @@ import type { exhibitionModels } from '@/lib/exhibition-models';
 import { formatPose, parseOrbit, resolvePose, type CameraPose, type ResolvedPose } from '@/lib/camera-pose';
 import { useMotionPreference } from './useMotionPreference';
 
-export type StageModel = (typeof exhibitionModels)[number];
+export type StageModel = (typeof exhibitionModels)[number] & { src?: string };
 export type ModelStageStatus = 'poster' | 'loading' | 'ready' | 'error';
 
 /** Handed to a controller once the model has loaded and its framing has been measured. */
@@ -102,7 +102,7 @@ export default function ModelStage({model, description, controller, initialPose,
     let alive = true;
     const load = () => {
       import('@google/model-viewer')
-        .then(() => { if (alive) { setModuleReady(true); setStatus(current => current === 'poster' ? 'loading' : current); } })
+        .then(module => { module.ModelViewerElement.dracoDecoderLocation = '/models/catalog/draco/'; if (alive) { setModuleReady(true); setStatus(current => current === 'poster' ? 'loading' : current); } })
         .catch(() => { if (alive) setStatus('error'); });
     };
     const idle = 'requestIdleCallback' in window;
@@ -175,7 +175,7 @@ export default function ModelStage({model, description, controller, initialPose,
     {moduleReady && status !== 'error' && createElement('model-viewer', {
       ref: viewer,
       className: 'ac-stage-viewer',
-      src: `/models/${model.id}.glb`,
+      src: model.src ?? `/models/${model.id}.glb`,
       alt: description,
       'aria-hidden': 'true',
       // model-viewer's shadow input layer is always tabbable (tabindex=0), even without

@@ -1,0 +1,23 @@
+{
+  "id": "marun",
+  "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Marun/MARUN_Studio_v3/MARUN_Studio_v3.blend",
+  "src": "/models/catalog/marun.glb",
+  "bytes": 5066164,
+  "sourceMeshObjects": 2077,
+  "triangles": 551106,
+  "materials": 78,
+  "bakedProceduralColors": 58,
+  "bounds": {
+    "min": [
+      -10.0,
+      0.0,
+      -3.0562
+    ],
+    "max": [
+      10.0,
+      5.1688,
+      3.0562
+    ]
+  },
+  "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."
+}

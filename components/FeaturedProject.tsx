@@ -4,16 +4,21 @@ import { useState, type KeyboardEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight } from 'lucide-react';
-import { projects } from '@/lib/content';
+import { featuredArticles, journalCover } from '@/lib/journal';
 import SplitChars from './SplitChars';
 
-// Home-only slide copy, as edited on the Claude Design canvas.
-const featuredCopy = [
-  { lines: ['The Open', 'Pavilion'], category: 'Professional Experience', name: 'TIME SERVICE PROFILES' },
-  { lines: ['Double Decker', 'Exhibition Stand'], category: 'Brand experience', name: 'Wooden Stands' },
-  { lines: ['Hangging', 'Structure'], category: 'Exhibition design', name: 'Systems & Pavilions' },
+const featureLines = [
+  ['The Open', 'Pavilions'],
+  ['Double Decker', 'Exhibition Stands'],
+  ['Hanging', 'Structure'],
 ];
-const featuredProjects = projects.slice(0, 3).map((project, index) => ({ ...project, ...featuredCopy[index], title: featuredCopy[index].lines.join(' ') }));
+const featuredProjects = featuredArticles.map((article, index) => ({
+  ...article,
+  lines: featureLines[index],
+  name: article.projectName ?? article.title,
+  category: 'News',
+  description: article.intro,
+}));
 
 export default function FeaturedProject() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -44,8 +49,8 @@ export default function FeaturedProject() {
             aria-hidden={index !== activeIndex}
           >
             <Image
-              src={`/images/${item.image}.jpg`}
-              alt={index === activeIndex ? `${item.name} — AI-generated concept image` : ''}
+              src={journalCover(item).src}
+              alt={index === activeIndex ? journalCover(item).alt : ''}
               fill
               sizes="100vw"
             />
@@ -60,8 +65,8 @@ export default function FeaturedProject() {
           <SplitChars as="h2" variant="reveal" className="featured-project-title" lines={project.lines} delay={.05} stagger={.024}/>
           <p className="featured-project-description">{project.description}</p>
         </div>
-        <Link className="featured-project-link" href={`/projects/${project.slug}/`} aria-label={`View project: ${project.title}`}>
-          View project <ArrowRight size={17} aria-hidden="true" />
+        <Link className="featured-project-link" href={`/news/#${project.slug}`} aria-label={`See what's news: ${project.title}`}>
+          See What&apos;s News <ArrowRight size={17} aria-hidden="true" />
         </Link>
       </div>
 
@@ -77,7 +82,7 @@ export default function FeaturedProject() {
                 aria-pressed={index === activeIndex}
                 onClick={() => setActiveIndex(index)}
               >
-                {String(index + 1).padStart(2, '0')}
+                <span className="featured-project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
               </button>
             ))}
           </div>

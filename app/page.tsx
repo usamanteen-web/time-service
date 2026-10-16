@@ -1,5 +1,5 @@
+import { companyStructuredData } from '@/lib/seo';
 import type { Metadata } from 'next';
-import { companyName, companyStructuredData, homeDescription, homeTitle, siteUrl } from '@/lib/seo';
 import ScrollVideoHero from '@/components/ScrollVideoHero';
 import Services from '@/components/Services';
 import About from '@/components/About';
@@ -10,15 +10,13 @@ import CTA from '@/components/CTA';
 import SpatialExperience from '@/components/SpatialExperience';
 import KineticBand from '@/components/KineticBand';
 import FeaturedProject from '@/components/FeaturedProject';
+const searchTitle = 'Time Service Designs and Constructions | ออกแบบและรับสร้างบูธครบวงจร';
+const searchDescription = 'รับออกแบบ ผลิต และติดตั้งบูธนิทรรศการ ด้วยโรงงานของเราเอง 4 แห่ง ดูแลตั้งแต่แนวคิดและแบบ 3 มิติ ไปจนถึงการผลิตและติดตั้งหน้างาน';
 export const metadata: Metadata = {
-  title: { absolute: homeTitle },
-  description: homeDescription,
-  alternates: { canonical: `${siteUrl}/` },
-  openGraph: {
-    type: 'website', url: `${siteUrl}/`, siteName: companyName,
-    title: homeTitle, description: homeDescription,
-  },
-  twitter: { card: 'summary', title: homeTitle, description: homeDescription },
+  title: { absolute: searchTitle },
+  description: searchDescription,
+  alternates: { canonical: 'https://www.timeservices.co/' },
+  openGraph: { type: 'website', siteName: 'Time Service Designs and Constructions', title: searchTitle, description: searchDescription, url: 'https://www.timeservices.co/' },
+  twitter: { card: 'summary', title: searchTitle, description: searchDescription },
 };
-
-export default function Home(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(companyStructuredData).replace(/</g, '\\u003c') }}/><ScrollVideoHero/><Services/><FeaturedProject/><SpatialExperience/><Projects/><KineticBand/><About/><Statistics/><Process/><CTA/></>;}
+export default function Home(){return <><script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(companyStructuredData).replace(/</g, '\\u003c') }}/><ScrollVideoHero/><Services/><FeaturedProject/><SpatialExperience/><Projects/><KineticBand/><About/><Statistics/><Process/><CTA className="home-cta"/></>;}

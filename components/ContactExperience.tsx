@@ -1,9 +1,9 @@
 'use client';
 
 import { useCallback, useEffect, useRef, type CSSProperties, type RefObject } from 'react';
-import { ArrowUpRight, Mail, MapPin, MessageCircle, Phone } from 'lucide-react';
+import { ArrowUpRight, Mail, MapPin, Phone } from 'lucide-react';
 import { exhibitionModels } from '@/lib/exhibition-models';
-import { company, people } from '@/lib/content';
+import { chatChannels, company, people } from '@/lib/content';
 import { smoothstep } from '@/lib/camera-pose';
 import ModelStage, { type ModelStageController } from './ModelStage';
 import SplitChars from './SplitChars';
@@ -13,7 +13,6 @@ const jiuli = exhibitionModels[1];
 // Closer and a touch lower than the landscape overview, so the booth fills the tall
 // stage edge to edge (immersive, not a product shot) while the camera sways around it.
 const pose = { ...jiuli.views[0], target: '0m 2.2m 0m', orbit: '31deg 70deg 15m' };
-const mapsHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(company.address)}`;
 const delay = (seconds: number) => ({ '--ac-d': `${seconds}s` }) as CSSProperties;
 const NewTab = () => <span className="sr-only"> (opens in a new tab)</span>;
 
@@ -35,20 +34,29 @@ function useHeldEntrances(root: RefObject<HTMLElement | null>) {
     if (!scope || reduced || typeof scope.getAnimations !== 'function') return;
     const held = new Map<Element, Animation[]>();
     const delayOf = (animation: Animation) => Number(animation.effect?.getTiming().delay ?? 0);
+    const release = (element: Element, order: number) => {
+      observer.unobserve(element);
+      const animations = held.get(element) ?? [];
+      held.delete(element);
+      for (const animation of animations) {
+        animation.currentTime = Math.max(0, delayOf(animation) - (90 + order * 110));
+        animation.play();
+      }
+    };
     const observer = new IntersectionObserver(entries => {
       let order = 0;
-      for (const entry of entries) {
-        if (!entry.isIntersecting) continue;
-        observer.unobserve(entry.target);
-        const animations = held.get(entry.target) ?? [];
-        held.delete(entry.target);
-        for (const animation of animations) {
-          animation.currentTime = Math.max(0, delayOf(animation) - (90 + order * 110));
-          animation.play();
-        }
-        order++;
-      }
+      for (const entry of entries) if (entry.isIntersecting) release(entry.target, order++);
     }, { rootMargin: '0px 0px -6% 0px', threshold: 0 });
+    // A fast scroll can carry an item from below the fold to above the screen
+    // between two frames without it ever intersecting, so also sweep on scroll.
+    let frame = 0;
+    const sweep = () => {
+      frame = 0;
+      let order = 0;
+      held.forEach((_, element) => { if (element.getBoundingClientRect().top < window.innerHeight * .94) release(element, order++); });
+    };
+    const onScroll = () => { if (!frame && held.size) frame = requestAnimationFrame(sweep); };
+    window.addEventListener('scroll', onScroll, { passive: true });
     const fold = window.innerHeight * .94;
     for (const element of scope.querySelectorAll('.ac-enter')) {
       if (element.getBoundingClientRect().top < fold) continue;
@@ -59,6 +67,8 @@ function useHeldEntrances(root: RefObject<HTMLElement | null>) {
       observer.observe(element);
     }
     return () => {
+      cancelAnimationFrame(frame);
+      window.removeEventListener('scroll', onScroll);
       observer.disconnect();
       held.forEach(animations => animations.forEach(animation => animation.play()));
     };
@@ -152,7 +162,7 @@ export default function ContactExperience() {
           <h2 id="ac-find-us" className="ac-contact-label">FIND US</h2>
           <p className="ac-contact-city">Bangkok, Thailand</p>
           <p className="ac-contact-address">{company.address}</p>
-          <a className="ac-contact-link" href={mapsHref} target="_blank" rel="noreferrer">
+          <a className="ac-contact-link" href={company.mapsHref} target="_blank" rel="noreferrer">
             <span className="ac-contact-icon" aria-hidden="true"><MapPin size={14} strokeWidth={1.8}/></span>
             <span>Open in Google Maps</span><NewTab/>
             <ArrowUpRight className="ac-contact-arrow" size={15} strokeWidth={1.8} aria-hidden="true"/>
@@ -167,11 +177,6 @@ export default function ContactExperience() {
             <span><small>CALL OUR TEAM</small><strong>{company.phone}</strong></span>
             <ArrowUpRight className="ac-contact-arrow" size={15} strokeWidth={1.8} aria-hidden="true"/>
           </a>
-          <a className="ac-contact-method" href="https://wa.me/66661124227" target="_blank" rel="noreferrer">
-            <span className="ac-contact-icon" aria-hidden="true"><MessageCircle size={14} strokeWidth={1.8}/></span>
-            <span><small>LET’S CHAT</small><strong>WhatsApp</strong><NewTab/></span>
-            <ArrowUpRight className="ac-contact-arrow" size={15} strokeWidth={1.8} aria-hidden="true"/>
-          </a>
         </section>
       </div>
 
@@ -179,10 +184,18 @@ export default function ContactExperience() {
         <h2 id="ac-team" className="ac-contact-label">LET’S TALK</h2>
         <ul className="ac-people">
           {people.map((person, index) => <li key={person.email} className="ac-enter" style={delay(1.45 + index * .1)}>
-            <h3>{person.name}</h3>
+            <div className="ac-person-name">
+              <h3>{person.name}</h3>
+              <p className="ac-person-role">{person.role}</p>
+            </div>
             <div className="ac-person-links">
               <a href={`tel:${person.tel}`}><span className="ac-contact-icon" aria-hidden="true"><Phone size={12} strokeWidth={1.8}/></span><span>Tel. : {person.phone}</span></a>
               <a href={`mailto:${person.email}`}><span className="ac-contact-icon" aria-hidden="true"><Mail size={12} strokeWidth={1.8}/></span><span>E-mail : {person.email}</span></a>
+              <div className="ac-person-chat" role="group" aria-label={`Chat with ${person.name}`}>
+                {chatChannels.map(channel => <a key={channel.key} href={person.chat[channel.key]} target="_blank" rel="noreferrer">
+                  <span>{channel.label}</span><NewTab/><ArrowUpRight size={12} strokeWidth={1.8} aria-hidden="true"/>
+                </a>)}
+              </div>
             </div>
           </li>)}
         </ul>

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "art-toy",
+    "validGLB": true,
+    "embeddedImages": 96,
+    "meshes": 1,
+    "primitives": 237,
+    "triangles": 1421800,
+    "blenderBounds": {
+      "min": [
+        -6.22246789932251,
+        -5.415566444396973,
+        -1.1920928955078125e-07
+      ],
+      "max": [
+        6.222469329833984,
+        5.415496826171875,
+        3.61906099319458
+      ]
+    },
+    "bytes": 11685048
+  },
+  {
+    "id": "inol",
+    "validGLB": true,
+    "embeddedImages": 47,
+    "meshes": 1,
+    "primitives": 97,
+    "triangles": 653748,
+    "blenderBounds": {
+      "min": [
+        -9.096680641174316,
+        -3.0194530487060547,
+        0.0
+      ],
+      "max": [
+        9.096681594848633,
+        3.019580364227295,
+        5.055120468139648
+      ]
+    },
+    "bytes": 6352392
+  },
+  {
+    "id": "italy-pavilion",
+    "validGLB": true,
+    "embeddedImages": 5,
+    "meshes": 1,
+    "primitives": 26,
+    "triangles": 465952,
+    "blenderBounds": {
+      "min": [
+        -6.3565754890441895,
+        -6.322519302368164,
+        0.0
+      ],
+      "max": [
+        6.35698938369751,
+        6.322564125061035,
+        7.90001106262207
+      ]
+    },
+    "bytes": 1610752
+  },
+  {
+    "id": "korea-pavilion",
+    "validGLB": true,
+    "embeddedImages": 14,
+    "meshes": 1,
+    "primitives": 44,
+    "triangles": 1581750,
+    "blenderBounds": {
+      "min": [
+        -16.55000114440918,
+        -12.017711639404297,
+        0.0
+      ],
+      "max": [
+        16.549999237060547,
+        12.017499923706055,
+        5.521862030029297
+      ]
+    },
+    "bytes": 8312860
+  },
+  {
+    "id": "marun",
+    "validGLB": true,
+    "embeddedImages": 64,
+    "meshes": 1,
+    "primitives": 78,
+    "triangles": 551106,
+    "blenderBounds": {
+      "min": [
+        -10.0,
+        -3.0562851428985596,
+        0.0
+      ],
+      "max": [
+        10.0,
+        3.0561699867248535,
+        5.168811321258545
+      ]
+    },
+    "bytes": 5066164
+  }
+]

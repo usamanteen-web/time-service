@@ -26,6 +26,7 @@ export default function Footer() {
           <div className="footer-people">
             {people.map(person => <p key={person.email}>
               <strong>{person.name}</strong>
+              <span className="footer-role">{person.role}</span>
               <a href={`tel:${person.tel}`}>Tel. : {person.phone}</a>
               <a href={`mailto:${person.email}`}>E-mail : {person.email}</a>
             </p>)}

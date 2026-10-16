@@ -5,11 +5,13 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ArrowUpRight, Menu, Phone, Search, X } from 'lucide-react';
-import { company, navigation, projects, services } from '@/lib/content';
+import { company, displayProject, navigation, projectPatterns, projects, services } from '@/lib/content';
 import { articles } from '@/lib/journal';
 
+// The six patterns first (as named on the site), then any other concept; old concept titles stay searchable.
+const projectItems = [...projectPatterns, ...projects.filter(p => !projectPatterns.some(x => x.slug === p.slug))].map(project => ({ shown: displayProject(project), original: projects.find(p => p.slug === project.slug)?.title ?? '' }));
 const searchItems = [
-  ...projects.map(project => ({ title: project.title, category: 'Project', href: `/projects/${project.slug}/`, text: `${project.category} ${project.description}` })),
+  ...projectItems.map(({ shown, original }) => ({ title: shown.title, category: 'Project', href: `/projects/${shown.slug}/`, text: `${shown.category} ${original} ${shown.description}` })),
   ...services.map(service => ({ title: service.title, category: 'Service', href: `/services/#${service.id}`, text: `${service.thai} ${service.description}` })),
   ...articles.map(article => ({ title: article.title, category: 'Journal', href: `/news/${article.slug}/`, text: `${article.category} ${article.intro}` })),
   ...navigation.filter(item => item.href !== '/').map(item => ({ title: item.label, category: 'Page', href: item.href, text: '' })),
@@ -19,7 +21,7 @@ export function Logo() {
   return (
     <span className="brand">
       <Image className="brand-logo" src="/images/company-logo.png" alt="" width={70} height={70} preload />
-      <span className="brand-type">TIME SERVICE<span>DESIGNS & CONSTRUCTIONS</span></span>
+      <span className="brand-type">TI<span className="brand-letter-accent">M</span>E SERVICE<span>DESIGNS & CONSTRUCTIONS</span></span>
     </span>
   );
 }
@@ -36,7 +38,7 @@ export default function Header() {
   const tokens = query.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
   const results = tokens.length
     ? searchItems.filter(item => tokens.every(token => `${item.title} ${item.category} ${item.text}`.toLocaleLowerCase().includes(token)))
-    : [...searchItems.slice(0, 3), ...searchItems.slice(projects.length, projects.length + 3)];
+    : [...searchItems.slice(0, 3), ...searchItems.slice(projectItems.length, projectItems.length + 3)];
 
   useEffect(() => {
     if (previousPath.current === path) return;

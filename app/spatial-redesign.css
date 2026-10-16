@@ -137,6 +137,8 @@
 }
 .spatial-redesign-stage .model-caption > div > span { font-size: 9px; color: #afc3d3; letter-spacing: .09em; }
 .spatial-redesign-stage .model-caption h3 { font-family: var(--serif); font-size: 25px; line-height: 1.15; font-weight: 400; color: #fff; margin: 4px 0 0; }
+.spatial-redesign-stage .model-caption-title-compact { display: none; }
+.spatial-redesign-stage .model-stage-footer { display: contents; }
 .spatial-redesign-stage .model-caption p { font-size: 11px; line-height: 1.6; color: #b6c7d4; margin-top: 5px; }
 .spatial-redesign-stage .model-dimension { align-self: center; flex-shrink: 0; color: #edf3f7; font-size: 17px; }
 .spatial-redesign-stage .model-dimension small { display: block; font-size: 7px; color: #afc3d3; }
@@ -213,7 +215,7 @@
   .spatial-redesign .spatial-chapter { max-width: none; }
   .spatial-redesign .spatial-chapter h3 { font-size: 12px; }
   .spatial-redesign .spatial-chapter p { max-width: 100%; font-size: 12px; }
-  .spatial-stage.spatial-redesign-stage { --model-top-space: 183px; --model-bottom-space: 230px; height: 700px; min-height: 700px; border-radius: 20px; }
+  .spatial-stage.spatial-redesign-stage { --model-top-space: 183px; --model-bottom-space: 170px; height: 700px; min-height: 700px; border-radius: 20px; }
   .spatial-redesign-stage .spatial-stage-top { top: 15px; left: 14px; right: 14px; gap: 7px; }
   .spatial-redesign-stage .spatial-stage-top .glass-chip { min-height: 40px; padding: 9px 10px; font-size: 10px; gap: 5px; }
   .spatial-redesign-stage .spatial-stage-top .glass-chip svg { width: 13px; }
@@ -233,7 +235,7 @@
   .spatial-redesign-stage .model-toolbar > div { margin-left: auto; gap: 8px; }
   .spatial-redesign .spatial-bottom { font-size: 9px; line-height: 1.7; }
   .model-dialog.spatial-redesign-dialog { width: 100vw; height: 100dvh; max-width: none; margin: 0; border: 0; border-radius: 0; }
-  .spatial-redesign-dialog .spatial-stage.spatial-redesign-stage.model-expanded { --model-top-space: 183px; --model-bottom-space: 230px; border-radius: 0; }
+  .spatial-redesign-dialog .spatial-stage.spatial-redesign-stage.model-expanded { --model-top-space: 183px; --model-bottom-space: 170px; border-radius: 0; }
   .spatial-redesign .spatial-stage.model-inline-placeholder { height: 700px; min-height: 700px; }
 }
 @media (max-width: 374px) {
@@ -249,6 +251,23 @@
   .spatial-redesign-dialog .model-caption > div > span, .spatial-redesign-dialog .model-caption p, .spatial-redesign-dialog .model-dimension small { display: none; }
   .spatial-redesign-dialog .model-caption h3 { margin: 0; font-size: 21px; }
   .spatial-redesign-dialog .model-toolbar { bottom: 10px; }
+}
+@media (max-width: 767px) {
+  /* Normal flow keeps captions and controls apart even when phone text wraps. */
+  .spatial-stage.spatial-redesign-stage:not(.model-inline-placeholder) { padding: var(--model-top-space) 0 16px; }
+  .spatial-stage.spatial-redesign-stage .model-viewport { position: relative; inset: auto; flex: 1 1 0; min-height: 0; }
+  .spatial-stage.spatial-redesign-stage .model-stage-footer { position: relative; display: grid; gap: 12px; flex: none; margin-top: 12px; padding: 0 12px; }
+  .spatial-stage.spatial-redesign-stage .model-caption { position: static; inset: auto; display: block; min-height: 0; padding: 10px 0 0; background: transparent; }
+  .spatial-stage.spatial-redesign-stage .model-caption > div > span { display: block; font-size: 11px; line-height: 1.4; letter-spacing: .06em; }
+  .spatial-stage.spatial-redesign-stage .model-caption h3 { margin-top: 3px; font-size: 18px; line-height: 1.25; }
+  .spatial-stage.spatial-redesign-stage .model-toolbar { position: static; inset: auto; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; }
+  .spatial-stage.spatial-redesign-stage .model-toolbar > span { min-width: 0; max-width: none; font-size: 11px; line-height: 1.4; }
+  .spatial-stage.spatial-redesign-stage .model-toolbar > div { margin: 0; }
+  .spatial-redesign-stage .model-caption-title-compact { display: inline; }
+  .spatial-redesign-stage .model-caption-title-full,
+  .spatial-redesign-stage .model-caption-desktop-context,
+  .spatial-stage.spatial-redesign-stage .model-caption p,
+  .spatial-stage.spatial-redesign-stage .model-caption .model-dimension { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
   .spatial-experience.spatial-redesign { height: auto; }

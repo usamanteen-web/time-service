@@ -1,0 +1,68 @@
+/* Projects page: the six patterns (components/ProjectGallery.tsx). pp- prefix; the cards reuse the home bento styles. */
+
+.pp-scroll { position: relative; background: var(--paper); }
+.pp-stage { padding: 12px var(--gutter) 40px; }
+.pp-intro-visual { position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 18px; margin-bottom: 28px; }
+.pp-intro-visual img { object-fit: cover; }
+.project-intro-cover { display: none; }
+.project-card .project-cover { position: absolute; inset: 0; overflow: hidden; }
+.pp-note { padding: 0 var(--gutter) 70px; background: var(--paper); }
+.pp-note .concept-disclosure { margin-top: 0; }
+
+/* Large screens: pinned; the first card zooms out of full screen and the rest arrive (driven from ProjectGallery). */
+@media (min-width: 1024px) and (min-height: 700px) and (prefers-reduced-motion: no-preference) {
+  .pp-scroll { height: calc(100svh - 90px + 130svh); }
+  .pp-stage { position: sticky; top: 90px; height: calc(100svh - 90px); padding: 24px var(--gutter) 28px; overflow: hidden; }
+  .pp-intro-visual { display: none; }
+  .pp-grid.project-grid.project-bento { grid-auto-rows: calc((100svh - 90px - 52px - 36px) / 3); }
+  .pp-grid > .bento-card:first-child { z-index: 2; }
+  .pp-grid > .bento-card { will-change: translate, scale; }
+  /* Each photo settles into its card as the card lands (--k: 0 → 1). */
+  .pp-scroll[data-pinned] .project-image img { scale: calc(1.18 - .18 * var(--k, 1)); }
+  .pp-scroll[data-pinned] .project-intro-cover { display: block; position: absolute; inset: 0; z-index: 2; opacity: clamp(0, calc(1 - var(--k, 0) * 1.8), 1); pointer-events: none; }
+  /* Keep the layout hidden for the moment before the script places the first card (with a failsafe). */
+  .pp-scroll:not([data-pinned]):not([data-static]) .pp-grid { visibility: hidden; animation: pp-failsafe 0s linear 2.5s forwards; }
+}
+@keyframes pp-failsafe { to { visibility: visible; } }
+
+/* Other screens: each card opens and its photo drifts as it passes through the viewport. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (max-width: 1023px), (prefers-reduced-motion: no-preference) and (max-height: 699px) {
+    .pp-grid > .bento-card { view-timeline: --pp-card block; animation: pp-open linear both; animation-timeline: view(); animation-range: entry 0% entry 90%; }
+    /* The drift follows the card's timeline: the photo's own nearest scroller is its (non-scrolling) frame. */
+    .pp-grid .project-image .project-cover > img { scale: 1.12; animation: pp-drift linear both; animation-timeline: --pp-card; animation-range: cover 0% cover 100%; }
+  }
+}
+@keyframes pp-open { from { clip-path: inset(14% 8% 0 8% round 28px); opacity: .25; } to { clip-path: inset(0 0 0 0 round 18px); opacity: 1; } }
+@keyframes pp-drift { from { translate: 0 -5%; } to { translate: 0 5%; } }
+
+/* Focus ring as an overlay: the cards' clip-path would cut away a normal outline. */
+.pp-grid > .bento-card:focus-visible { outline: none; }
+.pp-grid > .bento-card:focus-visible::after { content: ''; position: absolute; inset: 0; z-index: 5; border-radius: inherit; box-shadow: inset 0 0 0 3px #fff, inset 0 0 0 5px #708fac; pointer-events: none; }
+
+@media (max-width: 767px) {
+  .pp-stage { padding: 4px var(--gutter) 30px; }
+  .pp-intro-visual { margin-inline: calc(var(--gutter) * -1); border: 0; border-radius: 0; }
+  .pp-note { padding-bottom: 50px; }
+  /* Give the archive title its full card width: TIME SERVICE / PROFILES.
+     The arrow sits beside the subtitle instead of stealing title space. */
+  .profile-card.bento-card .project-meta { display: block; }
+  .profile-card.bento-card .project-meta .ac-split-line { white-space: nowrap; }
+  .profile-card.bento-card .project-meta .ac-split-word-wrap:last-child { display: block; }
+  .profile-card.bento-card .project-meta p { padding-right: 44px; }
+  .profile-card.bento-card .project-meta .project-arrow { position: absolute; right: 0; bottom: 0; }
+}
+
+/* A single active preview changes gently through three images, including when
+   the collection title/link is reached with a keyboard. */
+.project-card .project-image .project-preview-frame { position: absolute; inset: 0; z-index: 1; opacity: 0; pointer-events: none; overflow: hidden; transition: opacity .6s ease; }
+.project-card .project-image .project-preview-frame[data-active] { opacity: 1; }
+.project-card .project-image .project-preview-frame img { object-fit: cover; transform: scale(1.065); transition: transform 2.5s cubic-bezier(.2,.65,.3,1); }
+.project-card .project-image .project-preview-frame[data-active] img { transform: scale(1.015); }
+.project-card.bento-card .project-image::before { z-index: 3; }
+.project-card .project-image .project-tag { z-index: 4; }
+.project-card:focus-visible { outline: 2px solid var(--navy); outline-offset: 5px; }
+@media (prefers-reduced-motion: reduce) {
+  .project-card .project-image .project-preview-frame,
+  .project-card .project-image .project-preview-frame img { transition: none; transform: none; }
+}

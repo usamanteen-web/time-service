@@ -1,0 +1,1407 @@
+00:01.069  blend            | Read blend: "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Korean Pavilions/Korea_40Booths_v1/Korea_40Booths_v1.blend"
+/Users/macbook/Desktop/Codex of Teen/time-service-web/scripts/export/export_catalog.py:98: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes: continue
+BlenderMCP addon registered
+BAKE korea-pavilion JOINERY | walnut-look laminate
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE korea-pavilion KF | oak veneer
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE korea-pavilion LOGO | Korea cobalt acrylic
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE korea-pavilion LOGO | Korea red acrylic
+/Users/macbook/Desktop/Codex of Teen/time-service-web/scripts/export/export_catalog.py:147: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:continue
+Info: Baking map saved to internal image, save it externally or pack it
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/5.2/scripts/addons_core/io_scene_gltf2/libbf_intern_meshopt_bridge.dylib
+05:04:04 | INFO: Starting glTF 2.0 export
+05:04:05 | INFO: Extracting primitive: B1 | floor.001
+05:04:06 | INFO: Primitives created: 44
+05:04:07 | INFO: Draco encoder: Encoding mesh korea-pavilion.
+Blender 5.2.1 LTS (hash 9e2066aef7ef built 2026-08-25 01:35:57)
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 864 vertices, 1296 indices, raw size: 37152, encoded size: 2861, compression ratio: 12.99
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 141552 vertices, 253656 indices, raw size: 6676704, encoded size: 329161, compression ratio: 20.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 58016 vertices, 300144 indices, raw size: 2920928, encoded size: 198885, compression ratio: 14.69
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 551182 vertices, 1127256 indices, raw size: 26556304, encoded size: 1709194, compression ratio: 15.54
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 53008 vertices, 235800 indices, raw size: 2591920, encoded size: 170400, compression ratio: 15.21
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 176822 vertices, 472464 indices, raw size: 8899176, encoded size: 580155, compression ratio: 15.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 42840 vertices, 63000 indices, raw size: 1839600, encoded size: 150599, compression ratio: 12.22
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 151220 vertices, 599340 indices, raw size: 8316240, encoded size: 475248, compression ratio: 17.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 44 vertices, 66 indices, raw size: 1892, encoded size: 434, compression ratio: 4.36
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 50768 vertices, 77604 indices, raw size: 2185928, encoded size: 128258, compression ratio: 17.04
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 11760 vertices, 29400 indices, raw size: 529200, encoded size: 24986, compression ratio: 21.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 51944 vertices, 127548 indices, raw size: 2332856, encoded size: 162122, compression ratio: 14.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 140 vertices, 210 indices, raw size: 6020, encoded size: 911, compression ratio: 6.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 90368 vertices, 188784 indices, raw size: 4369856, encoded size: 272973, compression ratio: 16.01
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 117712 vertices, 160344 indices, raw size: 5349856, encoded size: 405540, compression ratio: 13.19
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 171380 vertices, 271032 indices, raw size: 7939328, encoded size: 493696, compression ratio: 16.08
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 32620 vertices, 50016 indices, raw size: 1404832, encoded size: 97787, compression ratio: 14.37
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 221712 vertices, 328026 indices, raw size: 10180584, encoded size: 695252, compression ratio: 14.64
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 44014 vertices, 66300 indices, raw size: 1893160, encoded size: 133847, compression ratio: 14.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 51408 vertices, 77112 indices, raw size: 2210544, encoded size: 93622, compression ratio: 23.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 100 vertices, 150 indices, raw size: 4300, encoded size: 699, compression ratio: 6.15
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 56076 vertices, 86526 indices, raw size: 2416092, encoded size: 163391, compression ratio: 14.79
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 43620 vertices, 69486 indices, raw size: 1883772, encoded size: 120121, compression ratio: 15.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 22878 vertices, 35808 indices, raw size: 986736, encoded size: 64830, compression ratio: 15.22
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 96 vertices, 144 indices, raw size: 4128, encoded size: 688, compression ratio: 05:04:08 | INFO: Finished glTF 2.0 export in 3.1445250511169434 s
+
+EXPORTED {"id": "korea-pavilion", "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Korean Pavilions/Korea_40Booths_v1/Korea_40Booths_v1.blend", "src": "/models/catalog/korea-pavilion.glb", "bytes": 8312860, "sourceMeshObjects": 2334, "triangles": 1581750, "materials": 44, "bakedProceduralColors": 4, "bounds": {"min": [-16.55, 0.0, -12.0175], "max": [16.55, 5.5219, 12.0175]}, "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."}
+00:29.315  blend            | Read blend: "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Marun/MARUN_Studio_v3/MARUN_Studio_v3.blend"
+/Users/macbook/Desktop/Codex of Teen/time-service-web/scripts/export/export_catalog.py:98: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes: continue
+BAKE marun Aluminium
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Base carpet
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Blue carpet
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | MARUN blue brochure stock
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | artificial foliage variation 0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | artificial foliage variation 1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | artificial foliage variation 2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | artificial foliage variation 3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | black powder coated cross brace
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | blue reflective coffee glass 18mm
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | brushed stainless hardware
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | cabinet reveal shadow
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | coffee surface
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | dark coir mulch
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | fine foliage midrib
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | natural oak leg clear finish
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | porcelain cup satin glaze
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | rubber foot pad
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | uncoated warm white paper
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | warm white upholstery piping
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | white HPL satin
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | white polypropylene shell
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN FURN | white tailored sofa upholstery
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN Graphics | brand blue satin acrylic
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN Graphics | brand red satin acrylic
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN Graphics | navy enamel
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN Graphics | satin aluminium return
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN Graphics | white acrylic
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | black caster polyurethane
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | charcoal mechanism and rear spine edge
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | graphite cable grommet
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | grey fabric perimeter binding
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | grey upholstered waterfall seat
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | grey woven mesh yarn
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | light grey armrest soft touch
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | meeting table white satin HPL
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | mesh alternate fine warp
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | polished chrome gas lift
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | satin stainless fastener
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | table compact laminate edge
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun MARUN V2 OFFICE | warm white moulded structural nylon
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Navy lacquer
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Pier leaf 0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Pier leaf 1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Pier leaf 2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Pier leaf 3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Pot porcelain
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun REAR | source corporate wall print
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Reveal dark
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Rubber
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Soil
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Stainless
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Steel charcoal
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Storage carton tape
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun Storage kraft carton
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun TV | sapphire LCD
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun WALL | navy painted MDF satin
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE marun White HPL
+/Users/macbook/Desktop/Codex of Teen/time-service-web/scripts/export/export_catalog.py:147: DeprecationWarning: 'Material.use_nodes' is expected to be removed in Blender 6.0
+  if not m.use_nodes:continue
+Info: Baking map saved to internal image, save it externally or pack it
+05:04:26 | INFO: Starting glTF 2.0 export
+05:04:26 | INFO: Extracting primitive: Cube.120
+05:04:27 | INFO: Primitives created: 78
+05:04:27 | INFO: Draco encoder: Encoding mesh marun.
+6.00
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 40 vertices, 60 indices, raw size: 1720, encoded size: 424, compression ratio: 4.06
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4320 vertices, 6480 indices, raw size: 185760, encoded size: 10381, compression ratio: 17.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 48 vertices, 72 indices, raw size: 2064, encoded size: 476, compression ratio: 4.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 26552 vertices, 41700 indices, raw size: 1145480, encoded size: 67894, compression ratio: 16.87
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10152 vertices, 15228 indices, raw size: 436536, encoded size: 40873, compression ratio: 10.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 32 vertices, 48 indices, raw size: 1376, encoded size: 400, compression ratio: 3.44
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 384 vertices, 576 indices, raw size: 16512, encoded size: 2184, compression ratio: 7.56
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10572 vertices, 31992 indices, raw size: 476944, encoded size: 75705, compression ratio: 6.30
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5002 vertices, 15336 indices, raw size: 227472, encoded size: 34080, compression ratio: 6.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 255, compression ratio: 1.35
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 221, compression ratio: 0.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3888 vertices, 5832 indices, raw size: 167184, encoded size: 9439, compression ratio: 17.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3264 vertices, 5568 indices, raw size: 141696, encoded size: 9728, compression ratio: 14.57
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 228, compression ratio: 0.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1431, compression ratio: 6.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 227, compression ratio: 0.76
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 228, compression ratio: 0.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 320 vertices, 480 indices, raw size: 13760, encoded size: 1896, compression ratio: 7.26
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 218, compression ratio: 0.79
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 28446 vertices, 43884 indices, raw size: 1224648, encoded size: 173593, compression ratio: 7.05
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1454, compression ratio: 6.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3582 vertices, 5412 indices, raw size: 154104, encoded size: 19359, compression ratio: 7.96
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6096 vertices, 9144 indices, raw size: 262128, encoded size: 33350, compression ratio: 7.86
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 16612 vertices, 25260 indices, raw size: 715000, encoded size: 98438, compression ratio: 7.26
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 12192 vertices, 28512 indices, raw size: 544704, encoded size: 75703, compression ratio: 7.20
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7435 vertices, 13854 indices, raw size: 314708, encoded size: 61372, compression ratio: 5.13
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 108 vertices, 168 indices, raw size: 4656, encoded size: 1247, compression ratio: 3.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 18982 vertices, 29928 indices, raw size: 819136, encoded size: 127165, compression ratio: 6.44
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4198 vertices, 6900 indices, raw size: 181720, encoded size: 20906, compression ratio: 8.69
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2448 vertices, 6624 indices, raw size: 111168, encoded size: 14013, compression ratio: 7.93
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2160 vertices, 5472 indices, raw size: 97344, encoded size: 11990, compression ratio: 8.12
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10467 vertices, 31680 indices, raw size: 482040, encoded size: 76701, compression ratio: 6.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1680 vertices, 4032 indices, raw size: 75264, encoded size: 15750, compression ratio: 4.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1680 vertices, 4032 indices, raw size: 75264, encoded size: 15743, compression ratio: 4.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1680 vertices, 4032 indices, raw size: 75264, encoded size: 15682, compression ratio: 4.80
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1944 vertices, 2916 indices, raw size: 83592, encoded size: 8134, compression ratio: 10.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 196 vertices, 324 indices, raw size: 8488, encoded size: 1424, compression ratio: 5.96
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8602 vertices, 26778 indices, raw size: 384676, encoded size: 50973, compression ratio: 7.55
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 200 vertices, 324 indices, raw size: 8648, encoded size: 1845, compression ratio: 4.69
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 586 vertices, 1248 indices, raw size: 25936, encoded size: 5689, compression ratio: 4.56
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8760 vertices, 19236 indices, raw size: 388872, encoded size: 42772, compression ratio: 9.09
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 9918 vertices, 14904 indices, raw size: 426528, encoded size: 38939, compression ratio: 10.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1512 vertices, 2268 indices, raw size: 65016, encoded size: 3937, compression ratio: 16.51
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 16832 vertices, 31104 indices, raw size: 728768, encoded size: 76191, compression ratio: 9.57
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6904 vertices, 19704 indices, raw size: 314288, encoded size: 41721, compression ratio: 7.53
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 34020 vertices, 161280 indices, raw size: 1683360, encoded size: 116752, compression ratio: 14.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 25820 vertices, 60312 indices, raw size: 1130224, encoded size: 150394, compression ratio: 7.52
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 648 vertices, 972 indices, raw size: 27864, encoded size: 3451, compression ratio: 8.07
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7340 vertices, 28812 indices, raw size: 346104, encoded size: 46039, compression ratio: 7.52
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 448 vertices, 2592 indices, raw size: 23104, encoded size: 3173, compression ratio: 7.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1344 vertices, 7992 indices, raw size: 69744, encoded size: 5711, compression ratio: 12.21
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5040 vertices, 7560 indices, raw size: 216720, encoded size: 19714, compression ratio: 10.99
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1512 vertices, 2268 indices, raw size: 65016, encoded size: 6448, compression ratio: 10.08
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2328 vertices, 5340 indices, raw size: 103800, encoded size: 19748, compression ratio: 5.26
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3336 vertices, 7656 indices, raw size: 145392, encoded size: 21626, compression ratio: 6.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4236 vertices, 18768 indices, raw size: 206976, encoded size: 24457, compression ratio: 8.46
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 336 vertices, 1152 indices, raw size: 15744, encoded size: 2305, compression ratio: 6.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5793 vertices, 17472 indices, raw size: 266664, encoded size: 40998, compression ratio: 6.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5837 vertices, 17472 indices, raw size: 268424, encoded size: 40703, compression ratio: 6.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6155 vertices, 18720 indices, raw size: 283640, encoded size: 42625, compression ratio: 6.65
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4903 vertices, 14976 indices, raw size: 226072, encoded size: 39891, compression ratio: 5.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7570 vertices, 20790 indices, raw size: 344140, encoded size: 48950, compression ratio: 7.03
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8352 vertices, 22536 indices, raw size: 373392, encoded size: 55713, compression ratio: 6.70
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 18696 vertices, 56868 indices, raw size: 858216, encoded size: 123803, compression ratio: 6.93
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5768 vertices, 16296 indices, raw size: 260992, encoded size: 36375, compression ratio: 7.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 42180 vertices, 161460 indices, raw size: 2008200, encoded size: 269409, compression ratio: 7.45
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 792 vertices, 2232 indices, raw size: 35664, encoded size: 5156, compression ratio: 6.92
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6768 vertices, 36216 indices, raw size: 343152, encoded size: 44178, compression ratio: 7.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 28998 vertices, 120780 indices, raw size: 1401480, encoded size: 156780, compression ratio: 8.94
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 38532 vertices, 101340 indices, raw size: 1535640, encoded size: 333064, compression ratio: 4.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 35442 vertices, 95400 indices, raw size: 1380000, encoded size: 295073, compression ratio: 4.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3912 vertices, 13536 indices, raw size: 183552, encoded size: 22592, compression ratio: 8.12
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 160 vertices, 564 indices, raw size: 7528, encoded size: 1660, compression ratio: 4.53
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 160 vertices, 564 indices, raw size: 7528, encoded size: 1613, compression ratio: 4.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 272 vertices, 744 indices, raw size: 12208, encoded size: 1903, compression ratio: 6.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2360 vertices, 3564 indices, raw size: 101528, encoded size: 11816, compression ratio: 8.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3240 vertices, 4860 indices, raw size: 139320, encoded size: 15176, compression ratio: 9.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 218, compression ratio: 0.79
+DracoEncoder | Preserve triangle order: no
+DracoEncode05:04:28 | INFO: Finished glTF 2.0 export in 1.4145121574401855 s
+
+EXPORTED {"id": "marun", "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Marun/MARUN_Studio_v3/MARUN_Studio_v3.blend", "src": "/models/catalog/marun.glb", "bytes": 5066164, "sourceMeshObjects": 2077, "triangles": 551106, "materials": 78, "bakedProceduralColors": 58, "bounds": {"min": [-10.0, 0.0, -3.0562], "max": [10.0, 5.1688, 3.0562]}, "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."}
+00:49.511  blend            | Read blend: "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /INOL Group/INOL_Studio_v1/INOL_Studio_v1.blend"
+BAKE inol BOT | cream plum breccia stone
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | dark satin stone
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | deep jade breccia stone
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | forest green and cream breccia
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | honed ivory travertine
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | honed warm beige limestone
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | ivory gold-veined sintered stone
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | olive bark silver brown fissures
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | olive lanceolate leaf 0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | olive lanceolate leaf 1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | olive lanceolate leaf 2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | olive lanceolate leaf 3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | warm oak wood-look planter finish
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol BOT | white grey-veined sintered stone
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | Tian Chuan Jin black and gold reference finish
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 00
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 01
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 02
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 03
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 04
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 05
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 06
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol FURN | sintered stone sample variation 07
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 00
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 01
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 02
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 03
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 04
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 05
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 06
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 07
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 08
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol INOL GRAPHICS | physical circular stone swatch 09
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol NICHE | Nero oro
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol NICHE | Pink onyx
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol NICHE | cream gold breccia
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 01 | Breccia Rosso
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 02 | Carrara fine grey
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 03 | Calacatta gold
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 04 | Sand travertine
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 05 | Travertino ivory
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 06 | Graphite quartzite
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE inol STONE 07 | Copper rosso
+Info: Baking map saved to internal image, save it externally or pack it
+05:04:49 | INFO: Starting glTF 2.0 export
+05:04:49 | INFO: Extracting primitive: Cube.063
+05:04:50 | INFO: Primitives created: 97
+05:04:50 | INFO: Draco encoder: Encoding mesh inol.
+r | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 252, compression ratio: 1.37
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3456 vertices, 5184 indices, raw size: 148608, encoded size: 9284, compression ratio: 16.01
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 218, compression ratio: 0.79
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 270, compression ratio: 1.27
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 58597 vertices, 144948 indices, raw size: 2569456, encoded size: 378242, compression ratio: 6.79
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 26730 vertices, 68736 indices, raw size: 1179752, encoded size: 182021, compression ratio: 6.48
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4472 vertices, 12600 indices, raw size: 199960, encoded size: 27481, compression ratio: 7.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 13688 vertices, 37956 indices, raw size: 607712, encoded size: 69417, compression ratio: 8.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1286 vertices, 5040 indices, raw size: 60880, encoded size: 6752, compression ratio: 9.02
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 914 vertices, 3432 indices, raw size: 42664, encoded size: 4768, compression ratio: 8.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 208, compression ratio: 0.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 214, compression ratio: 0.80
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 218, compression ratio: 0.79
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 213, compression ratio: 0.81
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 213, compression ratio: 0.81
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 28 vertices, 42 indices, raw size: 1204, encoded size: 365, compression ratio: 3.30
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1944 vertices, 2916 indices, raw size: 83592, encoded size: 10440, compression ratio: 8.01
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1944 vertices, 2916 indices, raw size: 83592, encoded size: 10860, compression ratio: 7.70
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1559, compression ratio: 5.96
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 69475 vertices, 156876 indices, raw size: 3376664, encoded size: 347587, compression ratio: 9.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10257 vertices, 17040 indices, raw size: 419680, encoded size: 62020, compression ratio: 6.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 190 vertices, 324 indices, raw size: 7048, encoded size: 1553, compression ratio: 4.54
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 428 vertices, 648 indices, raw size: 17656, encoded size: 3613, compression ratio: 4.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 54510 vertices, 149820 indices, raw size: 2437800, encoded size: 298275, compression ratio: 8.17
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 850 vertices, 1296 indices, raw size: 35032, encoded size: 7362, compression ratio: 4.76
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 420 vertices, 648 indices, raw size: 17096, encoded size: 3573, compression ratio: 4.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 424 vertices, 648 indices, raw size: 17576, encoded size: 3593, compression ratio: 4.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 432 vertices, 648 indices, raw size: 18416, encoded size: 3612, compression ratio: 5.10
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 60536 vertices, 175470 indices, raw size: 2699820, encoded size: 339743, compression ratio: 7.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 430 vertices, 648 indices, raw size: 18016, encoded size: 3612, compression ratio: 4.99
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 426 vertices, 648 indices, raw size: 17616, encoded size: 3557, compression ratio: 4.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 428 vertices, 648 indices, raw size: 17936, encoded size: 3608, compression ratio: 4.97
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 432 vertices, 648 indices, raw size: 18336, encoded size: 3607, compression ratio: 5.08
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 432 vertices, 648 indices, raw size: 18376, encoded size: 3620, compression ratio: 5.08
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3100 vertices, 4650 indices, raw size: 133300, encoded size: 3467, compression ratio: 38.45
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 29238 vertices, 77265 indices, raw size: 1290250, encoded size: 154692, compression ratio: 8.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 26081 vertices, 77280 indices, raw size: 1170720, encoded size: 145710, compression ratio: 8.03
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 15340 vertices, 67260 indices, raw size: 748120, encoded size: 73233, compression ratio: 10.22
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 13240 vertices, 79320 indices, raw size: 688240, encoded size: 64119, compression ratio: 10.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2880 vertices, 16320 indices, raw size: 147840, encoded size: 16904, compression ratio: 8.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4480 vertices, 26088 indices, raw size: 231376, encoded size: 21317, compression ratio: 10.85
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 9280 vertices, 16680 indices, raw size: 404560, encoded size: 28483, compression ratio: 14.20
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 960 vertices, 5736 indices, raw size: 49872, encoded size: 5380, compression ratio: 9.27
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3168 vertices, 18864 indices, raw size: 164448, encoded size: 15506, compression ratio: 10.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 288 vertices, 1680 indices, raw size: 14880, encoded size: 1775, compression ratio: 8.38
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 4032, compression ratio: 13.82
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 396 vertices, 648 indices, raw size: 17136, encoded size: 1354, compression ratio: 12.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 3942, compression ratio: 14.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6696 vertices, 10140 indices, raw size: 288120, encoded size: 18716, compression ratio: 15.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3024 vertices, 4536 indices, raw size: 130032, encoded size: 8135, compression ratio: 15.98
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 864 vertices, 1296 indices, raw size: 37152, encoded size: 3919, compression ratio: 9.48
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1728 vertices, 2592 indices, raw size: 74304, encoded size: 8529, compression ratio: 8.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1944 vertices, 2916 indices, raw size: 83592, encoded size: 9423, compression ratio: 8.87
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2160 vertices, 3240 indices, raw size: 92880, encoded size: 10046, compression ratio: 9.25
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2160 vertices, 3240 indices, raw size: 92880, encoded size: 9635, compression ratio: 9.64
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1944 vertices, 2916 indices, raw size: 83592, encoded size: 9078, compression ratio: 9.21
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1728 vertices, 2592 indices, raw size: 74304, encoded size: 8219, compression ratio: 9.04
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 6228, compression ratio: 8.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 6179, compression ratio: 9.02
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1456 vertices, 6324 indices, raw size: 70888, encoded size: 10722, compression ratio: 6.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 266 vertices, 1548 indices, raw size: 13736, encoded size: 1682, compression ratio: 8.17
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6162 vertices, 19428 indices, raw size: 285336, encoded size: 46192, compression ratio: 6.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 96768 vertices, 96768 indices, raw size: 4257792, encoded size: 632776, compression ratio: 6.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 93312 vertices, 93312 indices, raw size: 4105728, encoded size: 609556, compression ratio: 6.74
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 79488 vertices, 79488 indices, raw size: 3497472, encoded size: 517473, compression ratio: 6.76
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 62208 vertices, 62208 indices, raw size: 2612736, encoded size: 403708, compression ratio: 6.47
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 45149 vertices, 119376 indices, raw size: 2044312, encoded size: 315170, compression ratio: 6.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 693 vertices, 2520 indices, raw size: 32760, encoded size: 4292, compression ratio: 7.63
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 693 vertices, 2520 indices, raw size: 32760, encoded size: 4283, compression ratio: 7.65
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 693 vertices, 2520 indices, raw size: 32760, encoded size: 4266, compression ratio: 7.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3537 vertices, 20394 indices, raw size: 182268, encoded size: 17800, compression ratio: 10.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 324 vertices, 324 indices, raw size: 13608, encoded size: 1620, compression ratio: 8.40
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 711 vertices, 1170 indices, raw size: 30780, encoded size: 4313, compression ratio: 7.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 301 vertices, 1146 indices, raw size: 14332, encoded size: 2946, compression ratio: 4.86
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1852, compression ratio: 5.02
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1890, compression ratio: 4.91
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 540 vertices, 816 indices, raw size: 23232, encoded size: 4101, compression ratio: 5.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1872, compression ratio: 4.96
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 324 vertices, 492 indices, raw size: 13944, encoded size: 2869, compression ratio: 4.86
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 23472 vertices, 37476 indices, raw size: 1013832, encoded size: 56648, compression ratio: 17.90
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 408 vertices, 612 indices, raw size: 17544, encoded size: 1980, compression ratio: 8.86
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 224, compression ratio: 0.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 60258 vertices, 151125 indices, raw size: 2616770, encoded size: 231695, compression ratio: 11.29
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6160 vertices, 9996 indices, raw size: 266392, encoded size: 30783, compression ratio: 8.65
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5376 vertices, 8712 indices, raw size: 232464, encoded size: 25837, compression ratio: 9.00
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5808 vertices, 9360 indices, raw size: 251040, encoded size: 28071, compression ratio: 8.94
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5280 vertices, 8568 indices, raw size: 228336, encoded size: 26841, compression ratio: 8.51
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5280 vertices, 8568 indices, raw size: 228336, encoded size: 26863, compression ratio: 8.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5808 vertices, 9360 indices, raw size: 251040, encoded size: 27879, compression ratio: 9.00
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6688 vertices, 10860 indices, raw size: 289240, encoded size: 33918, compression ratio: 8.53
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6688 vertices, 10788 indices, raw size: 289096, encoded size: 31851, compression ratio: 9.08
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6472 vertices, 10464 indices, raw size: 279808, encoded size: 30890, compression ratio: 9.06
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5280 vertices, 8568 indices, raw size: 228336, encoded size: 26903, compression ratio: 8.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 648 vertices, 972 indices, raw size: 27864, encoded size: 2217, compression ratio: 12.57
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 22667 vertices, 77022 indices, raw size: 1033844, encoded size: 115319, compression ratio: 8.97
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 48 vertices, 72 indices, raw size: 2064, encoded size: 442, compression ratio: 4.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 221, compression ratio: 0.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 221, compression ratio: 0.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 20456 vertices, 32928 indices, raw size: 884096, encoded size: 61424, compression ratio: 14.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 4289, compression ratio: 12.99
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1003, compression ratio: 9.26
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1976 vertices, 3192 indices, raw size: 85424, encoded size: 8463, compression ratio: 10.09
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1051, compression ratio: 8.84
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1674 vertices, 9600 indices, raw size: 86160, encoded size: 5347, compression ratio: 16.11
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3374 vertices, 19194 indices, raw size: 173348, encoded size: 9053, compression ratio: 19.15
+DracoEncoder | Preserve triangle orde05:04:50 | INFO: Finished glTF 2.0 export in 1.4684820175170898 s
+
+EXPORTED {"id": "inol", "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /INOL Group/INOL_Studio_v1/INOL_Studio_v1.blend", "src": "/models/catalog/inol.glb", "bytes": 6352392, "sourceMeshObjects": 2218, "triangles": 653748, "materials": 97, "bakedProceduralColors": 43, "bounds": {"min": [-9.0967, 0.0, -3.0196], "max": [9.0967, 5.055, 3.0196]}, "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."}
+01:11.983  blend            | Read blend: "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Italy Pavilions/Italy_Pavilion_v1/Italy_Pavilion_v1.blend"
+BAKE italy-pavilion Pale oak HPL | directional grain
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE italy-pavilion Pale oak HPL | vertical grain
+Info: Baking map saved to internal image, save it externally or pack it
+05:04:53 | INFO: Starting glTF 2.0 export
+05:04:53 | INFO: Extracting primitive: Island platform | 5.8m x12m inferred.001
+05:04:53 | INFO: Primitives created: 26
+05:04:53 | INFO: Draco encoder: Encoding mesh italy-pavilion.
+r: no
+DracoEncoder | Encoded 1512 vertices, 2268 indices, raw size: 65016, encoded size: 5177, compression ratio: 12.56
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 16 vertices, 84 indices, raw size: 808, encoded size: 324, compression ratio: 2.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5984 vertices, 35340 indices, raw size: 310040, encoded size: 35694, compression ratio: 8.69
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 42 vertices, 240 indices, raw size: 2160, encoded size: 532, compression ratio: 4.06
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 504 vertices, 2976 indices, raw size: 26112, encoded size: 3310, compression ratio: 7.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 576 vertices, 3444 indices, raw size: 29928, encoded size: 3669, compression ratio: 8.16
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 512 vertices, 3072 indices, raw size: 26624, encoded size: 3088, compression ratio: 8.62
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 320 vertices, 1920 indices, raw size: 16640, encoded size: 1940, compression ratio: 8.58
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1265 vertices, 7446 indices, raw size: 65492, encoded size: 7522, compression ratio: 8.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1896 vertices, 11328 indices, raw size: 98496, encoded size: 7752, compression ratio: 12.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2016 vertices, 12060 indices, raw size: 104760, encoded size: 10658, compression ratio: 9.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 59856 vertices, 135576 indices, raw size: 2665392, encoded size: 198700, compression ratio: 13.41
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 21384 vertices, 32076 indices, raw size: 919512, encoded size: 67306, compression ratio: 13.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7128 vertices, 10692 indices, raw size: 306504, encoded size: 25770, compression ratio: 11.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 94001 vertices, 315192 indices, raw size: 5020808, encoded size: 319657, compression ratio: 15.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 29411 vertices, 70272 indices, raw size: 1280424, encoded size: 94289, compression ratio: 13.58
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 24320 vertices, 62016 indices, raw size: 1096832, encoded size: 78849, compression ratio: 13.91
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 54689 vertices, 324024 indices, raw size: 2834408, encoded size: 199635, compression ratio: 14.20
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 68 vertices, 102 indices, raw size: 2924, encoded size: 563, compression ratio: 5.19
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 19984 vertices, 82080 indices, raw size: 938040, encoded size: 80293, compression ratio: 11.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 27136 vertices, 111456 indices, raw size: 1270352, encoded size: 107776, compression ratio: 11.79
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 27786 vertices, 70182 indices, raw size: 1227804, encoded size: 140700, compression ratio: 8.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 19680 vertices, 49008 indices, raw size: 885216, encoded size: 66415, compression ratio: 13.33
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 15504 vertices, 37464 indices, raw size: 695088, encoded size: 46647, compression ratio: 14.90
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1512 vertices, 2268 indices, raw size: 65016, encoded size: 4889, compression ratio: 13.30
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 48 vertices, 72 indices, raw size: 2064, encoded size: 396, compression ratio: 5.21
+DracoEncoder | Prese05:04:53 | INFO: Finished glTF 2.0 export in 0.6778678894042969 s
+
+EXPORTED {"id": "italy-pavilion", "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Italy Pavilions/Italy_Pavilion_v1/Italy_Pavilion_v1.blend", "src": "/models/catalog/italy-pavilion.glb", "bytes": 1610752, "sourceMeshObjects": 1309, "triangles": 465952, "materials": 26, "bakedProceduralColors": 2, "bounds": {"min": [-6.3566, 0.0, -6.3226], "max": [6.357, 7.9, 6.3226]}, "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."}
+01:14.993  blend            | Read blend: "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Art Toy model/Art toy Cenematic/Orange_Ocean_Atelier_v5_Final.blend"
+BAKE art-toy Bench_Apricot
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Carton_Ocean_Print
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Castle_A_Cap_Tan
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Castle_A_Yellow
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Castle_C_Cap_Peach
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Castle_C_Lemon
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Coconut_Husk
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_10
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_11
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_12
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_13
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_14
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_15
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_16
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_17
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_5
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_7
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_8
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_E_9
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_0
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_1
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_10
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_11
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_12
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_13
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_14
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_15
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_16
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_17
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_2
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_3
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_4
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_5
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_6
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_7
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_8
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Drum_Band_W_9
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Face_Boat_Boy
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Face_Car_Boy
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Floor_Edge
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Hut_Counter_Wrap
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Hut_Plinth_Line
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Hut_Post_Lemon
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Island_A_Deck
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Island_A_Kerb
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Island_C_Deck
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Island_C_Kerb
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy PPT snake plant | green
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy PPT snake plant | pale stripe
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy PPT | ivory lettering
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy PPT | lacquer peach
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy PPT | pale gold edging
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Palm_Green_Dark
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Palm_Green_Light
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Palm_Trunk_Edge
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Palm_Trunk_Tan
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Plinth_Plate
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Plinth_Text_Grey
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Plinth_White
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Post_Pine
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Rope_Cream
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Seagrass
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Skin_Boat_Boy
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Skin_Peach
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Skin_Pink_Feet
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Turf_Dark
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Tyre_Lemon
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Tyre_Tan
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Umbrella_Navy
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Umbrella_White
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 Garden | bleached oak open grain HPL
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 Garden | honey timber clear matte
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 Garden | ivory cast resin fine chalk
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 Garden | palm moulded bark satin texture
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 Merch | honey wood laminate
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 Merch | orange lacquer
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 | brushed honey oak HPL
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy V5 | ivory canvas
+Info: Baking map saved to internal image, save it externally or pack it
+BAKE art-toy Wave_Plinth_Blue
+Info: Baking map saved to internal image, save it externally or pack it
+05:05:44 | INFO: Starting glTF 2.0 export
+05:05:44 | WARNING: Mesh Ozai_Goggle_Boy_Head.001 is not valid, and may be exported wrongly
+05:05:44 | INFO: Extracting primitive: Ozai_Goggle_Boy_Head.001
+05:05:45 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:05:45 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:05:45 | WARNING: More than one shader node tex image used for a texture. The resulting glTF sampler will behave like the first shader node tex image.
+05:05:46 | INFO: Primitives created: 237
+05:05:46 | INFO: Draco encoder: Encoding mesh art-toy.
+rve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 213, compression ratio: 0.81
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 209, compression ratio: 0.82
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2919 vertices, 7776 indices, raw size: 105752, encoded size: 11991, compression ratio: 8.82
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3132 vertices, 16128 indices, raw size: 157536, encoded size: 14416, compression ratio: 10.93
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1011 vertices, 5616 indices, raw size: 51672, encoded size: 4638, compression ratio: 11.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1680 vertices, 4284 indices, raw size: 75768, encoded size: 6608, compression ratio: 11.47
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1728 vertices, 5184 indices, raw size: 79488, encoded size: 7409, compression ratio: 10.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6561 vertices, 31104 indices, raw size: 324648, encoded size: 27996, compression ratio: 11.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1458 vertices, 8424 indices, raw size: 75168, encoded size: 8457, compression ratio: 8.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1458 vertices, 8424 indices, raw size: 75168, encoded size: 8450, compression ratio: 8.90
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1458 vertices, 8424 indices, raw size: 75168, encoded size: 8468, compression ratio: 8.88
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2024 vertices, 12132 indices, raw size: 105224, encoded size: 12251, compression ratio: 8.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4902 vertices, 28866 indices, raw size: 253812, encoded size: 30784, compression ratio: 8.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2126 vertices, 12648 indices, raw size: 110336, encoded size: 13432, compression ratio: 8.21
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2592 vertices, 15540 indices, raw size: 134760, encoded size: 14988, compression ratio: 8.99
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 320 vertices, 936 indices, raw size: 14672, encoded size: 1890, compression ratio: 7.76
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7587 vertices, 39084 indices, raw size: 381608, encoded size: 55347, compression ratio: 6.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1608 vertices, 9360 indices, raw size: 83040, encoded size: 10854, compression ratio: 7.65
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 516 vertices, 2664 indices, raw size: 25968, encoded size: 3848, compression ratio: 6.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3500 vertices, 18720 indices, raw size: 177440, encoded size: 25723, compression ratio: 6.90
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1334 vertices, 7992 indices, raw size: 69344, encoded size: 9127, compression ratio: 7.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 344 vertices, 2016 indices, raw size: 17792, encoded size: 2663, compression ratio: 6.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1620 vertices, 9426 indices, raw size: 83652, encoded size: 13103, compression ratio: 6.38
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1533 vertices, 8640 indices, raw size: 78600, encoded size: 8715, compression ratio: 9.02
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3456 vertices, 20736 indices, raw size: 179712, encoded size: 17485, compression ratio: 10.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 512 vertices, 1488 indices, raw size: 23456, encoded size: 2165, compression ratio: 10.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 144 vertices, 336 indices, raw size: 6432, encoded size: 1276, compression ratio: 5.04
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 64 vertices, 180 indices, raw size: 2920, encoded size: 612, compression ratio: 4.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2302 vertices, 13272 indices, raw size: 118624, encoded size: 14326, compression ratio: 8.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 292 vertices, 1728 indices, raw size: 15136, encoded size: 2320, compression ratio: 6.52
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 576 vertices, 3456 indices, raw size: 29952, encoded size: 3911, compression ratio: 7.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2259 vertices, 12132 indices, raw size: 114624, encoded size: 18163, compression ratio: 6.31
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2096 vertices, 12480 indices, raw size: 108800, encoded size: 12856, compression ratio: 8.46
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4188 vertices, 24132 indices, raw size: 215784, encoded size: 25407, compression ratio: 8.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1268 vertices, 7596 indices, raw size: 65912, encoded size: 6342, compression ratio: 10.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 729 vertices, 3924 indices, raw size: 37008, encoded size: 4370, compression ratio: 8.47
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 552 indices, raw size: 8784, encoded size: 939, compression ratio: 9.35
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 1128 indices, raw size: 9936, encoded size: 1213, compression ratio: 8.19
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 1128 indices, raw size: 9936, encoded size: 1220, compression ratio: 8.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 96 vertices, 276 indices, raw size: 4392, encoded size: 754, compression ratio: 5.82
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 294 vertices, 1524 indices, raw size: 14808, encoded size: 2466, compression ratio: 6.00
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3865 vertices, 16914 indices, raw size: 182948, encoded size: 15605, compression ratio: 11.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 158 vertices, 564 indices, raw size: 7368, encoded size: 1458, compression ratio: 5.05
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1252 vertices, 3132 indices, raw size: 56344, encoded size: 10618, compression ratio: 5.31
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1847 vertices, 7236 indices, raw size: 87872, encoded size: 15025, compression ratio: 5.85
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 288 vertices, 1692 indices, raw size: 14904, encoded size: 1576, compression ratio: 9.46
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3093 vertices, 17988 indices, raw size: 159696, encoded size: 18257, compression ratio: 8.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 384 vertices, 1728 indices, raw size: 18816, encoded size: 2536, compression ratio: 7.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 384 vertices, 1728 indices, raw size: 18816, encoded size: 2713, compression ratio: 6.94
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 926 vertices, 2592 indices, raw size: 42184, encoded size: 5561, compression ratio: 7.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1592 vertices, 6912 indices, raw size: 77504, encoded size: 13729, compression ratio: 5.65
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 942 vertices, 5616 indices, raw size: 48912, encoded size: 5677, compression ratio: 8.62
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2355 vertices, 13272 indices, raw size: 120744, encoded size: 15760, compression ratio: 7.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3462 vertices, 18720 indices, raw size: 175920, encoded size: 27761, compression ratio: 6.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 256 vertices, 1524 indices, raw size: 13288, encoded size: 2131, compression ratio: 6.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 40 vertices, 108 indices, raw size: 1816, encoded size: 437, compression ratio: 4.16
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2263 vertices, 12132 indices, raw size: 114784, encoded size: 17880, compression ratio: 6.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2126 vertices, 12648 indices, raw size: 110336, encoded size: 13181, compression ratio: 8.37
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 769 vertices, 3648 indices, raw size: 38056, encoded size: 4839, compression ratio: 7.86
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1920 vertices, 11496 indices, raw size: 99792, encoded size: 10128, compression ratio: 9.85
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2016 vertices, 6240 indices, raw size: 92880, encoded size: 16520, compression ratio: 5.62
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6545 vertices, 8337 indices, raw size: 239154, encoded size: 35254, compression ratio: 6.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2478 vertices, 11052 indices, raw size: 121224, encoded size: 17344, compression ratio: 6.99
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 100 vertices, 276 indices, raw size: 4552, encoded size: 871, compression ratio: 5.23
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 253, compression ratio: 1.36
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 80 vertices, 120 indices, raw size: 3440, encoded size: 669, compression ratio: 5.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 253, compression ratio: 1.36
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 253, compression ratio: 1.36
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 257, compression ratio: 1.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1640 vertices, 4896 indices, raw size: 75392, encoded size: 10936, compression ratio: 6.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1674 vertices, 4920 indices, raw size: 76800, encoded size: 3649, compression ratio: 21.05
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8 vertices, 12 indices, raw size: 344, encoded size: 257, compression ratio: 1.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3967 vertices, 12369 indices, raw size: 183258, encoded size: 30622, compression ratio: 5.98
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 710 vertices, 3576 indices, raw size: 35552, encoded size: 4597, compression ratio: 7.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 574 vertices, 2856 indices, raw size: 28672, encoded size: 3871, compression ratio: 7.41
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2240 vertices, 6552 indices, raw size: 102704, encoded size: 15804, compression ratio: 6.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 25736 vertices, 124800 indices, raw size: 1279040, encoded size: 112985, compression ratio: 11.32
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 96 vertices, 324 indices, raw size: 4488, encoded size: 1000, compression ratio: 4.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 1128 indices, raw size: 9936, encoded size: 1154, compression ratio: 8.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 1128 indices, raw size: 9936, encoded size: 1148, compression ratio: 8.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1864 vertices, 5388 indices, raw size: 85336, encoded size: 13601, compression ratio: 6.27
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3366 vertices, 11718 indices, raw size: 158076, encoded size: 6277, compression ratio: 25.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1302 vertices, 3870 indices, raw size: 59820, encoded size: 6953, compression ratio: 8.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 114 vertices, 588 indices, raw size: 5736, encoded size: 913, compression ratio: 6.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 836 vertices, 4440 indices, raw size: 42320, encoded size: 5915, compression ratio: 7.15
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 853 vertices, 4542 indices, raw size: 43204, encoded size: 6037, compression ratio: 7.16
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 520 vertices, 1512 indices, raw size: 23824, encoded size: 3466, compression ratio: 6.87
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3400 vertices, 12792 indices, raw size: 161584, encoded size: 24098, compression ratio: 6.71
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 64 vertices, 168 indices, raw size: 2896, encoded size: 582, compression ratio: 4.98
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 288 vertices, 828 indices, raw size: 13176, encoded size: 1588, compression ratio: 8.30
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 288 vertices, 828 indices, raw size: 13176, encoded size: 1588, compression ratio: 8.30
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 36 vertices, 48 indices, raw size: 1536, encoded size: 367, compression ratio: 4.19
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 960 vertices, 2808 indices, raw size: 44016, encoded size: 7500, compression ratio: 5.87
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 602 vertices, 1920 indices, raw size: 27920, encoded size: 5079, compression ratio: 5.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 128 vertices, 372 indices, raw size: 5864, encoded size: 916, compression ratio: 6.40
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1056 vertices, 2880 indices, raw size: 48000, encoded size: 5800, compression ratio: 8.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 224 vertices, 576 indices, raw size: 10112, encoded size: 1373, compression ratio: 7.36
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2154 vertices, 10944 indices, raw size: 108048, encoded size: 16683, compression ratio: 6.48
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 720 vertices, 3852 indices, raw size: 36504, encoded size: 4407, compression ratio: 8.28
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2426 vertices, 7188 indices, raw size: 111416, encoded size: 11335, compression ratio: 9.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1497 vertices, 8982 indices, raw size: 77844, encoded size: 9927, compression ratio: 7.84
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1497 vertices, 8982 indices, raw size: 77844, encoded size: 9927, compression ratio: 7.84
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 512 vertices, 3060 indices, raw size: 26600, encoded size: 3586, compression ratio: 7.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 480 vertices, 2568 indices, raw size: 24336, encoded size: 3383, compression ratio: 7.19
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10609 vertices, 22164 indices, raw size: 460008, encoded size: 72537, compression ratio: 6.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 520 vertices, 1512 indices, raw size: 23824, encoded size: 3459, compression ratio: 6.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3664 vertices, 15144 indices, raw size: 176848, encoded size: 24783, compression ratio: 7.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 144 vertices, 384 indices, raw size: 6528, encoded size: 970, compression ratio: 6.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 40 vertices, 108 indices, raw size: 1816, encoded size: 411, compression ratio: 4.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 384 vertices, 792 indices, raw size: 15984, encoded size: 3119, compression ratio: 5.12
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 576 vertices, 864 indices, raw size: 24768, encoded size: 2768, compression ratio: 8.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 156 vertices, 468 indices, raw size: 7176, encoded size: 1072, compression ratio: 6.69
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 52 vertices, 144 indices, raw size: 2368, encoded size: 741, compression ratio: 3.20
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1152 vertices, 6876 indices, raw size: 59832, encoded size: 7273, compression ratio: 8.23
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1920 vertices, 5664 indices, raw size: 88128, encoded size: 18111, compression ratio: 4.87
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1978 vertices, 5760 indices, raw size: 90640, encoded size: 5155, compression ratio: 17.58
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4254 vertices, 11616 indices, raw size: 193392, encoded size: 32596, compression ratio: 5.93
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1864 vertices, 5388 indices, raw size: 85336, encoded size: 13683, compression ratio: 6.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1864 vertices, 5388 indices, raw size: 85336, encoded size: 13637, compression ratio: 6.26
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 240 vertices, 1284 indices, raw size: 12168, encoded size: 1359, compression ratio: 8.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 304 vertices, 1800 indices, raw size: 15760, encoded size: 1673, compression ratio: 9.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2232 vertices, 5976 indices, raw size: 101232, encoded size: 10945, compression ratio: 9.25
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1728 vertices, 10344 indices, raw size: 89808, encoded size: 7396, compression ratio: 12.14
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 384 vertices, 1128 indices, raw size: 17616, encoded size: 1568, compression ratio: 11.23
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3728 vertices, 10776 indices, raw size: 170672, encoded size: 21951, compression ratio: 7.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5296 vertices, 15624 indices, raw size: 243088, encoded size: 30609, compression ratio: 7.94
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1312 vertices, 3852 indices, raw size: 60184, encoded size: 7793, compression ratio: 7.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2144 vertices, 10428 indices, raw size: 106616, encoded size: 12769, compression ratio: 8.35
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6000 vertices, 35700 indices, raw size: 311400, encoded size: 28826, compression ratio: 10.80
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2592 vertices, 7704 indices, raw size: 119088, encoded size: 9548, compression ratio: 12.47
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 96 vertices, 564 indices, raw size: 4968, encoded size: 877, compression ratio: 5.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2376 vertices, 6840 indices, raw size: 108720, encoded size: 13682, compression ratio: 7.95
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 564 indices, raw size: 8808, encoded size: 937, compression ratio: 9.40
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1152 vertices, 3312 indices, raw size: 52704, encoded size: 3529, compression ratio: 14.93
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1568 vertices, 7488 indices, raw size: 77696, encoded size: 9182, compression ratio: 8.46
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 288 indices, raw size: 8256, encoded size: 1175, compression ratio: 7.03
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1691 vertices, 9576 indices, raw size: 86792, encoded size: 10538, compression ratio: 8.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5987 vertices, 17130 indices, raw size: 269340, encoded size: 39411, compression ratio: 6.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6664 vertices, 11436 indices, raw size: 288592, encoded size: 31126, compression ratio: 9.27
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5533 vertices, 15996 indices, raw size: 252832, encoded size: 34662, compression ratio: 7.29
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2368 vertices, 5340 indices, raw size: 105400, encoded size: 14467, compression ratio: 7.29
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4 vertices, 6 indices, raw size: 172, encoded size: 223, compression ratio: 0.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 48 vertices, 96 indices, raw size: 2112, encoded size: 458, compression ratio: 4.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 12964 vertices, 27846 indices, raw size: 574012, encoded size: 59723, compression ratio: 9.61
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1176 vertices, 3576 indices, raw size: 53392, encoded size: 9321, compression ratio: 5.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1312 vertices, 1980 indices, raw size: 56440, encoded size: 10020, compression ratio: 5.63
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 832 vertices, 1248 indices, raw size: 35776, encoded size: 5672, compression ratio: 6.31
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 288 vertices, 768 indices, raw size: 13056, encoded size: 1616, compression ratio: 8.08
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2508 vertices, 8541 indices, raw size: 115122, encoded size: 22150, compression ratio: 5.20
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 516 vertices, 3084 indices, raw size: 26808, encoded size: 2838, compression ratio: 9.45
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3359, compression ratio: 5.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3315, compression ratio: 5.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3309, compression ratio: 5.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3287, compression ratio: 5.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3271, compression ratio: 5.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3258, compression ratio: 5.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 2683, compression ratio: 7.01
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 2951, compression ratio: 6.37
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3279, compression ratio: 5.74
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3290, compression ratio: 5.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3309, compression ratio: 5.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3316, compression ratio: 5.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3364, compression ratio: 5.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3399, compression ratio: 5.53
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3405, compression ratio: 5.52
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3425, compression ratio: 5.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 372 vertices, 588 indices, raw size: 16056, encoded size: 3084, compression ratio: 5.21
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 372 vertices, 588 indices, raw size: 16056, encoded size: 3266, compression ratio: 4.92
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3358, compression ratio: 5.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3314, compression ratio: 5.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3308, compression ratio: 5.69
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3287, compression ratio: 5.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3272, compression ratio: 5.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3256, compression ratio: 5.78
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 2644, compression ratio: 7.11
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 2930, compression ratio: 6.42
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3278, compression ratio: 5.74
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3290, compression ratio: 5.72
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3310, compression ratio: 5.68
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3316, compression ratio: 5.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3366, compression ratio: 5.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3399, compression ratio: 5.53
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3405, compression ratio: 5.52
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 436 vertices, 684 indices, raw size: 18808, encoded size: 3419, compression ratio: 5.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 372 vertices, 588 indices, raw size: 16056, encoded size: 3084, compression ratio: 5.21
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 372 vertices, 588 indices, raw size: 16056, encoded size: 3265, compression ratio: 4.92
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 18864 vertices, 112896 indices, raw size: 980352, encoded size: 86617, compression ratio: 11.32
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 18864 vertices, 112896 indices, raw size: 980352, encoded size: 83313, compression ratio: 11.77
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2466 vertices, 12672 indices, raw size: 123984, encoded size: 10976, compression ratio: 11.30
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 564 indices, raw size: 8808, encoded size: 1176, compression ratio: 7.49
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 15318 vertices, 79488 indices, raw size: 771696, encoded size: 61247, compression ratio: 12.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 192 vertices, 564 indices, raw size: 8808, encoded size: 1175, compression ratio: 7.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1746 vertices, 4608 indices, raw size: 79056, encoded size: 16644, compression ratio: 4.75
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 764 vertices, 1152 indices, raw size: 32864, encoded size: 8181, compression ratio: 4.02
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1382 vertices, 7296 indices, raw size: 69872, encoded size: 9023, compression ratio: 7.74
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1382 vertices, 7296 indices, raw size: 69872, encoded size: 8656, compression ratio: 8.07
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1382 vertices, 7296 indices, raw size: 69872, encoded size: 8407, compression ratio: 8.31
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 925 vertices, 4800 indices, raw size: 46600, encoded size: 5946, compression ratio: 7.84
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3888 vertices, 12132 indices, raw size: 179784, encoded size: 19276, compression ratio: 9.33
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7560 vertices, 36864 indices, raw size: 376128, encoded size: 36613, compression ratio: 10.27
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 4248, compression ratio: 13.12
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4122 vertices, 19404 indices, raw size: 203688, encoded size: 15468, compression ratio: 13.17
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8865 vertices, 46656 indices, raw size: 447912, encoded size: 33038, compression ratio: 13.56
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1957 vertices, 9408 indices, raw size: 97096, encoded size: 8968, compression ratio: 10.83
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 384 vertices, 648 indices, raw size: 16656, encoded size: 1986, compression ratio: 8.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5142 vertices, 17112 indices, raw size: 235464, encoded size: 34515, compression ratio: 6.82
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6065 vertices, 16800 indices, raw size: 276200, encoded size: 32317, compression ratio: 8.55
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 6660 vertices, 31104 indices, raw size: 328608, encoded size: 31768, compression ratio: 10.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 25456 vertices, 75360 indices, raw size: 1168960, encoded size: 175743, compression ratio: 6.65
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 25844 vertices, 85728 indices, raw size: 1204576, encoded size: 146108, compression ratio: 8.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1056 vertices, 6240 indices, raw size: 54720, encoded size: 4345, compression ratio: 12.59
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 32328 vertices, 45636 indices, raw size: 1238992, encoded size: 134683, compression ratio: 9.20
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 210534 vertices, 276174 indices, raw size: 7099936, encoded size: 1108486, compression ratio: 6.41
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 474590 vertices, 588810 indices, raw size: 19813120, encoded size: 1467842, compression ratio: 13.50
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 91228 vertices, 118644 indices, raw size: 3228736, encoded size: 404693, compression ratio: 7.98
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1296 vertices, 1944 indices, raw size: 55728, encoded size: 5844, compression ratio: 9.54
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216 vertices, 324 indices, raw size: 9288, encoded size: 1399, compression ratio: 6.64
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 59748 vertices, 80022 indices, raw size: 1820884, encoded size: 321983, compression ratio: 5.66
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5904 vertices, 8856 indices, raw size: 253872, encoded size: 30832, compression ratio: 8.23
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 1946 vertices, 2364 indices, raw size: 74888, encoded size: 7471, compression ratio: 10.02
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 88200 vertices, 121734 indices, raw size: 3246696, encoded size: 454352, compression ratio: 7.15
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 72312 vertices, 99252 indices, raw size: 2545944, encoded size: 365149, compression ratio: 6.97
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 70560 vertices, 98046 indices, raw size: 2532732, encoded size: 347429, compression ratio: 7.29
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 63348 vertices, 87180 indices, raw size: 2251760, encoded size: 313615, compression ratio: 7.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5406 vertices, 26640 indices, raw size: 269520, encoded size: 32201, compression ratio: 8.37
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5061 vertices, 28791 indices, raw size: 260022, encoded size: 31754, compression ratio: 8.19
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10861 vertices, 30087 indices, raw size: 494614, encoded size: 60461, compression ratio: 8.18
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10588 vertices, 29013 indices, raw size: 481546, encoded size: 59534, compression ratio: 8.09
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 10605 vertices, 29049 indices, raw size: 482298, encoded size: 59743, compression ratio: 8.07
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 9503 vertices, 26502 indices, raw size: 433124, encoded size: 53540, compression ratio: 8.09
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 5971 vertices, 16218 indices, raw size: 271276, encoded size: 34177, compression ratio: 7.94
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 41472 vertices, 179517 indices, raw size: 2017554, encoded size: 252951, compression ratio: 7.98
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2340 vertices, 12960 indices, raw size: 119520, encoded size: 10043, compression ratio: 11.90
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 11760 vertices, 67914 indices, raw size: 606228, encoded size: 43687, compression ratio: 13.88
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 840 vertices, 2394 indices, raw size: 38388, encoded size: 5051, compression ratio: 7.60
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 216208 vertices, 266628 indices, raw size: 5590992, encoded size: 1270650, compression ratio: 4.40
+DracoEncoder | Preserve05:05:47 | INFO: Finished glTF 2.0 export in 3.7144670486450195 s
+
+EXPORTED {"id": "art-toy", "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Art Toy model/Art toy Cenematic/Orange_Ocean_Atelier_v5_Final.blend", "src": "/models/catalog/art-toy.glb", "bytes": 11685048, "sourceMeshObjects": 1801, "triangles": 1425879, "materials": 237, "bakedProceduralColors": 85, "bounds": {"min": [-6.2225, -0.0, -5.4155], "max": [6.2225, 3.619, 5.4155]}, "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."}
+BlenderMCP addon unregistered
+ triangle order: no
+DracoEncoder | Encoded 15023 vertices, 25728 indices, raw size: 604696, encoded size: 121511, compression ratio: 4.98
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 3528 vertices, 20736 indices, raw size: 182592, encoded size: 15407, compression ratio: 11.85
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2420 vertices, 6600 indices, raw size: 110000, encoded size: 10589, compression ratio: 10.39
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 35730 vertices, 56106 indices, raw size: 1541412, encoded size: 119590, compression ratio: 12.89
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 864 vertices, 1296 indices, raw size: 37152, encoded size: 3669, compression ratio: 10.13
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2070 vertices, 11340 indices, raw size: 105480, encoded size: 10198, compression ratio: 10.34
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 7680 vertices, 12960 indices, raw size: 333080, encoded size: 38124, compression ratio: 8.74
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2520 vertices, 12960 indices, raw size: 126720, encoded size: 9999, compression ratio: 12.67
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 2451 vertices, 14076 indices, raw size: 126192, encoded size: 14733, compression ratio: 8.57
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 16870 vertices, 54390 indices, raw size: 780220, encoded size: 115949, compression ratio: 6.73
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 4134 vertices, 23310 indices, raw size: 211980, encoded size: 20703, compression ratio: 10.24
+DracoEncoder | Preserve triangle order: no
+DracoEncoder | Encoded 8525 vertices, 40170 indices, raw size: 421340, encoded size: 37685, compression ratio: 11.18
+
+Blender quit

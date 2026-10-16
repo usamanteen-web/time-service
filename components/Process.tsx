@@ -5,6 +5,7 @@ import {motion} from 'framer-motion';
 import {MessageCircle,PencilRuler,Settings2,Wrench,Check} from 'lucide-react';
 import {steps} from '@/lib/content';
 import SplitChars from './SplitChars';
+import '@/app/service-factory.css';
 const icons=[MessageCircle,PencilRuler,Settings2,Wrench,Check];
 
 /**
@@ -19,7 +20,7 @@ export default function Process(){
  const [active,setActive]=useState(-1);
  useEffect(()=>{
   if(reduced){setActive(-1);return;}
-  const wide=window.matchMedia('(min-width: 1024px)');
+  const wide=window.matchMedia('(min-width: 1024px) and (min-height: 821px)');
   const count=steps.length;
   const clamp=(value:number)=>Math.min(1,Math.max(0,value));
   // Measured on every scroll so layout shifts above (the pinned 3D section) never skew it.
@@ -44,5 +45,5 @@ export default function Process(){
   wide.addEventListener('change',schedule);
   return ()=>{cancelAnimationFrame(frame);window.removeEventListener('scroll',schedule);window.removeEventListener('resize',schedule);wide.removeEventListener('change',schedule);};
  },[reduced]);
- return <div ref={wrap} className="process-scrolly"><section className="section process-section" id="process"><div className="section-heading"><div><p className="eyebrow"><span/> HOW WE WORK</p><SplitChars variant="skew" lines={['From your vision',{text:'To opening day',italic:true}]}/></div><p className="section-intro thai">ทุกขั้นตอน ใส่ใจทุกรายละเอียด<br/><span>A clear process. A shared ambition</span></p></div><ol ref={list} className="process-list"><motion.div className="process-track" aria-hidden="true" initial={{scaleX:reduced?1:0}} whileInView={{scaleX:1}} viewport={{once:true}} transition={{duration:1.2}}/>{steps.map((s,i)=>{const Icon=icons[i];return <li key={s.title} data-active={i===active?'':undefined} aria-current={i===active?'step':undefined}><span className="process-number">0{i+1}</span><div className="process-icon"><Icon size={26} strokeWidth={1.3}/></div><SplitChars as="h3" variant="reveal" lines={[s.title]} delay={.15+i*.1} stagger={.03}/><p className="thai">{s.thai}</p><p className="process-copy">{s.copy}</p></li>;})}</ol></section><div className="process-scrolly-space" aria-hidden="true"/></div>;
+ return <div ref={wrap} className="process-scrolly has-factory-proof"><section className="section process-section" id="process"><div className="section-heading"><div><p className="eyebrow"><span/> HOW WE WORK</p><SplitChars variant="skew" lines={['From your vision',{text:'To opening day',italic:true}]}/></div><p className="section-intro thai">ทุกขั้นตอน ใส่ใจทุกรายละเอียด<br/><span>A clear process. A shared ambition</span></p></div><ol ref={list} className="process-list"><motion.div className="process-track" aria-hidden="true" initial={{scaleX:reduced?1:0}} whileInView={{scaleX:1}} viewport={{once:true}} transition={{duration:1.2}}/>{steps.map((s,i)=>{const Icon=icons[i];return <li key={s.title} data-active={i===active?'':undefined} aria-current={i===active?'step':undefined}><span className="process-number">0{i+1}</span><div className="process-icon"><Icon size={26} strokeWidth={1.3}/></div><SplitChars as="h3" variant="reveal" lines={[s.title]} delay={.15+i*.1} stagger={.03}/><p className="thai">{s.thai}</p><p className="process-copy">{s.copy}</p></li>;})}</ol><aside className="process-factory-proof" aria-labelledby="process-factory-title"><div><h3 id="process-factory-title">4 FACTORIES. ONE STANDARD.</h3><p lang="th">4 โรงงาน ภายใต้มาตรฐานเดียวกัน</p></div><p>With four dedicated production facilities, we manage every stage in-house — from fabrication and finishing to quality control and final preparation.</p></aside></section><div className="process-scrolly-space" aria-hidden="true"/></div>;
 }

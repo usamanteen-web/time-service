@@ -1,0 +1,23 @@
+{
+  "id": "italy-pavilion",
+  "source": "/Users/macbook/Desktop/Codex of Teen/Projects/3D Model Designs/Concept-3D models /Italy Pavilions/Italy_Pavilion_v1/Italy_Pavilion_v1.blend",
+  "src": "/models/catalog/italy-pavilion.glb",
+  "bytes": 1610752,
+  "sourceMeshObjects": 1309,
+  "triangles": 465952,
+  "materials": 26,
+  "bakedProceduralColors": 2,
+  "bounds": {
+    "min": [
+      -6.3566,
+      0.0,
+      -6.3226
+    ],
+    "max": [
+      6.357,
+      7.9,
+      6.3226
+    ]
+  },
+  "notes": "Full booth geometry; studio removed; centered at ground. Procedural color swatches sampled for web; browser lighting differs from authored render."
+}
