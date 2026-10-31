@@ -166,29 +166,51 @@ async function mailStats(request, env) {
   const to = isDay(params.get('to')) ? params.get('to') : bangkokDay(Date.now());
   let from = isDay(params.get('from')) ? params.get('from') : shiftDay(to, -29);
   if (from > to) from = to;
+  // Optional filter: one campaign (e.g. INTRO-2026Q4). Empty = every campaign.
+  const campaign = clean(params.get('campaign') || '', 60);
   const fromTs = Math.floor(dayMs(from) / 1000) - BANGKOK_SECONDS;
   const toTs = fromTs + spanDays(from, to) * 86400;
   const q = (sql, ...args) => env.DB.prepare(sql).bind(...args);
+  const camp = "(? = '' OR l.campaign = ?)";
   const people = `
-    SELECT l.id, l.company, l.email, l.template, l.sent_ts,
+    SELECT l.id, l.company, l.email, l.template, l.campaign, l.sent_ts,
       MIN(CASE WHEN e.type = 'mail' THEN e.ts END) AS first_click,
       SUM(e.type = 'mail' AND e.zone = 'browser') AS clicks,
       SUM(e.type = 'mail' AND e.zone = 'scanner') AS scanner_hits,
       SUM(e.type = 'pageview') AS pageviews,
       MAX(e.ts) AS last_seen
     FROM mail_links l JOIN events e ON e.camp = 'mail-' || l.id
-    WHERE e.day BETWEEN ? AND ? AND (e.type = 'pageview' OR e.type = 'mail')
+    WHERE e.day BETWEEN ? AND ? AND (e.type = 'pageview' OR e.type = 'mail') AND ${camp}
     GROUP BY l.id ORDER BY last_seen DESC LIMIT 500`;
-  const [sent, rows, byTemplate] = await env.DB.batch([
-    q('SELECT COUNT(*) AS n FROM mail_links WHERE mode = ? AND sent_ts BETWEEN ? AND ?', 'PRODUCTION', fromTs, toTs),
-    q(people, from, to),
-    q('SELECT template, COUNT(*) AS n FROM mail_links WHERE mode = ? AND sent_ts BETWEEN ? AND ? GROUP BY template', 'PRODUCTION', fromTs, toTs),
+  // Per campaign and e-mail set: mails sent in the range, and how many of those were clicked / opened the site.
+  const perCampaign = `
+    SELECT l.campaign, l.template, COUNT(*) AS sent,
+      SUM(COALESCE(c.clicks, 0) > 0 OR COALESCE(c.pv, 0) > 0) AS clicked,
+      SUM(COALESCE(c.pv, 0) > 0) AS opened,
+      SUM(COALESCE(c.scans, 0) > 0 AND COALESCE(c.clicks, 0) = 0 AND COALESCE(c.pv, 0) = 0) AS scanner_only
+    FROM mail_links l LEFT JOIN (
+      SELECT camp, SUM(type = 'mail' AND zone = 'browser') AS clicks, SUM(type = 'mail' AND zone = 'scanner') AS scans,
+        SUM(type = 'pageview') AS pv
+      FROM events WHERE camp LIKE 'mail-%' GROUP BY camp
+    ) c ON c.camp = 'mail-' || l.id
+    WHERE l.mode = 'PRODUCTION' AND l.sent_ts BETWEEN ? AND ?
+    GROUP BY l.campaign, l.template ORDER BY l.campaign, sent DESC`;
+  const [rows, campaigns, all] = await env.DB.batch([
+    q(people, from, to, campaign, campaign),
+    q(perCampaign, fromTs, toTs),
+    q("SELECT DISTINCT campaign FROM mail_links WHERE mode = 'PRODUCTION' ORDER BY campaign"),
   ]);
+  const breakdown = (campaigns.results || []).map((row) => ({...row, clicked: row.clicked || 0, opened: row.opened || 0, scanner_only: row.scanner_only || 0}));
+  const shown = breakdown.filter((row) => !campaign || row.campaign === campaign);
+  const sum = (key) => shown.reduce((total, row) => total + (row[key] || 0), 0);
   const list = (rows.results || []).map((row) => ({...row, opened_site: (row.pageviews || 0) > 0, clicks: row.clicks || 0, scanner_hits: row.scanner_hits || 0, pageviews: row.pageviews || 0}));
   return json({
     range: {from, to},
-    sent: sent.results?.[0]?.n || 0,
-    sentByTemplate: byTemplate.results || [],
+    campaign,
+    campaignList: (all.results || []).map((row) => row.campaign),
+    sent: sum('sent'),
+    sentByTemplate: shown.map(({template, sent}) => ({template, n: sent})),
+    byCampaign: breakdown,
     clickedCompanies: list.filter((row) => row.clicks > 0 || row.opened_site).length,
     openedSite: list.filter((row) => row.opened_site).length,
     scannerOnly: list.filter((row) => row.clicks === 0 && !row.opened_site).length,

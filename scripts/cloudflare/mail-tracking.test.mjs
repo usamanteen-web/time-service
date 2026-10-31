@@ -90,6 +90,37 @@ test('mail-stats joins clicks and the following page view to the company', async
   assert.equal(data.people[0].pageviews, 1);
 });
 
+test('mail-stats splits results by campaign and can filter to one campaign', async () => {
+  const {d1, env} = setup();
+  const now = Math.floor(Date.now() / 1000);
+  const add = (id, company, template, campaign) => d1.db.prepare(
+    "INSERT INTO mail_links (id, company, email, template, campaign, mode, sent_ts) VALUES (?, ?, ?, ?, ?, 'PRODUCTION', ?)",
+  ).run(id, company, `${id}@x.test`, template, campaign, now - 600);
+  add('intro00001', 'A Co', 'exhibitor_th', 'INTRO-2026Q4');
+  add('intro00002', 'B Co', 'exhibitor_th', 'INTRO-2026Q4');
+  add('intro00003', 'C Co', 'transport_en', 'INTRO-2026Q4');
+  add('vivasia001', 'D Co', 'exhibitor_en', 'VIV-Asia-2027');
+  add('vivasia002', 'E Co', 'exhibitor_en', 'VIV-Asia-2027');
+  await worker.fetch(get('/r/intro00001'), env);
+  await worker.fetch(get('/r/vivasia001', 'Mozilla/5.0 (compatible; Mimecast URL Protect)'), env);
+  await worker.fetch(get('/r/vivasia002'), env);
+  const auth = {headers: {Authorization: `Bearer ${KEY}`}};
+  const all = await (await worker.fetch(new Request(`${ORIGIN}/api/mail-stats`, auth), env)).json();
+  assert.deepEqual(all.campaignList, ['INTRO-2026Q4', 'VIV-Asia-2027']);
+  assert.equal(all.sent, 5);
+  const row = (campaign, template) => all.byCampaign.find((r) => r.campaign === campaign && r.template === template);
+  assert.deepEqual([row('INTRO-2026Q4', 'exhibitor_th').sent, row('INTRO-2026Q4', 'exhibitor_th').clicked], [2, 1]);
+  assert.deepEqual([row('INTRO-2026Q4', 'transport_en').sent, row('INTRO-2026Q4', 'transport_en').clicked], [1, 0]);
+  assert.deepEqual([row('VIV-Asia-2027', 'exhibitor_en').sent, row('VIV-Asia-2027', 'exhibitor_en').clicked, row('VIV-Asia-2027', 'exhibitor_en').scanner_only], [2, 1, 1]);
+  assert.ok(all.people.every((p) => p.campaign), 'every person row names its campaign');
+  const viv = await (await worker.fetch(new Request(`${ORIGIN}/api/mail-stats?campaign=VIV-Asia-2027`, auth), env)).json();
+  assert.equal(viv.campaign, 'VIV-Asia-2027');
+  assert.equal(viv.sent, 2);
+  assert.deepEqual(viv.people.map((p) => p.company).sort(), ['D Co', 'E Co']);
+  assert.equal(viv.clickedCompanies, 1);
+  assert.equal(viv.scannerOnly, 1);
+});
+
 test('lead alert is pushed to LINE when the OA token is set, and skipped when not', async () => {
   const calls = [];
   const realFetch = globalThis.fetch;

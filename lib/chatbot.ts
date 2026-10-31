@@ -67,7 +67,16 @@ export function matchIntent(input: string): string | null {
   return null;
 }
 
-const pick = (lang: Lang, th: string, en: string) => (lang === 'th' ? th : en);
+// Thai replies are written with ครับ/ผม. The widget calls setVoice(chatbotConfig.voice) so the mascot
+// speaks with her own particles; without it the bot keeps the original wording.
+export type Voice = { particle: string; question: string; pronoun: string };
+let currentVoice: Voice = { particle: 'ครับ', question: 'ครับ', pronoun: 'ผม' };
+export function setVoice(next: Voice) { currentVoice = next; }
+export function voice(text: string, v: Voice = currentVoice): string {
+  if (v.particle === 'ครับ') return text;
+  return text.replace(/(ไหม|มั้ย|หรือเปล่า|ยังไง|อะไร)ครับ/g, `$1${v.question}`).replace(/ครับ/g, v.particle).replace(/ผม(?=[ก-๙])/g, v.pronoun);
+}
+const pick = (lang: Lang, th: string, en: string) => (lang === 'th' ? voice(th) : en);
 
 export function menuActions(lang: Lang): BotAction[] {
   return [

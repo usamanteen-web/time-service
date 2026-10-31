@@ -40,4 +40,20 @@
 .tsc-note{margin:0;padding:0 14px 10px;background:#fff;color:#7b8a95;font-size:10.5px;line-height:1.4;text-align:center}
 @media(max-width:640px){.tsc-launcher{padding:0;width:58px}.tsc-launcher-label{display:none}}
 @media(max-width:540px){.tsc-panel{right:8px;left:8px;width:auto;height:min(72dvh,600px);bottom:calc(max(14px,env(safe-area-inset-bottom)) + 70px)}.tsc-launcher{right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom))}.tsc-input input,.tsc-form input:not(.tsc-hp),.tsc-form textarea{font-size:16px}}
+/* Mascot (2026-10-31): avatar launcher, online dot, header avatar, stickers, typing dots */
+.tsc-launcher{padding-left:6px}
+.tsc-launcher-avatar{flex-shrink:0;width:46px;height:46px;border-radius:50%;background:#fff;object-fit:cover}
+.tsc-online{position:absolute;left:42px;bottom:9px;width:12px;height:12px;border:2px solid var(--navy);border-radius:50%;background:#3fcf6b}
+.tsc-launcher{position:fixed}
+.tsc-head-avatar{position:relative;flex-shrink:0;width:42px;height:42px}
+.tsc-head-avatar img{width:42px;height:42px;padding:0;border-radius:50%;background:#fff;object-fit:cover}
+.tsc-head-avatar i{position:absolute;right:0;bottom:1px;width:11px;height:11px;border:2px solid var(--navy);border-radius:50%;background:#3fcf6b}
+.tsc-sticker{display:block;width:150px;height:auto;max-height:140px;margin:0 0 6px;border-radius:14px;object-fit:contain;background:#faf6f1}
+.tsc-typing .tsc-bubble{display:inline-flex;gap:5px;align-items:center;padding:14px 16px}
+.tsc-typing .tsc-bubble span{width:7px;height:7px;border-radius:50%;background:#7b8a95;animation:tsc-dot 1s infinite ease-in-out}
+.tsc-typing .tsc-bubble span:nth-child(2){animation-delay:.15s}
+.tsc-typing .tsc-bubble span:nth-child(3){animation-delay:.3s}
+@keyframes tsc-dot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
+@media(prefers-reduced-motion:reduce){.tsc-typing .tsc-bubble span{animation:none;opacity:.7}}
+@media(max-width:640px){.tsc-launcher{padding:0 6px}.tsc-online{left:40px}}
 @media print{.tsc-root{display:none}}

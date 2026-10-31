@@ -281,6 +281,7 @@ footer input{width:18px;height:18px;accent-color:var(--p)}
 }
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 @media print{.bar,.filters,.tabs,footer,.topload{display:none}.card{break-inside:avoid}}
+.camp-bar{padding:16px 20px 0}.camp-pick{gap:10px}.camp-pick select{border:0;background:transparent;font:inherit;color:inherit;min-width:220px;outline:none;cursor:pointer}
 </style>
 </head>
 <body>
@@ -739,27 +740,42 @@ function clicksView(data) {
   return h('div', { class: 'g48' }, left, right);
 }
 
-// ---------- mail view (who clicked the link in our intro e-mails) ----------
+// ---------- mail view (who clicked the link in our e-mails, split by campaign) ----------
 const TEMPLATE_NAMES = { exhibitor_th: 'บูธ/อีเวนต์ (ไทย)', exhibitor_en: 'บูธ (อังกฤษ)', partner_en: 'พาร์ทเนอร์ (อังกฤษ)', transport_th: 'รถรับส่ง (ไทย)', transport_en: 'รถรับส่ง (อังกฤษ)' };
+// Friendly names for campaign codes; unknown codes are shown as they are.
+const CAMPAIGN_NAMES = { 'INTRO-2026Q4': 'แนะนำบริษัท Q4/2026' };
+const campaignName = (code) => CAMPAIGN_NAMES[code] || code || '-';
+const templateName = (code) => TEMPLATE_NAMES[code] || code || '-';
 function mailView() {
   const m = state.mail;
   if (!m) return emptyBox('ยังโหลดข้อมูลอีเมลไม่ได้', 'ลองกดรีเฟรชอีกครั้ง');
-  const stats = h('section', { class: 'card kcard' }, h('div', { class: 'kpis' },
-    kpi('lead', 'อีเมลที่ส่ง (มีลิงก์ติดตาม)', m.sent, undefined, 'นับเฉพาะอีเมลที่ส่งหลังเปิดระบบติดตามลิงก์'),
-    kpi('click', 'บริษัทที่กดลิงก์', m.clickedCompanies, undefined, `คิดเป็น ${pct(m.clickedCompanies, m.sent)} ของอีเมลที่ส่ง`),
-    kpi('eye', 'เข้าดูเว็บจริง', m.openedSite, undefined, 'กดลิงก์แล้วหน้าเว็บโหลดในเบราว์เซอร์จริง (สัญญาณที่เชื่อได้ที่สุด)'),
-    kpi('alert', 'โปรแกรมสแกนเมลเท่านั้น', m.scannerOnly, undefined, 'ระบบความปลอดภัยของบริษัทผู้รับเปิดลิงก์ตรวจ ไม่ใช่คนกด')));
+  const picker = h('label', { class: 'search camp-pick' }, h('span', { text: 'แคมเปญ' }),
+    h('select', { 'aria-label': 'เลือกแคมเปญ', onchange: (event) => { state.mailCampaign = event.target.value; store.set('ts_mail_campaign', state.mailCampaign); load(); } },
+      h('option', { value: '', selected: !state.mailCampaign ? true : null, text: 'ทุกแคมเปญ' }),
+      (m.campaignList || []).map((code) => h('option', { value: code, selected: state.mailCampaign === code ? true : null, text: campaignName(code) }))));
+  const scope = state.mailCampaign ? campaignName(state.mailCampaign) : 'ทุกแคมเปญ';
+  const stats = h('section', { class: 'card kcard' }, h('div', { class: 'toolbar camp-bar' }, picker),
+    h('div', { class: 'kpis' },
+      kpi('lead', 'อีเมลที่ส่ง (มีลิงก์ติดตาม)', m.sent, undefined, `${scope} · นับเฉพาะอีเมลที่ส่งหลังเปิดระบบติดตามลิงก์`),
+      kpi('click', 'บริษัทที่กดลิงก์', m.clickedCompanies, undefined, `คิดเป็น ${pct(m.clickedCompanies, m.sent)} ของอีเมลที่ส่ง`),
+      kpi('eye', 'เข้าดูเว็บจริง', m.openedSite, undefined, 'กดลิงก์แล้วหน้าเว็บโหลดในเบราว์เซอร์จริง (สัญญาณที่เชื่อได้ที่สุด)'),
+      kpi('alert', 'โปรแกรมสแกนเมลเท่านั้น', m.scannerOnly, undefined, 'ระบบความปลอดภัยของบริษัทผู้รับเปิดลิงก์ตรวจ ไม่ใช่คนกด')));
+  const groups = (m.byCampaign || []).filter((row) => !state.mailCampaign || row.campaign === state.mailCampaign);
+  const byCampaign = h('section', { class: 'card' }, cardHead('ผลแยกตามแคมเปญและชุดอีเมล', 'อีเมลที่ส่งในช่วงวันที่เลือก · % คิดจากจำนวนที่ส่ง'),
+    groups.length ? table([{ text: 'แคมเปญ' }, { text: 'ชุดอีเมล' }, { text: 'ส่ง' }, { text: 'กดลิงก์' }, { text: 'เข้าดูเว็บจริง' }, { text: 'สแกนเมลอย่างเดียว' }],
+      groups.map((r) => [campaignName(r.campaign), templateName(r.template), nf.format(r.sent), `${nf.format(r.clicked)} (${pct(r.clicked, r.sent)})`, `${nf.format(r.opened)} (${pct(r.opened, r.sent)})`, nf.format(r.scanner_only)]))
+      : emptyBox('ยังไม่มีอีเมลที่ส่งพร้อมลิงก์ติดตามในช่วงนี้', 'แคมเปญที่ส่งหลังเปิดระบบนี้จะแยกให้อัตโนมัติ'));
   const rows = m.people.filter((r) => r.clicks > 0 || r.opened_site);
   const people = h('section', { class: 'card' }, cardHead('บริษัทที่กดลิงก์ในอีเมล', 'เรียงจากล่าสุด · ใช้เลือกว่าจะโทรตามรายไหนก่อน'),
-    rows.length ? table([{ text: 'ล่าสุด' }, { text: 'บริษัท' }, { text: 'อีเมล' }, { text: 'ชุดอีเมล' }, { text: 'กดลิงก์' }, { text: 'ดูหน้าเว็บ' }],
-      rows.map((r) => [stamp.format(new Date(r.last_seen * 1000)), r.company || '-', h('span', null, r.email, copyButton(r.email)), TEMPLATE_NAMES[r.template] || r.template || '-', nf.format(r.clicks), nf.format(r.pageviews)]))
+    rows.length ? table([{ text: 'ล่าสุด' }, { text: 'บริษัท' }, { text: 'อีเมล' }, { text: 'แคมเปญ' }, { text: 'ชุดอีเมล' }, { text: 'กดลิงก์' }, { text: 'ดูหน้าเว็บ' }],
+      rows.map((r) => [stamp.format(new Date(r.last_seen * 1000)), r.company || '-', h('span', null, r.email, copyButton(r.email)), campaignName(r.campaign), templateName(r.template), nf.format(r.clicks), nf.format(r.pageviews)]))
       : emptyBox('ยังไม่มีบริษัทกดลิงก์ในช่วงนี้', 'อีเมลที่ส่งหลังเปิดระบบนี้จะมีลิงก์ติดตาม เมื่อมีคนกดจะขึ้นที่นี่'));
-  const exportCsv = () => downloadCsv([['ล่าสุด', 'บริษัท', 'อีเมล', 'ชุดอีเมล', 'กดลิงก์', 'ดูหน้าเว็บ', 'สแกนเมล'],
-    ...m.people.map((r) => [stamp.format(new Date(r.last_seen * 1000)), r.company, r.email, r.template, r.clicks, r.pageviews, r.scanner_hits])], `mail-clicks-${m.range.from}_${m.range.to}.csv`);
+  const exportCsv = () => downloadCsv([['ล่าสุด', 'บริษัท', 'อีเมล', 'แคมเปญ', 'ชุดอีเมล', 'กดลิงก์', 'ดูหน้าเว็บ', 'สแกนเมล'],
+    ...m.people.map((r) => [stamp.format(new Date(r.last_seen * 1000)), r.company, r.email, r.campaign, r.template, r.clicks, r.pageviews, r.scanner_hits])], `mail-clicks-${state.mailCampaign || 'all'}-${m.range.from}_${m.range.to}.csv`);
   const note = h('section', { class: 'card' }, cardHead('อ่านตัวเลขยังไง', ''),
-    h('p', { text: 'ลิงก์เว็บในอีเมลแต่ละฉบับเป็นลิงก์เฉพาะของบริษัทนั้น (www.timeservices.co/r/…) กดแล้วเข้าหน้าเว็บตามปกติ ระบบไม่ได้นับการเปิดอ่านอีเมล เพราะอีเมลเป็นข้อความธรรมดา ตัวเลข “เข้าดูเว็บจริง” คือบริษัทที่สนใจจริง ส่วน “สแกนเมล” เป็นระบบกันไวรัสของบริษัทผู้รับ ไม่นับเป็นความสนใจ' }),
+    h('p', { text: 'ลิงก์เว็บในอีเมลแต่ละฉบับเป็นลิงก์เฉพาะของบริษัทนั้น (www.timeservices.co/r/…) และรู้ว่ามาจากแคมเปญไหน กดแล้วเข้าหน้าเว็บตามปกติ ระบบไม่ได้นับการเปิดอ่านอีเมล เพราะอีเมลเป็นข้อความธรรมดา ตัวเลข “เข้าดูเว็บจริง” คือบริษัทที่สนใจจริง ส่วน “สแกนเมล” เป็นระบบกันไวรัสของบริษัทผู้รับ ไม่นับเป็นความสนใจ' }),
     m.people.length ? h('button', { class: 'btn outline', type: 'button', onclick: exportCsv }, icon('download', 18), 'ดาวน์โหลด CSV') : null);
-  return h('div', { class: 'stack' }, stats, people, note);
+  return h('div', { class: 'stack' }, stats, byCampaign, people, note);
 }
 
 // ---------- chat view ----------
@@ -985,7 +1001,7 @@ async function load() {
     } else {
       state.data = await response.json(); state.error = ''; state.updated = new Date();
       try {
-        const mail = await fetch(`/api/mail-stats?from=${state.from}&to=${state.to}`, { headers: { Authorization: `Bearer ${state.key}` }, cache: 'no-store' });
+        const mail = await fetch(`/api/mail-stats?from=${state.from}&to=${state.to}&campaign=${encodeURIComponent(state.mailCampaign || '')}`, { headers: { Authorization: `Bearer ${state.key}` }, cache: 'no-store' });
         state.mail = mail.ok ? await mail.json() : null;
       } catch { state.mail = null; }
     }
@@ -1003,6 +1019,7 @@ document.addEventListener('keydown', (event) => {
   else if (state.menu) { state.menu = false; draw(); }
 });
 setInterval(() => { if (state.key && !state.drawer && !state.menu && document.visibilityState === 'visible' && !document.activeElement?.matches('input')) load(); }, 60000);
+state.mailCampaign = store.get('ts_mail_campaign') || '';
 Object.assign(state, rangeFor(state.preset));
 load();
 </script>

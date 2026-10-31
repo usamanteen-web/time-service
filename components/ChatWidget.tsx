@@ -2,11 +2,14 @@
 import { useEffect, useId, useRef, useState, type FormEvent } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { ArrowUpRight, MessageCircle, Send, X } from 'lucide-react';
+import { ArrowUpRight, Send, X } from 'lucide-react';
 import { company, people, projectPatterns, services, steps } from '@/lib/content';
 import { projectHref } from '@/lib/project-media';
-import { detectLang, greeting, matchIntent, replyFor, type BotAction, type BotData, type Lang } from '@/lib/chatbot';
+import { detectLang, greeting, matchIntent, replyFor, setVoice, voice, type BotAction, type BotData, type Lang } from '@/lib/chatbot';
+import { chatbotConfig, stickerFor } from '@/lib/chatbot-config';
 import { track } from '@/lib/track';
+
+setVoice(chatbotConfig.voice);
 
 const sales = people.find((person) => /sales/i.test(person.role)) ?? people[0];
 const botData: BotData = {
@@ -17,11 +20,11 @@ const botData: BotData = {
   sales,
 };
 
-type Message = { id: number; from: 'bot' | 'user'; text: string; actions?: BotAction[]; form?: 'quote' };
+type Message = { id: number; from: 'bot' | 'user'; text: string; actions?: BotAction[]; form?: 'quote'; sticker?: { src: string; alt: string } | null };
 
 const copy = {
   th: {
-    open: 'เปิดแชท', close: 'ปิดแชท', title: 'Time Service', status: 'ผู้ช่วยตอบอัตโนมัติ · ทีมงานติดต่อกลับ',
+    open: 'เปิดแชท', close: 'ปิดแชท', title: chatbotConfig.name.th, status: chatbotConfig.status.online.th,
     placeholder: 'พิมพ์คำถามที่นี่', send: 'ส่ง', note: 'ข้อความที่บอทตอบไม่ได้จะถูกบันทึกเพื่อปรับปรุงบริการ',
     name: 'ชื่อ', contact: 'เบอร์โทร / LINE ID / อีเมล', message: 'รายละเอียดงาน (ชื่องาน ขนาดพื้นที่ วันที่)',
     submit: 'ส่งข้อมูล', sending: 'กำลังส่ง…', consent: 'ข้อมูลนี้ใช้เพื่อติดต่อกลับเรื่องที่สอบถามเท่านั้น',
@@ -30,7 +33,7 @@ const copy = {
     limited: 'วันนี้ส่งข้อมูลครบจำนวนแล้ว กรุณาติดต่อทีมงานโดยตรงผ่านช่องทางด้านล่างครับ', sent: 'ส่งข้อมูลแล้ว',
   },
   en: {
-    open: 'Open chat', close: 'Close chat', title: 'Time Service', status: 'Automated assistant · our team follows up',
+    open: 'Open chat', close: 'Close chat', title: chatbotConfig.name.en, status: chatbotConfig.status.online.en,
     placeholder: 'Type your question', send: 'Send', note: 'Questions the bot cannot answer are saved to improve our service',
     name: 'Name', contact: 'Phone / LINE ID / email', message: 'Project details (show name, size, dates)',
     submit: 'Send details', sending: 'Sending…', consent: 'Used only to contact you about your enquiry.',
@@ -39,6 +42,7 @@ const copy = {
     limited: 'You have reached today’s limit. Please contact the team directly below.', sent: 'Details sent',
   },
 } satisfies Record<Lang, Record<string, string>>;
+for (const key of Object.keys(copy.th) as (keyof typeof copy.th)[]) copy.th[key] = voice(copy.th[key]);
 
 function Chip({ action, onChoose, onNavigate }: { action: BotAction; onChoose: (action: BotAction) => void; onNavigate: () => void }) {
   if (!action.href) {
@@ -108,11 +112,15 @@ export default function ChatWidget() {
   const launcherRef = useRef<HTMLButtonElement>(null);
   const t = copy[lang];
 
+  const [typing, setTyping] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const push = (message: Omit<Message, 'id'>) => setMessages((current) => [...current, { ...message, id: nextId.current++ }]);
 
   const answer = (intent: string, language: Lang, typed?: string) => {
     const reply = replyFor(intent, botData, language);
-    push({ from: 'bot', text: reply.text, actions: reply.actions, form: reply.form });
+    const show = () => { setTyping(false); push({ from: 'bot', text: reply.text, actions: reply.actions, form: reply.form, sticker: stickerFor(reply.intent) }); };
+    if (timer.current) clearTimeout(timer.current);
+    if (chatbotConfig.typingDelayMs > 0) { setTyping(true); timer.current = setTimeout(show, chatbotConfig.typingDelayMs); } else show();
     track({ t: 'chat', p: pathname, c: 'chat', i: reply.intent === 'unmatched' ? 'unmatched' : `topic:${reply.intent}`, z: 'chat', l: reply.intent === 'unmatched' ? typed?.slice(0, 200) : undefined });
   };
 
@@ -121,7 +129,7 @@ export default function ChatWidget() {
       const initial: Lang = typeof navigator !== 'undefined' && navigator.language.toLowerCase().startsWith('th') ? 'th' : 'en';
       setLang(initial);
       const hello = greeting(botData, initial);
-      push({ from: 'bot', text: hello.text, actions: hello.actions });
+      push({ from: 'bot', text: hello.text, actions: hello.actions, sticker: stickerFor('greeting') });
     }
     setOpen(true);
     track({ t: 'chat', p: pathname, c: 'chat', i: 'open', z: 'chat' });
@@ -150,13 +158,15 @@ export default function ChatWidget() {
   };
 
   const leadResult = (result: 'ok' | 'error' | 'limited') => {
-    push({ from: 'bot', text: t[result], actions: replyFor('contact', botData, lang).actions.slice(0, 4) });
+    push({ from: 'bot', text: t[result], actions: replyFor('contact', botData, lang).actions.slice(0, 4), sticker: result === 'ok' ? stickerFor('lead_ok') : null });
   };
 
   useEffect(() => {
     const list = listRef.current;
     if (list) list.scrollTop = list.scrollHeight;
-  }, [messages, open]);
+  }, [messages, open, typing]);
+
+  useEffect(() => () => { if (timer.current) clearTimeout(timer.current); }, []);
 
   useEffect(() => {
     if (open) inputRef.current?.focus();
@@ -170,18 +180,20 @@ export default function ChatWidget() {
   return (
     <div className="tsc-root" onKeyDown={(event) => { if (event.key === 'Escape' && open) closeChat(); }}>
       <button ref={launcherRef} type="button" className="tsc-launcher" aria-expanded={open} aria-controls={panelId} aria-label={open ? t.close : t.open} onClick={open ? closeChat : openChat}>
-        {open ? <X size={22} aria-hidden="true" /> : <MessageCircle size={22} aria-hidden="true" />}
-        <span className="tsc-launcher-label" aria-hidden="true">{open ? 'Close' : 'สอบถาม / Chat'}</span>
+        {open ? <X size={22} aria-hidden="true" /> : <img className="tsc-launcher-avatar" src={chatbotConfig.avatar} alt="" width={46} height={46} />}
+        {!open && <span className="tsc-online" aria-hidden="true" />}
+        <span className="tsc-launcher-label" aria-hidden="true">{open ? 'Close' : chatbotConfig.launcher[lang]}</span>
       </button>
       <section id={panelId} className="tsc-panel" role="dialog" aria-label="Chat with Time Service" hidden={!open}>
         <header className="tsc-head">
-          <img src="/images/company-logo.png" alt="" width={38} height={38} />
-          <div><strong>{t.title}</strong><span>{t.status}</span></div>
+          <span className="tsc-head-avatar"><img src={chatbotConfig.avatar} alt="" width={42} height={42} /><i aria-hidden="true" /></span>
+          <div><strong>{t.title}</strong><span>{typing ? chatbotConfig.status.typing[lang] : t.status}</span></div>
           <button type="button" className="tsc-close" onClick={closeChat} aria-label={t.close}><X size={18} aria-hidden="true" /></button>
         </header>
         <div className="tsc-log" ref={listRef} role="log" aria-live="polite">
           {messages.map((message, index) => (
             <div key={message.id} className={`tsc-msg tsc-${message.from}`}>
+              {message.sticker && <img className="tsc-sticker" src={message.sticker.src} alt={message.sticker.alt} loading="lazy" width={150} height={130} />}
               <div className="tsc-bubble">{message.text}</div>
               {message.form === 'quote' && <QuoteForm lang={lang} pathname={pathname} onResult={leadResult} />}
               {message.actions && index === lastBot && (
@@ -191,6 +203,11 @@ export default function ChatWidget() {
               )}
             </div>
           ))}
+          {typing && (
+            <div className="tsc-msg tsc-bot tsc-typing" aria-label={chatbotConfig.status.typing[lang]}>
+              <div className="tsc-bubble"><span /><span /><span /></div>
+            </div>
+          )}
         </div>
         <form className="tsc-input" onSubmit={submitText}>
           <input ref={inputRef} value={input} onChange={(event) => setInput(event.target.value)} placeholder={t.placeholder} aria-label={t.placeholder} maxLength={300} autoComplete="off" />
