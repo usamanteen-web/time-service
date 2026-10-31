@@ -56,8 +56,8 @@
 @keyframes tsc-dot{0%,80%,100%{opacity:.3;transform:translateY(0)}40%{opacity:1;transform:translateY(-3px)}}
 @media(prefers-reduced-motion:reduce){.tsc-typing .tsc-bubble span{animation:none;opacity:.7}}
 @media(max-width:640px){.tsc-launcher{padding:0 6px}.tsc-online{left:40px}}
-.tsc-lang{display:flex;flex-shrink:0;margin-left:auto;padding:3px;border-radius:999px;background:#ffffff14}
-.tsc-lang button{min-width:38px;height:30px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:#c7d6e0;font-size:12px;font-weight:700;letter-spacing:.06em}
+.tsc-head .tsc-lang{display:flex;flex-direction:row;align-items:center;gap:2px;min-width:auto;flex-shrink:0;margin-left:auto;padding:3px;border-radius:999px;background:#ffffff14}
+.tsc-lang button{min-width:36px;height:28px;padding:0 10px;border:0;border-radius:999px;background:transparent;color:#c7d6e0;font-size:12px;font-weight:700;letter-spacing:.06em}
 .tsc-lang button[aria-pressed=true]{background:#fff;color:var(--navy)}
 .tsc-lang button:hover:not([aria-pressed=true]){color:#fff}
 .tsc-lang button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
