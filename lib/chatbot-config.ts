@@ -15,6 +15,10 @@ export const chatbotConfig = {
     checking: { th: 'กำลังตรวจสอบ…', en: 'Checking…' },
   },
   launcher: { th: 'สอบถาม / Chat', en: 'Chat with us' },
+  // Whose details the bot hands out when a customer asks to contact / talk to the team / call back.
+  // Must match a `name` in lib/content.ts `people` (Teen 2026-10-31: send Teen's details).
+  contactPerson: 'Usaman Ohro',
+  contactLabel: { th: 'อุสมาน โอะโร (ทีน)', en: 'Usaman Ohro (Teen)' },
   avatar: '/images/chatbot/avatar-96.webp',
   avatarLarge: '/images/chatbot/avatar-192.webp',
   stickerDir: '/images/chatbot/',

@@ -11,7 +11,8 @@ import { track } from '@/lib/track';
 
 setVoice(chatbotConfig.voice);
 
-const sales = people.find((person) => /sales/i.test(person.role)) ?? people[0];
+const contact = people.find((person) => person.name === chatbotConfig.contactPerson) ?? people[0];
+const sales = { ...contact, label: chatbotConfig.contactLabel };
 const botData: BotData = {
   company,
   services,
@@ -104,6 +105,8 @@ export default function ChatWidget() {
   const panelId = useId();
   const [open, setOpen] = useState(false);
   const [lang, setLang] = useState<Lang>('th');
+  // Once the visitor picks TH/EN in the header, typed messages no longer flip the language.
+  const [langLocked, setLangLocked] = useState(false);
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState<Message[]>([]);
   const nextId = useRef(1);
@@ -126,7 +129,10 @@ export default function ChatWidget() {
 
   const openChat = () => {
     if (messages.length === 0) {
-      const initial: Lang = typeof navigator !== 'undefined' && navigator.language.toLowerCase().startsWith('th') ? 'th' : 'en';
+      let saved: string | null = null;
+      try { saved = localStorage.getItem('tsc_lang'); } catch { /* storage blocked */ }
+      const initial: Lang = saved === 'th' || saved === 'en' ? saved : typeof navigator !== 'undefined' && navigator.language.toLowerCase().startsWith('th') ? 'th' : 'en';
+      if (saved === 'th' || saved === 'en') setLangLocked(true);
       setLang(initial);
       const hello = greeting(botData, initial);
       push({ from: 'bot', text: hello.text, actions: hello.actions, sticker: stickerFor('greeting') });
@@ -150,11 +156,21 @@ export default function ChatWidget() {
     event.preventDefault();
     const text = input.trim();
     if (!text) return;
-    const language = detectLang(text, lang);
+    const language = langLocked ? lang : detectLang(text, lang);
     setLang(language);
     setInput('');
     push({ from: 'user', text });
     answer(matchIntent(text) ?? 'unmatched', language, text);
+  };
+
+  const switchLang = (next: Lang) => {
+    setLangLocked(true);
+    if (next === lang) return;
+    setLang(next);
+    try { localStorage.setItem('tsc_lang', next); } catch { /* storage blocked */ }
+    const hello = greeting(botData, next);
+    push({ from: 'bot', text: hello.text, actions: hello.actions, sticker: stickerFor('greeting') });
+    track({ t: 'chat', p: pathname, c: 'chat', i: `lang:${next}`, z: 'chat' });
   };
 
   const leadResult = (result: 'ok' | 'error' | 'limited') => {
@@ -188,6 +204,11 @@ export default function ChatWidget() {
         <header className="tsc-head">
           <span className="tsc-head-avatar"><img src={chatbotConfig.avatar} alt="" width={42} height={42} /><i aria-hidden="true" /></span>
           <div><strong>{t.title}</strong><span>{typing ? chatbotConfig.status.typing[lang] : t.status}</span></div>
+          <div className="tsc-lang" role="group" aria-label={lang === 'th' ? 'เลือกภาษา' : 'Choose language'}>
+            {(['th', 'en'] as const).map((code) => (
+              <button key={code} type="button" aria-pressed={lang === code} onClick={() => switchLang(code)}>{code === 'th' ? 'TH' : 'EN'}</button>
+            ))}
+          </div>
           <button type="button" className="tsc-close" onClick={closeChat} aria-label={t.close}><X size={18} aria-hidden="true" /></button>
         </header>
         <div className="tsc-log" ref={listRef} role="log" aria-live="polite">

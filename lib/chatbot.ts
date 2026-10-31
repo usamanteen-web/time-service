@@ -5,7 +5,7 @@ export type BotData = {
   services: { id: string; title: string; short: string; thai: string; description: string; detail: string; includes: string[] }[];
   projects: { title: string; href: string }[];
   steps: { title: string; thai: string; copy: string }[];
-  sales: { name: string; role: string; phone: string; tel: string; email: string; chat: { whatsapp: string; wechat: string; line: string } };
+  sales: { name: string; role: string; phone: string; tel: string; email: string; chat: { whatsapp: string; wechat: string; line: string }; label?: { th: string; en: string } };
 };
 
 export type BotAction = { label: string; intent?: string; href?: string; external?: boolean };
@@ -94,7 +94,8 @@ function channelActions(data: BotData, lang: Lang): BotAction[] {
     { label: 'LINE', href: chat.line, external: true },
     { label: 'WhatsApp', href: chat.whatsapp, external: true },
     { label: 'WeChat', href: chat.wechat, external: true },
-    { label: pick(lang, `โทร ${data.company.phone}`, `Call ${data.company.phone}`), href: data.company.phoneHref, external: true },
+    { label: pick(lang, `โทร ${data.sales.phone}`, `Call ${data.sales.phone}`), href: `tel:${data.sales.tel}`, external: true },
+    { label: pick(lang, 'ส่งอีเมล', 'E-mail'), href: `mailto:${data.sales.email}`, external: true },
   ];
 }
 
@@ -163,7 +164,7 @@ export function replyFor(intent: string, data: BotData, lang: Lang): BotReply {
       ? pick(lang, 'ได้เลยครับ ติดต่อทีมงานโดยตรงได้ตามช่องทางด้านล่าง', 'Of course. You can reach our team directly below.')
       : pick(lang, 'ช่องทางติดต่อของเราครับ', 'Here is how to reach us.');
     return done(
-      `${intro}\n${sales.name} (${sales.role})\n${sales.phone}\n${sales.email}`,
+      `${intro}\n${sales.label ? pick(lang, sales.label.th, sales.label.en) : sales.name} · ${sales.role}\n${pick(lang, 'โทร', 'Phone')} ${sales.phone}\n${pick(lang, 'อีเมล', 'E-mail')} ${sales.email}`,
       [
         ...channelActions(data, lang),
         { label: pick(lang, 'ฝากข้อมูลให้ติดต่อกลับ', 'Leave details for a call back'), intent: 'quote' },

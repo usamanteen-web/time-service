@@ -15,7 +15,7 @@ const data = {
   services,
   projects: projectPatterns.map((p) => ({title: p.title, href: `/projects/${p.slug}/`})),
   steps,
-  sales: people.find((p) => /sales/i.test(p.role)) ?? people[0],
+  sales: {...people.find((p) => p.name === chatbotConfig.contactPerson), label: chatbotConfig.contactLabel},
 };
 
 test('avatar and every configured sticker file exists and is small enough for a chat bubble', () => {
@@ -89,4 +89,38 @@ test('a customer chat transcript: every turn answers from real site data', () =>
 test('stickerFor maps any service:* intent to the services sticker', () => {
   assert.equal(stickerFor('service:lighting')?.src, '/images/chatbot/build.webp');
   assert.equal(stickerFor('nope'), null);
+});
+
+test("contact and talk-to-team answers hand out Teen's details from the site data", () => {
+  const teen = people.find((p) => p.name === 'Usaman Ohro');
+  assert.ok(teen, 'Usaman Ohro is in lib/content.ts people');
+  assert.equal(chatbotConfig.contactPerson, 'Usaman Ohro');
+  for (const text of ['ขอเบอร์ติดต่อหน่อย', 'ขอคุยกับเจ้าหน้าที่', 'how can I contact you']) {
+    const r = reply(text, data);
+    assert.ok(r.text.includes(teen.phone), `${text}: phone`);
+    assert.ok(r.text.includes(teen.email), `${text}: email`);
+    assert.ok(!/Harry|Pimchanok/.test(r.text), `${text}: no other person`);
+    const hrefs = r.actions.map((a) => a.href);
+    assert.ok(hrefs.includes(teen.chat.line), `${text}: Teen LINE`);
+    assert.ok(hrefs.includes(teen.chat.whatsapp), `${text}: Teen WhatsApp`);
+    assert.ok(hrefs.includes(teen.chat.wechat), `${text}: Teen WeChat`);
+    assert.ok(hrefs.includes(`tel:${teen.tel}`), `${text}: call Teen`);
+    assert.ok(hrefs.includes(`mailto:${teen.email}`), `${text}: mail Teen`);
+  }
+  assert.match(reply('ขอเบอร์ติดต่อหน่อย', data).text, /อุสมาน โอะโร \(ทีน\) · Project Director/);
+  assert.match(reply('how can I contact you', data).text, /Usaman Ohro \(Teen\) · Project Director/);
+});
+
+test('TH/EN switch: every answer exists in both languages, EN has no Thai text and TH answers are Thai', () => {
+  const THAI = /[\u0E00-\u0E7F]/;
+  for (const intent of ['greeting', 'services', 'projects', 'quote', 'contact', 'human', 'location', 'process', 'about', 'thanks', 'bye', 'unmatched']) {
+    const en = replyFor(intent, data, 'en');
+    const th = replyFor(intent, data, 'th');
+    assert.equal(en.lang, 'en');
+    assert.equal(th.lang, 'th');
+    assert.ok(!THAI.test(en.text), `${intent} EN has Thai: ${en.text}`);
+    assert.ok(!en.actions.some((a) => THAI.test(a.label)), `${intent} EN chip has Thai`);
+    assert.ok(THAI.test(th.text), `${intent} TH has no Thai`);
+  }
+  assert.notEqual(greeting(data, 'th').text, greeting(data, 'en').text);
 });
