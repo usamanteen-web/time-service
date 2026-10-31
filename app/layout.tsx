@@ -3,6 +3,8 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MotionEnhancements from '@/components/MotionEnhancements';
 import SiteMotion from '@/components/SiteMotion';
+import Analytics from '@/components/Analytics';
+import ChatWidget from '@/components/ChatWidget';
 import './globals.css';
 import './motion.css';
 import './redesign.css';
@@ -15,5 +17,6 @@ import './canvas-port.css';
 import './profiles.css';
 import './projects-page.css';
 import './model-explorer.css';
+import './chat-widget.css';
 export const metadata:Metadata={metadataBase:new URL('https://www.timeservices.co'),title:{default:'Time Service Designs and Constructions | Exhibition Booth Design Thailand',template:'%s | Time Service Designs and Constructions'},description:'Professional exhibition booth design, construction, event production, interior and general construction services in Bangkok, Thailand.',keywords:['Exhibition Booth Thailand','Exhibition Design Bangkok','Booth Construction Thailand','Exhibition Contractor Thailand','Event Organizer Bangkok','Interior Design Thailand'],icons:{icon:'/images/company-logo.png',apple:'/apple-touch-icon.png'}};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" data-scroll-behavior="smooth"><body><MotionEnhancements/><SiteMotion/><Header/><main id="main">{children}</main><Footer/></body></html>;}
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" data-scroll-behavior="smooth"><body><MotionEnhancements/><SiteMotion/><Header/><main id="main">{children}</main><Footer/><Analytics/><ChatWidget/></body></html>;}

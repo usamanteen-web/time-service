@@ -71,3 +71,13 @@ Release bundles and initial HTTP check results are in `output/cloudflare-release
 ## Monitoring complete — 2026-09-30 01:14 Asia/Bangkok
 
 Both HTTP and HTTPS apex now return permanent 301 redirects to https://www.timeservices.co/; destination returns 200 with valid TLS. Sitemap returns 200 and valid XML with 20 URLs. Search Console reports sitemap Success / 20 discovered pages and homepage URL is on Google / Page is indexed. All monitoring completion criteria satisfied; stop scheduled monitoring. This does not assert all 20 pages are indexed or any search ranking.
+
+## Analytics, chatbot and e-mail link tracking — 2026-10-31
+
+- D1 database `time-service-analytics` (`4e32967f-e707-42bb-976d-0f269e04d6b8`, APAC) is bound as **DB**; schema is `scripts/cloudflare/schema.sql` (tables `events`, `leads`, `mail_links`). Re-running the schema is safe (`IF NOT EXISTS`).
+- Production secrets: `DASHBOARD_KEY` (dashboard + `/api/stats`, `/api/mail-stats`), `HASH_SALT` (daily anonymous visitor id), `MAIL_LINK_KEY` (only the intro mailer may register links; copy in `TIME/Claude-Gmail-API/core/.mail_link_key`). Optional: `LEAD_WEBHOOK_URL` (Discord/Slack webhook), `LINE_CHANNEL_TOKEN` + `LINE_TO` (LINE OA Messaging API push for chatbot leads; LINE Notify no longer exists).
+- `_routes.json` sends `/api/*` and `/r/*` to the Worker; everything else stays static.
+- `/r/<id>` (id `[a-z0-9]{6,32}`) records an e-mail click (`events.type = 'mail'`, zone `browser`/`scanner`) and 302s to `/?utm_source=email&utm_campaign=mail-<id>`; the page view that follows proves a real browser opened the site.
+- Dashboard tab "อีเมลที่ส่ง" reads `/api/mail-stats`.
+- Releases: `400a10b2` (analytics + chatbot), `04fe60eb` (e-mail link tracking + LINE hook). Rollback point before both: `f4f3a682-8da6-47aa-95c5-a67919247c73`.
+- Tests: `node --test scripts/cloudflare/*.test.mjs scripts/*.test.mjs` (87 passing).
