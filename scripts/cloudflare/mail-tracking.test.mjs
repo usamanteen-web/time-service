@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
-import worker from './video-worker.mjs';
+import worker, {keepsProtected, AI_INTENTS} from './video-worker.mjs';
 
 function makeD1() {
   const db = new DatabaseSync(':memory:');
@@ -146,4 +146,62 @@ test('lead alert is pushed to LINE when the OA token is set, and skipped when no
   } finally {
     globalThis.fetch = realFetch;
   }
+});
+
+// ---- /api/chat-ai (unknown languages) ----
+const aiPost = (body, {ua = SAFARI, origin = ORIGIN} = {}) => new Request(`${ORIGIN}/api/chat-ai`, {method: 'POST',
+  headers: {'User-Agent': ua, Origin: origin, 'CF-Connecting-IP': '203.0.113.20'}, body: JSON.stringify(body)});
+const fakeAi = (reply) => { const calls = []; return {calls, run: async (model, input) => { calls.push({model, input}); return {response: typeof reply === 'function' ? reply(input) : reply}; }}; };
+
+test('chat-ai detect returns language, name and a known intent only', async () => {
+  const ai = fakeAi('Sure: {"lang": "ja", "name": "日本語", "intent": "quote"}');
+  const {env} = setup({AI: ai});
+  const res = await worker.fetch(aiPost({mode: 'detect', text: 'ブースの価格はいくらですか'}), env, {waitUntil: () => {}});
+  assert.equal(res.status, 200);
+  assert.deepEqual(await res.json(), {lang: 'ja', name: '日本語', intent: 'quote'});
+  assert.match(ai.calls[0].input.messages[0].content, /ISO 639-1/);
+  const bad = fakeAi('{"lang": "ko", "name": "한국어", "intent": "delete everything"}');
+  const r2 = await worker.fetch(aiPost({mode: 'detect', text: '안녕하세요'}), setup({AI: bad}).env, {waitUntil: () => {}});
+  assert.equal((await r2.json()).intent, 'unmatched');
+  assert.ok(AI_INTENTS.includes('quote'));
+});
+
+test('chat-ai translate keeps phone, e-mail and URL; a translation that drops them falls back to English', async () => {
+  const src = ['Usaman Ohro (Teen) · Project Director\nPhone (+66) 66 112 4227\nE-mail usaman.teen@gmail.com', 'Request a quote'];
+  const good = fakeAi(JSON.stringify(['Usaman Ohro (Teen) · Giám đốc dự án\nĐiện thoại (+66) 66 112 4227\nEmail usaman.teen@gmail.com', 'Yêu cầu báo giá']));
+  const res = await worker.fetch(aiPost({mode: 'translate', to: 'vi', name: 'Tiếng Việt', strings: src}), setup({AI: good}).env, {waitUntil: () => {}});
+  const out = (await res.json()).strings;
+  assert.match(out[0], /Giám đốc/);
+  assert.equal(out[1], 'Yêu cầu báo giá');
+  const broken = fakeAi(JSON.stringify(['Giám đốc dự án, gọi 0661124227', 'Yêu cầu báo giá']));
+  const r2 = await worker.fetch(aiPost({mode: 'translate', to: 'vi', strings: src}), setup({AI: broken}).env, {waitUntil: () => {}});
+  const out2 = (await r2.json()).strings;
+  assert.equal(out2[0], src[0], 'falls back to the English original');
+  assert.equal(out2[1], 'Yêu cầu báo giá');
+  assert.equal(keepsProtected('Call (+66) 66 112 4227', 'Gọi (+66) 66 112 4227'), true);
+  assert.equal(keepsProtected('Visit https://www.timeservices.co/contact/', 'Truy cập trang liên hệ'), false);
+});
+
+test('chat-ai refuses other sites, bots, bad input, wrong length and over-use', async () => {
+  const ai = fakeAi('[]');
+  const {env, d1} = setup({AI: ai});
+  const ctx = {waitUntil: () => {}};
+  assert.equal((await worker.fetch(aiPost({mode: 'detect', text: 'hi'}, {origin: 'https://evil.example'}), env, ctx)).status, 403);
+  assert.equal((await worker.fetch(aiPost({mode: 'detect', text: 'hi'}, {ua: 'python-requests/2.31'}), env, ctx)).status, 403);
+  assert.equal((await worker.fetch(aiPost({mode: 'nope'}), env, ctx)).status, 400);
+  assert.equal((await worker.fetch(aiPost({mode: 'translate', to: 'vi', strings: ['a', 'b']}), env, ctx)).status, 502);
+  assert.equal((await worker.fetch(aiPost({mode: 'detect', text: 'hi'}), setup().env, ctx)).status, 503, 'no AI binding');
+  const day = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
+  const visitorRow = async () => {
+    const ok = fakeAi('{"lang":"fr","name":"Français","intent":"greeting"}');
+    const e = {...env, AI: ok};
+    const waits = [];
+    await worker.fetch(aiPost({mode: 'detect', text: 'Bonjour'}), e, {waitUntil: (p) => waits.push(p)});
+    await Promise.all(waits);
+    return d1.db.prepare("SELECT visitor FROM events WHERE type = 'ai' LIMIT 1").get().visitor;
+  };
+  const visitor = await visitorRow();
+  const insert = d1.db.prepare("INSERT INTO events (ts, day, type, path, visitor) VALUES (0, ?, 'ai', '/api/chat-ai', ?)");
+  for (let i = 0; i < 80; i += 1) insert.run(day, visitor);
+  assert.equal((await worker.fetch(aiPost({mode: 'detect', text: 'Bonjour'}), {...env, AI: fakeAi('{}')}, ctx)).status, 429);
 });

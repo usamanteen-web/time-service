@@ -62,4 +62,6 @@
 .tsc-lang button:hover:not([aria-pressed=true]){color:#fff}
 .tsc-lang button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
 .tsc-lang+.tsc-close{margin-left:6px}
+.tsc-lang-ai{display:inline-grid;place-items:center;min-width:34px;height:28px;padding:0 8px;border-radius:999px;background:#3fcf6b;color:#06231a;font-size:11px;font-weight:800;letter-spacing:.05em}
+@media(max-width:420px){.tsc-lang button{min-width:30px;padding:0 7px;font-size:11px}.tsc-head{gap:8px;padding:12px 10px 12px 12px}.tsc-head strong{font-size:14px}}
 @media print{.tsc-root{display:none}}

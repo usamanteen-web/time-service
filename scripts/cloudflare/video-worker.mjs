@@ -218,6 +218,100 @@ async function mailStats(request, env) {
   });
 }
 
+// ---- Chatbot AI route: languages the rule bot does not speak (Teen 2026-11-01) ----
+// POST /api/chat-ai {mode:'detect', text} -> {lang, name, intent}
+// POST /api/chat-ai {mode:'translate', to, name, strings:[...]} -> {strings:[...]}
+// Runs on Workers AI (binding AI). Answers are still the bot's own site-data replies; the model only
+// detects the language/topic and translates. Phone numbers, e-mails and URLs are verified unchanged.
+export const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
+export const AI_INTENTS = ['greeting', 'quote', 'projects', 'services', 'service:exhibition', 'service:event', 'service:lighting',
+  'service:interior', 'service:construction', 'contact', 'human', 'location', 'process', 'factory', 'about', 'thanks', 'bye', 'unmatched'];
+const AI_DAILY_LIMIT = 80;
+const PROTECTED = /(?:https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+(?:\.[\w-]+)+|\+?\(?\d[\d\s()+-]{6,}\d/g;
+
+function aiText(result) {
+  if (typeof result?.response === 'string') return result.response;
+  if (result?.response && typeof result.response === 'object') return JSON.stringify(result.response);
+  return result?.choices?.[0]?.message?.content || '';
+}
+
+function firstJson(text, open, close) {
+  const start = text.indexOf(open);
+  const end = text.lastIndexOf(close);
+  if (start < 0 || end <= start) return null;
+  try { return JSON.parse(text.slice(start, end + 1)); } catch { return null; }
+}
+
+// A translation is accepted only if every phone/e-mail/URL of the source survives verbatim.
+export function keepsProtected(source, translated) {
+  if (typeof translated !== 'string' || !translated.trim()) return false;
+  return (source.match(PROTECTED) || []).every((token) => translated.includes(token.trim()));
+}
+
+async function chatAi(request, env, ctx) {
+  if (request.method !== 'POST') return notAllowed('POST');
+  if (!env.AI) return json({error: 'unavailable'}, 503);
+  if (!allowedOrigin(request, env)) return json({error: 'forbidden'}, 403);
+  const userAgent = request.headers.get('User-Agent') || '';
+  if (!userAgent || BOTS.test(userAgent)) return json({error: 'forbidden'}, 403);
+  const body = await readJson(request, 16384);
+  if (body.tooLarge) return json({error: 'too_large'}, 413);
+  const data = body.value;
+  if (body.invalid || typeof data !== 'object' || data === null) return json({error: 'bad_request'}, 400);
+  const now = Date.now();
+  const day = bangkokDay(now);
+  const visitor = await visitorId(request, env, day);
+  if (env.DB) {
+    const used = await env.DB.prepare("SELECT COUNT(*) AS n FROM events WHERE type = 'ai' AND visitor = ? AND day = ?").bind(visitor, day).first();
+    if ((used?.n ?? 0) >= AI_DAILY_LIMIT) return json({error: 'rate_limited'}, 429);
+  }
+  const log = (item) => {
+    if (!env.DB) return;
+    const write = env.DB.prepare('INSERT INTO events (ts, day, type, path, category, item, zone, label, ref, camp, entry, device, country, visitor) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)')
+      .bind(Math.floor(now / 1000), day, 'ai', '/api/chat-ai', 'chat', clean(item, 100), 'chat', '', '', '', 0, deviceOf(userAgent), request.cf?.country || '', visitor).run()
+      .catch(() => {});
+    if (ctx?.waitUntil) ctx.waitUntil(write);
+  };
+  const run = (system, user, maxTokens) => env.AI.run(AI_MODEL, {messages: [{role: 'system', content: system}, {role: 'user', content: user}], max_tokens: maxTokens, temperature: 0});
+
+  if (data.mode === 'detect') {
+    const text = clean(data.text, 300);
+    if (!text) return json({error: 'bad_request'}, 400);
+    const system = 'You classify one chat message sent to the website chatbot of an exhibition booth, event and transport company in Thailand. '
+      + 'Reply with JSON only: {"lang": ISO 639-1 code of the language the message is written in, "name": that language\'s own name for itself, '
+      + `"intent": one of ${JSON.stringify(AI_INTENTS)}}. quote = asks price, cost or budget. human = wants to talk to a person or sales. `
+      + 'contact = asks for phone, e-mail, LINE, WeChat or WhatsApp. location = asks where the office is. '
+      + 'service:exhibition = booth / stand / exhibition / pavilion design or build. service:event = events, launches, stages, conferences. '
+      + 'service:lighting = lighting, sound, LED. service:interior = transport, airport transfer, vans, buses, tours, travel. '
+      + 'service:construction = project consulting, site coordination. process = steps or timeline. projects = portfolio or past work. '
+      + 'Use unmatched only when nothing fits.';
+    let parsed = null;
+    try { parsed = firstJson(aiText(await run(system, text, 120)), '{', '}'); } catch (error) { console.error('chat-ai detect', error); }
+    if (!parsed) return json({error: 'ai_failed'}, 502);
+    const lang = /^[a-z]{2,3}$/i.test(String(parsed.lang || '')) ? String(parsed.lang).toLowerCase() : '';
+    const intent = AI_INTENTS.includes(parsed.intent) ? parsed.intent : 'unmatched';
+    log(`detect:${lang}`);
+    return json({lang, name: clean(String(parsed.name || ''), 40), intent});
+  }
+
+  if (data.mode === 'translate') {
+    const to = String(data.to || '').toLowerCase();
+    const strings = Array.isArray(data.strings) ? data.strings.slice(0, 40).map((value) => cleanLines(String(value ?? ''), 1500)) : [];
+    if (!/^[a-z]{2,3}$/.test(to) || !strings.length) return json({error: 'bad_request'}, 400);
+    const system = `Translate each string in the JSON array from English into ${clean(String(data.name || ''), 40) || to} (language code ${to}). `
+      + 'Keep person names, company names, brand names, phone numbers, e-mail addresses, URLs, bullet characters and line breaks exactly as they are. '
+      + 'Use a polite, friendly customer-service tone. Reply with a JSON array of exactly the same length and order, and nothing else.';
+    let parsed = null;
+    try { parsed = firstJson(aiText(await run(system, JSON.stringify(strings), 2000)), '[', ']'); } catch (error) { console.error('chat-ai translate', error); }
+    if (!Array.isArray(parsed) || parsed.length !== strings.length) return json({error: 'ai_failed'}, 502);
+    const out = strings.map((source, index) => (keepsProtected(source, parsed[index]) ? cleanLines(String(parsed[index]), 1500) : source));
+    log(`translate:${to}`);
+    return json({strings: out});
+  }
+
+  return json({error: 'bad_request'}, 400);
+}
+
 async function lead(request, env, ctx) {
   if (request.method !== 'POST') return notAllowed('POST');
   if (!env.DB) return json({ok: false, error: 'unavailable'}, 503);
@@ -346,6 +440,7 @@ export default {
     if (path === '/api/stats') return stats(request, env);
     if (path === '/api/mail-stats') return mailStats(request, env);
     if (path === '/api/mail-links') return mailLinks(request, env);
+    if (path === '/api/chat-ai') return chatAi(request, env, ctx);
     if (path.startsWith('/r/')) return mailRedirect(request, env, ctx);
     if (path.startsWith('/api/')) return json({error: 'not_found'}, 404);
     if (!videos.has(path) || !env.MEDIA) return env.ASSETS.fetch(request);

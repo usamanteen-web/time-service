@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import {existsSync, statSync} from 'node:fs';
 import {company, people, services, projectPatterns, steps} from '../lib/content.ts';
 import {chatbotConfig, stickerFor} from '../lib/chatbot-config.ts';
-import {greeting, matchIntent, reply, replyFor, setVoice, voice} from '../lib/chatbot.ts';
+import {detectLang, greeting, matchIntent, reply, replyFor, routeFor, setVoice, voice} from '../lib/chatbot.ts';
 
 setVoice(chatbotConfig.voice);
 
@@ -123,4 +123,45 @@ test('TH/EN switch: every answer exists in both languages, EN has no Thai text a
     assert.ok(THAI.test(th.text), `${intent} TH has no Thai`);
   }
   assert.notEqual(greeting(data, 'th').text, greeting(data, 'en').text);
+});
+
+test('Chinese: detection, intents and full answers in Simplified Chinese from site data', () => {
+  const HAN = /[\u4e00-\u9fff]/;
+  const THAI = /[\u0E00-\u0E7F]/;
+  assert.equal(detectLang('展台设计多少钱？'), 'zh');
+  const cases = [
+    ['你好', 'greeting'], ['展台设计多少钱？', 'quote'], ['你们做展台搭建吗', 'service:exhibition'], ['可以看看你们的案例吗', 'projects'],
+    ['你们的地址在哪里', 'location'], ['请给我电话和微信', 'contact'], ['我想和销售聊聊', 'human'], ['流程是怎样的，需要多久', 'process'],
+    ['有机场接送吗', 'service:interior'], ['灯光音响可以做吗', 'service:lighting'], ['谢谢', 'thanks'],
+  ];
+  for (const [text, intent] of cases) {
+    const r = reply(text, data);
+    assert.equal(r.intent, intent, text);
+    assert.equal(r.lang, 'zh', text);
+    assert.ok(HAN.test(r.text), `${text}: Chinese answer`);
+    assert.ok(!THAI.test(r.text), `${text}: no Thai in Chinese answer`);
+  }
+  const teen = people.find((p) => p.name === 'Usaman Ohro');
+  const contact = reply('请给我电话和微信', data);
+  assert.ok(contact.text.includes(teen.phone) && contact.text.includes(teen.email));
+  assert.ok(contact.actions.some((a) => a.href === teen.chat.wechat));
+  for (const intent of ['greeting', 'services', 'projects', 'quote', 'contact', 'human', 'location', 'process', 'factory', 'about', 'thanks', 'bye', 'unmatched',
+    'service:exhibition', 'service:event', 'service:construction', 'service:lighting', 'service:interior']) {
+    const r = replyFor(intent, data, 'zh');
+    assert.ok(HAN.test(r.text), `${intent} zh text`);
+    for (const a of r.actions) if (a.intent) assert.ok(HAN.test(a.label), `${intent} zh chip ${a.label}`);
+  }
+});
+
+test('routeFor: the answer follows the language of each new message; unknown languages go to the AI route', () => {
+  assert.equal(routeFor('ราคาเท่าไหร่', 'en'), 'th');
+  assert.equal(routeFor('how much is a booth', 'th'), 'en');
+  assert.equal(routeFor('展台多少钱', 'th'), 'zh');
+  for (const text of ['ブースのデザインをお願いできますか', '부스 제작 가격이 얼마인가요?', 'Здравствуйте, можно поговорить с менеджером?',
+    'Xin chào, công ty có làm gian hàng triển lãm không?', 'Bonjour, combien coûte un stand ?', 'مرحبا كم سعر الجناح', 'नमस्ते, बूथ की कीमत क्या है']) {
+    assert.equal(routeFor(text, 'th'), 'other', text);
+  }
+  // Plain-ASCII text that is not English (Malay, Indonesian …) is checked by the AI route too.
+  assert.equal(routeFor('Selamat pagi, boleh saya dapatkan nombor telefon?', 'th'), 'en?');
+  assert.equal(routeFor('12345', 'zh'), 'zh');
 });

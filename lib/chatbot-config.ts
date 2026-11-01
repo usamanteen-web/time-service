@@ -5,20 +5,31 @@
 export type Sticker = 'hello' | 'think' | 'thanks' | 'ask' | 'check' | 'gotit' | 'build' | 'solution' | 'search';
 
 export const chatbotConfig = {
-  name: { th: 'ผู้ช่วย TIME', en: 'TIME Assistant' },
+  name: { th: 'ผู้ช่วย TIME', en: 'TIME Assistant', zh: 'TIME 助手' },
   // Thai voice of the mascot (female): particle for statements, for questions, and the first-person word.
   // Set particle to 'ครับ' to go back to the original male wording.
   voice: { particle: 'ค่ะ', question: 'คะ', pronoun: 'เรา' },
   status: {
-    online: { th: 'ออนไลน์ · พร้อมช่วยเหลือ', en: 'Online · Ready to help' },
-    typing: { th: 'กำลังพิมพ์…', en: 'Typing…' },
-    checking: { th: 'กำลังตรวจสอบ…', en: 'Checking…' },
+    online: { th: 'ออนไลน์ · พร้อมช่วยเหลือ', en: 'Online · Ready to help', zh: '在线 · 随时为您服务' },
+    typing: { th: 'กำลังพิมพ์…', en: 'Typing…', zh: '正在输入…' },
+    checking: { th: 'กำลังตรวจสอบ…', en: 'Checking…', zh: '正在查询…' },
+    // Shown while the AI route detects an unknown language and translates the answer.
+    translating: { th: 'กำลังแปลภาษา…', en: 'Translating…', zh: '正在翻译…' },
   },
-  launcher: { th: 'สอบถาม / Chat', en: 'Chat with us' },
+  launcher: { th: 'สอบถาม / Chat', en: 'Chat with us', zh: '在线咨询' },
   // Whose details the bot hands out when a customer asks to contact / talk to the team / call back.
   // Must match a `name` in lib/content.ts `people` (Teen 2026-10-31: send Teen's details).
   contactPerson: 'Usaman Ohro',
-  contactLabel: { th: 'อุสมาน โอะโร (ทีน)', en: 'Usaman Ohro (Teen)' },
+  contactLabel: { th: 'อุสมาน โอะโร (ทีน)', en: 'Usaman Ohro (Teen)', zh: 'Usaman Ohro (Teen)' },
+  // Languages the bot speaks itself (buttons in the header). Any other language the customer types is
+  // detected and translated by the site's AI route (/api/chat-ai, Cloudflare Workers AI).
+  languages: [
+    { code: 'th', label: 'TH' },
+    { code: 'en', label: 'EN' },
+    { code: 'zh', label: '中文' },
+  ] as { code: 'th' | 'en' | 'zh'; label: string }[],
+  // Let the AI route handle languages the bot does not speak. false = answer in English instead.
+  aiTranslate: true,
   avatar: '/images/chatbot/avatar-96.webp',
   avatarLarge: '/images/chatbot/avatar-192.webp',
   stickerDir: '/images/chatbot/',
