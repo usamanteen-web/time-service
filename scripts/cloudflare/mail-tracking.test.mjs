@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 import {DatabaseSync} from 'node:sqlite';
-import worker, {keepsProtected, AI_INTENTS} from './video-worker.mjs';
+import worker, {keepsProtected, aiIntents} from './video-worker.mjs';
 
 function makeD1() {
   const db = new DatabaseSync(':memory:');
@@ -163,7 +163,7 @@ test('chat-ai detect returns language, name and a known intent only', async () =
   const bad = fakeAi('{"lang": "ko", "name": "한국어", "intent": "delete everything"}');
   const r2 = await worker.fetch(aiPost({mode: 'detect', text: '안녕하세요'}), setup({AI: bad}).env, {waitUntil: () => {}});
   assert.equal((await r2.json()).intent, 'unmatched');
-  assert.ok(AI_INTENTS.includes('quote'));
+  assert.ok(aiIntents().includes('quote'));
 });
 
 test('chat-ai translate keeps phone, e-mail and URL; a translation that drops them falls back to English', async () => {

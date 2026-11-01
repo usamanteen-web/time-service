@@ -64,4 +64,42 @@
 .tsc-lang+.tsc-close{margin-left:6px}
 .tsc-lang-ai{display:inline-grid;place-items:center;min-width:34px;height:28px;padding:0 8px;border-radius:999px;background:#3fcf6b;color:#06231a;font-size:11px;font-weight:800;letter-spacing:.05em}
 @media(max-width:420px){.tsc-lang button{min-width:30px;padding:0 7px;font-size:11px}.tsc-head{gap:8px;padding:12px 10px 12px 12px}.tsc-head strong{font-size:14px}}
+/* Compact panel (Teen 2026-11-01): corner widget, at most ~1/3 of the phone screen; smaller on desktop too */
+.tsc-panel{width:min(340px,calc(100vw - 24px));height:min(500px,calc(100dvh - 150px));min-height:0;border-radius:16px}
+.tsc-head{gap:9px;padding:10px 10px 10px 12px}
+.tsc-head-avatar,.tsc-head-avatar img{width:34px;height:34px}
+.tsc-head-avatar i{width:9px;height:9px}
+.tsc-head strong{font-size:13.5px;white-space:nowrap}
+.tsc-head span{font-size:10.5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tsc-close{width:30px;height:30px}
+.tsc-lang button{min-width:28px;height:24px;padding:0 7px;font-size:11px}
+.tsc-lang-ai{min-width:28px;height:24px;font-size:10px}
+.tsc-log{padding:12px}
+.tsc-msg{margin-bottom:10px}
+.tsc-bubble{padding:8px 12px;font-size:13px;line-height:1.5}
+.tsc-sticker{width:96px;max-height:90px;margin-bottom:4px;border-radius:12px}
+.tsc-actions{gap:6px;margin-top:8px}
+.tsc-chip{min-height:30px;padding:5px 11px;font-size:12px}
+.tsc-input{gap:6px;padding:8px 10px}
+.tsc-input input{height:36px;padding:0 13px;font-size:13px}
+.tsc-input button{width:36px;height:36px}
+.tsc-note{padding:0 10px 7px;font-size:9.5px}
+.tsc-form{gap:8px;padding:11px}
+.tsc-launcher{height:50px;min-width:50px;font-size:12px}
+.tsc-launcher-avatar{width:40px;height:40px}
+.tsc-online{left:37px;bottom:7px;width:11px;height:11px}
+.tsc-panel{bottom:calc(max(20px,env(safe-area-inset-bottom)) + 60px)}
+@media(max-width:540px){
+ .tsc-panel{left:auto;right:10px;width:min(300px,82vw);height:min(400px,44dvh);bottom:calc(max(12px,env(safe-area-inset-bottom)) + 56px)}
+ .tsc-launcher{height:46px;min-width:46px;right:max(12px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom))}
+ .tsc-launcher-avatar{width:36px;height:36px}
+ .tsc-online{left:33px;bottom:6px}
+ .tsc-head div>span{display:none}
+ .tsc-head strong{font-size:13px}
+ .tsc-note{display:none}
+ .tsc-sticker{width:80px;max-height:76px}
+ .tsc-bubble{font-size:12.5px}
+ .tsc-chip{min-height:28px;padding:4px 10px;font-size:11.5px}
+ .tsc-input input,.tsc-form input:not(.tsc-hp),.tsc-form textarea{font-size:16px}
+}
 @media print{.tsc-root{display:none}}

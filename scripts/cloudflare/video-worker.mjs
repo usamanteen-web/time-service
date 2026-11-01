@@ -27,7 +27,7 @@ const notAllowed = (allow) => empty(405, {Allow: allow});
 const clean = (value, max) => (typeof value === 'string' ? value.replace(/[\u0000-\u001f\u007f]/g, ' ').trim().slice(0, max) : '');
 const cleanLines = (value, max) => (typeof value === 'string' ? value.replace(/[\u0000-\u0009\u000b-\u001f\u007f]/g, ' ').trim().slice(0, max) : '');
 
-export const bangkokDay = (ms) => new Date(ms + BANGKOK_SECONDS * 1000).toISOString().slice(0, 10);
+export function bangkokDay(ms) { return  new Date(ms + BANGKOK_SECONDS * 1000).toISOString().slice(0, 10); }
 const dayMs = (day) => Date.parse(`${day}T00:00:00Z`);
 const shiftDay = (day, n) => new Date(dayMs(day) + n * DAY_MS).toISOString().slice(0, 10);
 const spanDays = (from, to) => Math.round((dayMs(to) - dayMs(from)) / DAY_MS) + 1;
@@ -223,8 +223,8 @@ async function mailStats(request, env) {
 // POST /api/chat-ai {mode:'translate', to, name, strings:[...]} -> {strings:[...]}
 // Runs on Workers AI (binding AI). Answers are still the bot's own site-data replies; the model only
 // detects the language/topic and translates. Phone numbers, e-mails and URLs are verified unchanged.
-export const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
-export const AI_INTENTS = ['greeting', 'quote', 'projects', 'services', 'service:exhibition', 'service:event', 'service:lighting',
+const AI_MODEL = '@cf/meta/llama-3.3-70b-instruct-fp8-fast';
+const AI_INTENTS = ['greeting', 'quote', 'projects', 'services', 'service:exhibition', 'service:event', 'service:lighting',
   'service:interior', 'service:construction', 'contact', 'human', 'location', 'process', 'factory', 'about', 'thanks', 'bye', 'unmatched'];
 const AI_DAILY_LIMIT = 80;
 const PROTECTED = /(?:https?:\/\/|www\.)\S+|[\w.+-]+@[\w-]+(?:\.[\w-]+)+|\+?\(?\d[\d\s()+-]{6,}\d/g;
@@ -431,6 +431,9 @@ async function stats(request, env) {
     leads: rows(15),
   });
 }
+
+/** Intent list for the AI route (a function: workerd only allows handler exports). */
+export function aiIntents() { return AI_INTENTS; }
 
 export default {
   async fetch(request, env, ctx) {
