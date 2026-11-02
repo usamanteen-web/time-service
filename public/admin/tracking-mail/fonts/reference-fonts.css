@@ -2,23 +2,23 @@
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 400;
-  src: url(/mail/fonts/manrope-400.ttf) format('truetype');
+  src: url(/admin/tracking-mail/fonts/manrope-400.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 500;
-  src: url(/mail/fonts/manrope-500.ttf) format('truetype');
+  src: url(/admin/tracking-mail/fonts/manrope-500.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 600;
-  src: url(/mail/fonts/manrope-600.ttf) format('truetype');
+  src: url(/admin/tracking-mail/fonts/manrope-600.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Manrope';
   font-style: normal;
   font-weight: 700;
-  src: url(/mail/fonts/manrope-700.ttf) format('truetype');
+  src: url(/admin/tracking-mail/fonts/manrope-700.ttf) format('truetype');
 }

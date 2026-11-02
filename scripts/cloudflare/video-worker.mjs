@@ -358,7 +358,7 @@ async function mailLinks(request, env) {
   return json({ok: true, stored: rows.length, skipped: items.length - rows.length});
 }
 
-// ---- Mail-sending dashboard (/mail/): snapshots pushed by the Mac mailer, one row per sender account ----
+// ---- Mail-sending dashboard (/admin/tracking-mail/): snapshots pushed by the Mac mailer, one row per sender account ----
 // Accounts Teen named on 2026-11-02. Harry is tracked through mail he cc's to pimchanok.event@gmail.com.
 export const MAIL_ACCOUNTS = {
   gmail: {address: 'usaman.teen.event@gmail.com', status: 'sending'},

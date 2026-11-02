@@ -1,6 +1,6 @@
 /* Approved Teen reference: fixed desktop composition, responsive below 1200px. */
 body{background:#0e2a4d}
-.sidebar{background:#0d284a url('/mail/img/sidebar.webp') center / 100% 100% no-repeat}.swoosh{display:none}
+.sidebar{background:#0d284a url('/admin/tracking-mail/img/sidebar.webp') center / 100% 100% no-repeat}.swoosh{display:none}
 .brand{padding-top:36px;padding-bottom:37px;gap:17px}.brand strong{font-weight:500;font-size:25px}.brand small{font-weight:400;font-size:13px}
 .brand .mail{width:49px;height:44px}.nav button{gap:26px;font-weight:400}.nav button.selected{font-weight:600;box-shadow:inset 0 0 0 1px #fff,0 4px 8px #5ac6ff44}.nav button.selected:after{opacity:.75;transform:none;background:linear-gradient(125deg,transparent 75%,#ffffff55 75.5%,#ffffff08 94%)}
 main{background:radial-gradient(ellipse at 30% 40%,#fff8,transparent 70%),#f8f9fc;border-top-left-radius:22px 42px}

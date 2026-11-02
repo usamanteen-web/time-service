@@ -82,9 +82,9 @@ Both HTTP and HTTPS apex now return permanent 301 redirects to https://www.times
 - Releases: `400a10b2` (analytics + chatbot), `04fe60eb` (e-mail link tracking + LINE hook). Rollback point before both: `f4f3a682-8da6-47aa-95c5-a67919247c73`.
 - Tests: `node --test scripts/cloudflare/*.test.mjs scripts/*.test.mjs` (87 passing).
 
-## Mail-sending dashboard `/mail/` — 2026-11-02
+## Mail-sending dashboard `/admin/tracking-mail/` (moved from `/mail/` on Teen's request) — 2026-11-02
 
-- Page: `public/mail/index.html` (approved mockup v6, `TIME/TIME-Web-Analytics/mail-dashboard-2026-11-02/mockups/v6/`). `noindex`. Uses the same `DASHBOARD_KEY` as `/dashboard/` (localStorage `ts_dash_key`). `?sample=1` renders the bundled sample JSON for local previews.
+- Page: `public/admin/tracking-mail/index.html` (approved mockup v6, `TIME/TIME-Web-Analytics/mail-dashboard-2026-11-02/mockups/v6/`). `noindex`. Uses the same `DASHBOARD_KEY` as `/dashboard/` (localStorage `ts_dash_key`). `?sample=1` renders the bundled sample JSON for local previews.
 - `GET /api/mail-dashboard` (`DASHBOARD_KEY`): three sender accounts `gmail` (usaman.teen.event@gmail.com), `domain` (usaman.teen@timeservices.co, waiting for the domain), `harry` (read from mail Harry cc's to pimchanok.event@gmail.com) + all-time production link clicks.
 - `POST /api/mail-snapshot` (`MAIL_LINK_KEY`, mailer only): `{account, status, data}`; one row per account in D1 table `mail_snapshots`.
 - Snapshots are pushed from the Mac by the intro cron (`~/.hermes/scripts/time_intro_daily.py`): `campaigns/INTRO-2026Q4/dashboard_snapshot.py` every tick (local files only, no recipient e-mail addresses) and `core/harry_snapshot.py` hourly once `core/token_pimchanok.json` (gmail.readonly) exists. If the Mac is off the page shows the last snapshot with a "ข้อมูลเก่า" chip.
