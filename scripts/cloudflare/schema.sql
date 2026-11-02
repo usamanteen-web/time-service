@@ -42,3 +42,11 @@ CREATE TABLE IF NOT EXISTS mail_links (
 );
 CREATE INDEX IF NOT EXISTS idx_mail_links_sent ON mail_links (mode, sent_ts);
 CREATE INDEX IF NOT EXISTS idx_events_camp ON events (camp);
+
+-- Mail-sending dashboard: latest snapshot per sender account (gmail | domain | harry), pushed by the Mac mailer.
+CREATE TABLE IF NOT EXISTS mail_snapshots (
+  account TEXT PRIMARY KEY,
+  status TEXT NOT NULL DEFAULT '',
+  data TEXT,
+  updated_at INTEGER NOT NULL
+);

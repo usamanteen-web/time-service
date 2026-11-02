@@ -358,6 +358,75 @@ async function mailLinks(request, env) {
   return json({ok: true, stored: rows.length, skipped: items.length - rows.length});
 }
 
+// ---- Mail-sending dashboard (/mail/): snapshots pushed by the Mac mailer, one row per sender account ----
+// Accounts Teen named on 2026-11-02. Harry is tracked through mail he cc's to pimchanok.event@gmail.com.
+export const MAIL_ACCOUNTS = {
+  gmail: {address: 'usaman.teen.event@gmail.com', status: 'sending'},
+  domain: {address: 'usaman.teen@timeservices.co', status: 'waiting_domain'},
+  harry: {address: 'pimchanok.event@gmail.com', status: 'not_connected'},
+};
+const ACCOUNT_STATUSES = new Set(['sending', 'waiting_domain', 'not_connected', 'connected', 'error']);
+
+async function bearerMatches(request, secret) {
+  const given = (request.headers.get('Authorization') || '').replace(/^Bearer\s+/i, '');
+  return Boolean(secret) && (await sameSecret(given, secret));
+}
+
+// POST /api/mail-snapshot {account, status?, data} (MAIL_LINK_KEY) -> stores the latest snapshot for that account.
+async function mailSnapshot(request, env) {
+  if (request.method !== 'POST') return notAllowed('POST');
+  if (!env.MAIL_LINK_KEY || !env.DB) return json({error: 'not_configured'}, 503);
+  if (!(await bearerMatches(request, env.MAIL_LINK_KEY))) return json({error: 'unauthorized'}, 401);
+  const body = await readJson(request, 256 * 1024);
+  if (body.tooLarge) return json({error: 'too_large'}, 413);
+  const value = body.value || {};
+  const account = clean(value.account, 20);
+  if (!MAIL_ACCOUNTS[account]) return json({error: 'unknown_account'}, 400);
+  const status = ACCOUNT_STATUSES.has(value.status) ? value.status : MAIL_ACCOUNTS[account].status;
+  const data = value.data && typeof value.data === 'object' ? JSON.stringify(value.data) : null;
+  if (data && data.length > 200000) return json({error: 'too_large'}, 413);
+  await env.DB.prepare(
+    'INSERT OR REPLACE INTO mail_snapshots (account, status, data, updated_at) VALUES (?, ?, ?, ?)',
+  ).bind(account, status, data, Math.floor(Date.now() / 1000)).run();
+  return json({ok: true, account, status});
+}
+
+// GET /api/mail-dashboard (DASHBOARD_KEY) -> every account (snapshot or placeholder) + all-time link clicks.
+async function mailDashboard(request, env) {
+  if (request.method !== 'GET') return notAllowed('GET');
+  if (!env.DASHBOARD_KEY) return json({error: 'not_configured'}, 503);
+  if (!(await bearerMatches(request, env.DASHBOARD_KEY))) return json({error: 'unauthorized'}, 401);
+  if (!env.DB) return json({error: 'no_database'}, 503);
+  const [snaps, clicks] = await env.DB.batch([
+    env.DB.prepare('SELECT account, status, data, updated_at FROM mail_snapshots'),
+    env.DB.prepare(`
+      SELECT COUNT(*) AS sent,
+        SUM(COALESCE(c.clicks, 0) > 0 OR COALESCE(c.pv, 0) > 0) AS clicked,
+        SUM(COALESCE(c.pv, 0) > 0) AS opened,
+        SUM(COALESCE(c.scans, 0) > 0 AND COALESCE(c.clicks, 0) = 0 AND COALESCE(c.pv, 0) = 0) AS scanner_only
+      FROM mail_links l LEFT JOIN (
+        SELECT camp, SUM(type = 'mail' AND zone = 'browser') AS clicks, SUM(type = 'mail' AND zone = 'scanner') AS scans,
+          SUM(type = 'pageview') AS pv
+        FROM events WHERE camp LIKE 'mail-%' GROUP BY camp
+      ) c ON c.camp = 'mail-' || l.id
+      WHERE l.mode = 'PRODUCTION'`),
+  ]);
+  const stored = Object.fromEntries((snaps.results || []).map((row) => [row.account, row]));
+  const accounts = {};
+  for (const [id, base] of Object.entries(MAIL_ACCOUNTS)) {
+    const row = stored[id];
+    let data = null;
+    try { data = row?.data ? JSON.parse(row.data) : null; } catch { data = null; }
+    accounts[id] = {address: base.address, status: row?.status || base.status, updated_at: row?.updated_at ?? null, data};
+  }
+  const c = clicks.results?.[0] || {};
+  return json({
+    generated_at: Math.floor(Date.now() / 1000),
+    accounts,
+    clicks: {sent: c.sent || 0, clicked: c.clicked || 0, opened: c.opened || 0, scanner_only: c.scanner_only || 0},
+  });
+}
+
 async function stats(request, env) {
   if (request.method !== 'GET') return notAllowed('GET');
   if (!env.DASHBOARD_KEY) return json({error: 'not_configured'}, 503);
@@ -443,6 +512,8 @@ export default {
     if (path === '/api/stats') return stats(request, env);
     if (path === '/api/mail-stats') return mailStats(request, env);
     if (path === '/api/mail-links') return mailLinks(request, env);
+    if (path === '/api/mail-snapshot') return mailSnapshot(request, env);
+    if (path === '/api/mail-dashboard') return mailDashboard(request, env);
     if (path === '/api/chat-ai') return chatAi(request, env, ctx);
     if (path.startsWith('/r/')) return mailRedirect(request, env, ctx);
     if (path.startsWith('/api/')) return json({error: 'not_found'}, 404);

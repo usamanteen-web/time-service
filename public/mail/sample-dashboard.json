@@ -1,0 +1,194 @@
+{
+  "generated_at": 1793607360,
+  "accounts": {
+    "gmail": {
+      "address": "usaman.teen.event@gmail.com",
+      "status": "sending",
+      "updated_at": 1793607360,
+      "data": {
+        "as_of": "2026-11-02T15:16",
+        "campaign": "INTRO-2026Q4",
+        "total": 19236,
+        "safe_cap": 100,
+        "daily": [
+          {
+            "date": "2026-10-20",
+            "attempts": 202,
+            "delivered": 107,
+            "limit_bounced": 92,
+            "errors": 2,
+            "unknown": 1
+          },
+          {
+            "date": "2026-10-21",
+            "attempts": 213,
+            "delivered": 112,
+            "limit_bounced": 0,
+            "errors": 101,
+            "unknown": 0
+          },
+          {
+            "date": "2026-10-22",
+            "attempts": 486,
+            "delivered": 9,
+            "limit_bounced": 471,
+            "errors": 6,
+            "unknown": 0
+          },
+          {
+            "date": "2026-10-23",
+            "attempts": 245,
+            "delivered": 109,
+            "limit_bounced": 68,
+            "errors": 67,
+            "unknown": 1
+          },
+          {
+            "date": "2026-10-26",
+            "attempts": 256,
+            "delivered": 109,
+            "limit_bounced": 5,
+            "errors": 141,
+            "unknown": 1
+          },
+          {
+            "date": "2026-10-27",
+            "attempts": 20,
+            "delivered": 14,
+            "limit_bounced": 6,
+            "errors": 0,
+            "unknown": 0
+          },
+          {
+            "date": "2026-10-28",
+            "attempts": 102,
+            "delivered": 100,
+            "limit_bounced": 0,
+            "errors": 0,
+            "unknown": 2
+          },
+          {
+            "date": "2026-11-02",
+            "attempts": 100,
+            "delivered": 100,
+            "limit_bounced": 0,
+            "errors": 0,
+            "unknown": 0
+          }
+        ],
+        "campaign_name": "แนะนำบริษัท TIME (ต.ค.–ธ.ค. 2026)",
+        "sent_companies": 639,
+        "pending": 18583,
+        "retry": 320,
+        "verify": 5,
+        "held": 9,
+        "today": {
+          "date": "2026-11-02",
+          "delivered": 100,
+          "attempts": 100,
+          "cap": 100
+        },
+        "eta_workdays": 186,
+        "progress_pct": 3.3,
+        "attempts_total": 1624,
+        "delivered_total": 660,
+        "last7": {
+          "attempts": 222,
+          "delivered": 214,
+          "rate": 96.4
+        },
+        "recent": [
+          {
+            "company": "Siam Fittings Co., Ltd",
+            "time": "2026-11-02T08:22",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "SUSTAINERGY GLOBAL TECH CO., LTD.",
+            "time": "2026-11-02T08:22",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "SSP BIOTECH CO., LTD.",
+            "time": "2026-11-02T08:21",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "SCOOTEX CO.,LTD. (HEAD OFFICE)",
+            "time": "2026-11-02T08:21",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "R V Connex Co., Ltd.",
+            "time": "2026-11-02T08:21",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "REMOOD CO., LTD. / บริษัท รีมู้ด จำกัด",
+            "time": "2026-11-02T08:21",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "PROMPT CONTRACT FURNITURE CO., LTD. / บริษัท พรอมท์ คอนแทรค เฟอร์นิเจอร์ จำกัด",
+            "time": "2026-11-02T08:20",
+            "template": "exhibitor_th"
+          },
+          {
+            "company": "PRODIGY DESIGN CO., LTD. / บริษัท โพรดิจี้ ดีไซน์ จำกัด",
+            "time": "2026-11-02T08:20",
+            "template": "exhibitor_th"
+          }
+        ],
+        "groups": [
+          {
+            "key": "exhibitor_th",
+            "label": "ผู้ออกบูธไทย",
+            "sent": 563,
+            "pending": 3018
+          },
+          {
+            "key": "exhibitor_en",
+            "label": "ผู้ออกบูธต่างชาติ",
+            "sent": 76,
+            "pending": 8158
+          },
+          {
+            "key": "transport",
+            "label": "ทัวร์ / โรงแรม",
+            "sent": 0,
+            "pending": 4174
+          },
+          {
+            "key": "partner",
+            "label": "ผู้จัดงาน",
+            "sent": 0,
+            "pending": 3233
+          }
+        ],
+        "suppression": {
+          "blacklist": 46,
+          "holds": 49
+        },
+        "window": "จ.–ศ. 08:00–18:00"
+      }
+    },
+    "domain": {
+      "address": "usaman.teen@timeservices.co",
+      "status": "waiting_domain",
+      "updated_at": null,
+      "data": null
+    },
+    "harry": {
+      "address": "pimchanok.event@gmail.com",
+      "status": "not_connected",
+      "updated_at": null,
+      "data": null
+    }
+  },
+  "clicks": {
+    "sent": 0,
+    "clicked": 0,
+    "opened": 0,
+    "scanner_only": 0
+  }
+}
