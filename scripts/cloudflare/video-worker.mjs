@@ -391,6 +391,79 @@ async function mailSnapshot(request, env) {
   return json({ok: true, account, status});
 }
 
+// ---- Mail archive (Teen 2026-11-03: every mail on the dashboard must be readable) ----
+const MSG_ID = /^[A-Za-z0-9_-]{6,64}$/;
+const DIRECTIONS = new Set(['sent', 'reply', 'harry', 'customer', 'internal', 'auto', 'bounce']);
+
+// POST /api/mail-archive {messages:[...]} (MAIL_LINK_KEY) -> upsert full mail copies.
+async function mailArchive(request, env) {
+  if (request.method !== 'POST') return notAllowed('POST');
+  if (!env.MAIL_LINK_KEY || !env.DB) return json({error: 'not_configured'}, 503);
+  if (!(await bearerMatches(request, env.MAIL_LINK_KEY))) return json({error: 'unauthorized'}, 401);
+  const body = await readJson(request, 4 * 1024 * 1024);
+  if (body.tooLarge) return json({error: 'too_large'}, 413);
+  const items = Array.isArray(body.value?.messages) ? body.value.messages : null;
+  if (!items || items.length > 200) return json({error: 'bad_request'}, 400);
+  const rows = items.filter((m) => MSG_ID.test(String(m?.id || '')) && MAIL_ACCOUNTS[m?.account]
+    && Number.isSafeInteger(m?.ts));
+  const statements = rows.map((m) => env.DB.prepare(
+    `INSERT OR REPLACE INTO mail_messages (id, account, thread_id, ts, day, direction, from_name, from_addr, to_addr, cc,
+      to_ref, subject, snippet, category, body_text, body_html) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+  ).bind(m.id, m.account, clean(m.thread_id, 64), m.ts, clean(m.day, 10),
+    DIRECTIONS.has(m.direction) ? m.direction : '', clean(m.from_name, 200), clean(m.from_addr, 200).toLowerCase(),
+    clean(m.to_addr, 1000), clean(m.cc, 1000), clean(m.to_ref, 32), clean(m.subject, 500), clean(m.snippet, 400),
+    clean(m.category, 30), String(m.body_text || '').slice(0, 100000), String(m.body_html || '').slice(0, 300000)));
+  for (let index = 0; index < statements.length; index += 25) await env.DB.batch(statements.slice(index, index + 25));
+  return json({ok: true, stored: rows.length, skipped: items.length - rows.length});
+}
+
+// GET /api/mail-messages?account=&day=&thread=&ref=&category=&direction=&q=&limit=&offset= (DASHBOARD_KEY) -> list (no bodies).
+async function mailMessages(request, env) {
+  if (request.method !== 'GET') return notAllowed('GET');
+  if (!env.DASHBOARD_KEY) return json({error: 'not_configured'}, 503);
+  if (!(await bearerMatches(request, env.DASHBOARD_KEY))) return json({error: 'unauthorized'}, 401);
+  if (!env.DB) return json({error: 'no_database'}, 503);
+  const p = new URL(request.url).searchParams;
+  const account = p.get('account') || 'gmail';
+  if (!MAIL_ACCOUNTS[account]) return json({error: 'unknown_account'}, 400);
+  const where = ['account = ?'];
+  const args = [account];
+  const add = (sql, value) => { where.push(sql); args.push(value); };
+  if (/^\d{4}-\d{2}-\d{2}$/.test(p.get('day') || '')) add('day = ?', p.get('day'));
+  if (/^\d{4}-\d{2}$/.test(p.get('month') || '')) add('substr(day, 1, 7) = ?', p.get('month'));
+  if (MSG_ID.test(p.get('thread') || '')) add('thread_id = ?', p.get('thread'));
+  if (/^[a-f0-9]{8,32}$/.test(p.get('ref') || '')) add('to_ref = ?', p.get('ref'));
+  if (/^[a-z_]{2,30}$/.test(p.get('category') || '')) add('category = ?', p.get('category'));
+  if (DIRECTIONS.has(p.get('direction') || '')) add('direction = ?', p.get('direction'));
+  const q = clean(p.get('q') || '', 80).toLowerCase();
+  if (q) {
+    where.push('(lower(subject) LIKE ? OR lower(from_addr) LIKE ? OR lower(to_addr) LIKE ? OR lower(from_name) LIKE ? OR lower(snippet) LIKE ?)');
+    for (let i = 0; i < 5; i += 1) args.push(`%${q}%`);
+  }
+  const limit = Math.min(Math.max(parseInt(p.get('limit') || '50', 10) || 50, 1), 200);
+  const offset = Math.min(Math.max(parseInt(p.get('offset') || '0', 10) || 0, 0), 100000);
+  const order = p.get('order') === 'asc' ? 'ASC' : 'DESC';
+  const sql = `FROM mail_messages WHERE ${where.join(' AND ')}`;
+  const [list, total] = await env.DB.batch([
+    env.DB.prepare(`SELECT id, thread_id, ts, day, direction, from_name, from_addr, to_addr, subject, snippet, category
+      ${sql} ORDER BY ts ${order} LIMIT ? OFFSET ?`).bind(...args, limit, offset),
+    env.DB.prepare(`SELECT COUNT(*) AS n ${sql}`).bind(...args),
+  ]);
+  return json({account, total: total.results?.[0]?.n || 0, limit, offset, messages: list.results || []});
+}
+
+// GET /api/mail-message?id= (DASHBOARD_KEY) -> one full mail.
+async function mailMessage(request, env) {
+  if (request.method !== 'GET') return notAllowed('GET');
+  if (!env.DASHBOARD_KEY) return json({error: 'not_configured'}, 503);
+  if (!(await bearerMatches(request, env.DASHBOARD_KEY))) return json({error: 'unauthorized'}, 401);
+  if (!env.DB) return json({error: 'no_database'}, 503);
+  const id = new URL(request.url).searchParams.get('id') || '';
+  if (!MSG_ID.test(id)) return json({error: 'bad_request'}, 400);
+  const row = await env.DB.prepare('SELECT * FROM mail_messages WHERE id = ?').bind(id).first();
+  return row ? json({message: row}) : json({error: 'not_found'}, 404);
+}
+
 // GET /api/mail-dashboard (DASHBOARD_KEY) -> every account (snapshot or placeholder) + all-time link clicks.
 async function mailDashboard(request, env) {
   if (request.method !== 'GET') return notAllowed('GET');
@@ -514,6 +587,9 @@ export default {
     if (path === '/api/mail-links') return mailLinks(request, env);
     if (path === '/api/mail-snapshot') return mailSnapshot(request, env);
     if (path === '/api/mail-dashboard') return mailDashboard(request, env);
+    if (path === '/api/mail-archive') return mailArchive(request, env);
+    if (path === '/api/mail-messages') return mailMessages(request, env);
+    if (path === '/api/mail-message') return mailMessage(request, env);
     if (path === '/api/chat-ai') return chatAi(request, env, ctx);
     if (path.startsWith('/r/')) return mailRedirect(request, env, ctx);
     if (path.startsWith('/api/')) return json({error: 'not_found'}, 404);

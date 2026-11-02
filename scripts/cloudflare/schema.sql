@@ -50,3 +50,29 @@ CREATE TABLE IF NOT EXISTS mail_snapshots (
   data TEXT,
   updated_at INTEGER NOT NULL
 );
+
+-- Mail archive for the owner dashboard (Teen 2026-11-03: "ต้องอ่านเมลจริงนั้นๆได้"). Full copies of the sent intro
+-- mails (account gmail, with their replies) and Harry's threads seen in Pimchanok's mailbox (account harry).
+-- Pushed by the Mac (MAIL_LINK_KEY), read only with DASHBOARD_KEY. to_ref = first 16 hex of sha256(lower(to address)).
+CREATE TABLE IF NOT EXISTS mail_messages (
+  id TEXT PRIMARY KEY,
+  account TEXT NOT NULL,
+  thread_id TEXT NOT NULL DEFAULT '',
+  ts INTEGER NOT NULL,
+  day TEXT NOT NULL DEFAULT '',
+  direction TEXT NOT NULL DEFAULT '',
+  from_name TEXT NOT NULL DEFAULT '',
+  from_addr TEXT NOT NULL DEFAULT '',
+  to_addr TEXT NOT NULL DEFAULT '',
+  cc TEXT NOT NULL DEFAULT '',
+  to_ref TEXT NOT NULL DEFAULT '',
+  subject TEXT NOT NULL DEFAULT '',
+  snippet TEXT NOT NULL DEFAULT '',
+  category TEXT NOT NULL DEFAULT '',
+  body_text TEXT NOT NULL DEFAULT '',
+  body_html TEXT NOT NULL DEFAULT ''
+);
+CREATE INDEX IF NOT EXISTS idx_mail_messages_acc_ts ON mail_messages (account, ts);
+CREATE INDEX IF NOT EXISTS idx_mail_messages_acc_day ON mail_messages (account, day);
+CREATE INDEX IF NOT EXISTS idx_mail_messages_thread ON mail_messages (account, thread_id);
+CREATE INDEX IF NOT EXISTS idx_mail_messages_ref ON mail_messages (account, to_ref);

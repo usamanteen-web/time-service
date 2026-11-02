@@ -68,3 +68,32 @@ test('mail-dashboard counts all-time production link clicks', async () => {
   const body = await (await worker.fetch(dash(KEY), env)).json();
   assert.deepEqual(body.clicks, {sent: 2, clicked: 1, opened: 1, scanner_only: 1});
 });
+
+const archive = (key, messages) => new Request(`${ORIGIN}/api/mail-archive`, {method: 'POST', headers: {Authorization: `Bearer ${key}`}, body: JSON.stringify({messages})});
+const getj = (path, key) => new Request(`${ORIGIN}${path}`, {headers: key ? {Authorization: `Bearer ${key}`} : {}});
+const MSG = {id: 'msg000001', account: 'gmail', thread_id: 'thr000001', ts: 1793581339, day: '2026-11-02', direction: 'sent',
+  from_name: 'TIME', from_addr: 'usaman.teen.event@gmail.com', to_addr: 'contact@example.co.th', to_ref: 'abcdef0123456789',
+  subject: 'แนะนำบริการ', snippet: 'สวัสดีครับ', category: 'exhibitor_th', body_text: 'body', body_html: '<p>body</p>'};
+
+test('mail archive: mailer key writes, dashboard key reads, keys are not interchangeable', async () => {
+  const {env} = setup();
+  assert.equal((await worker.fetch(archive(KEY, [MSG]), env)).status, 401, 'dashboard key must not write');
+  const stored = await (await worker.fetch(archive(LINK_KEY, [MSG, {...MSG, id: 'bad id!'}, {...MSG, id: 'msg000002', account: 'nope'}]), env)).json();
+  assert.deepEqual([stored.stored, stored.skipped], [1, 2]);
+  assert.equal((await worker.fetch(getj('/api/mail-messages?account=gmail'), env)).status, 401);
+  assert.equal((await worker.fetch(getj('/api/mail-messages?account=gmail', LINK_KEY), env)).status, 401, 'mailer key must not read mail');
+  const list = await (await worker.fetch(getj('/api/mail-messages?account=gmail&day=2026-11-02', KEY), env)).json();
+  assert.equal(list.total, 1);
+  assert.equal(list.messages[0].subject, 'แนะนำบริการ');
+  assert.equal(list.messages[0].body_html, undefined, 'list never carries bodies');
+  const byRef = await (await worker.fetch(getj('/api/mail-messages?account=gmail&ref=abcdef0123456789', KEY), env)).json();
+  assert.equal(byRef.total, 1);
+  const search = await (await worker.fetch(getj('/api/mail-messages?account=gmail&q=example', KEY), env)).json();
+  assert.equal(search.total, 1);
+  const none = await (await worker.fetch(getj('/api/mail-messages?account=harry', KEY), env)).json();
+  assert.equal(none.total, 0);
+  const one = await (await worker.fetch(getj('/api/mail-message?id=msg000001', KEY), env)).json();
+  assert.equal(one.message.body_html, '<p>body</p>');
+  assert.equal((await worker.fetch(getj('/api/mail-message?id=msg000009', KEY), env)).status, 404);
+  assert.equal((await worker.fetch(getj("/api/mail-message?id=x'or'1", KEY), env)).status, 400);
+});
