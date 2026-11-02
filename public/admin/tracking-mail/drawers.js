@@ -143,7 +143,7 @@ window.MailDetails = (() => {
   if(select){select.addEventListener('change',filter);if(id==='recent'&&selectedHarryCategory&&[...select.options].some(o=>o.value===selectedHarryCategory))select.value=selectedHarryCategory}
   if(input||select)filter();
   if(id==='recent'&&rowIndex!==null){const target=dialog.querySelector(`#detail-row-${Number(rowIndex)}`);if(target){target.classList.add('is-target');requestAnimationFrame(()=>target.scrollIntoView({block:'start',behavior:'instant'}))}}
-
+  document.dispatchEvent(new CustomEvent('mail-detail-open',{detail:{card}}));
  }
  function bind(){
   $$(selectors).forEach((card,i)=>{card.dataset.detailCard=ids[i];card.tabIndex=0;card.setAttribute('aria-haspopup','dialog');card.setAttribute('aria-controls','mail-detail');card.setAttribute('aria-label',`ดูรายละเอียด ${card.querySelector('.kpi-label,.section-title')?.textContent.trim()||titles[i]}`);if(i<4)card.setAttribute('role','button')});
@@ -151,6 +151,7 @@ window.MailDetails = (() => {
   const snap=payload?.accounts[selectedAccount==='all'?'gmail':selectedAccount]?.data;
   const visible=arr(snap?.recent).map((r,i)=>({r,i})).filter(({r})=>selectedAccount!=='harry'||!selectedHarryCategory||r.category===selectedHarryCategory);
   $$('.recent-row').forEach((row,i)=>{row.dataset.recentIndex=String(visible[i]?.i??i);row.setAttribute('role','button');row.setAttribute('aria-haspopup','dialog');row.setAttribute('aria-label','ดูรายละเอียด '+row.textContent.trim())});
+  window.MailInteractions?.bind();
  }
  document.addEventListener('click',event=>{
   const card=event.target.closest('[data-detail-card]');
