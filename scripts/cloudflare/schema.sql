@@ -70,9 +70,11 @@ CREATE TABLE IF NOT EXISTS mail_messages (
   snippet TEXT NOT NULL DEFAULT '',
   category TEXT NOT NULL DEFAULT '',
   body_text TEXT NOT NULL DEFAULT '',
-  body_html TEXT NOT NULL DEFAULT ''
+  body_html TEXT NOT NULL DEFAULT '',
+  campaign TEXT NOT NULL DEFAULT ''
 );
 CREATE INDEX IF NOT EXISTS idx_mail_messages_acc_ts ON mail_messages (account, ts);
 CREATE INDEX IF NOT EXISTS idx_mail_messages_acc_day ON mail_messages (account, day);
 CREATE INDEX IF NOT EXISTS idx_mail_messages_thread ON mail_messages (account, thread_id);
 CREATE INDEX IF NOT EXISTS idx_mail_messages_ref ON mail_messages (account, to_ref);
+CREATE INDEX IF NOT EXISTS idx_mail_messages_campaign ON mail_messages (account, campaign, ts);

@@ -97,3 +97,13 @@ test('mail archive: mailer key writes, dashboard key reads, keys are not interch
   assert.equal((await worker.fetch(getj('/api/mail-message?id=msg000009', KEY), env)).status, 404);
   assert.equal((await worker.fetch(getj("/api/mail-message?id=x'or'1", KEY), env)).status, 400);
 });
+
+test('mail archive filters by campaign', async () => {
+  const {env} = setup();
+  await worker.fetch(archive(LINK_KEY, [{...MSG, campaign: 'intro_2026q4_intro'}, {...MSG, id: 'msg000002', campaign: 'viv_asia_2027_coldmail'}]), env);
+  const intro = await (await worker.fetch(getj('/api/mail-messages?account=gmail&campaign=intro_2026q4_intro', KEY), env)).json();
+  assert.equal(intro.total, 1);
+  assert.equal(intro.messages[0].campaign, 'intro_2026q4_intro');
+  const all = await (await worker.fetch(getj('/api/mail-messages?account=gmail', KEY), env)).json();
+  assert.equal(all.total, 2);
+});

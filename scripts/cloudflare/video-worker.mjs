@@ -408,11 +408,12 @@ async function mailArchive(request, env) {
     && Number.isSafeInteger(m?.ts));
   const statements = rows.map((m) => env.DB.prepare(
     `INSERT OR REPLACE INTO mail_messages (id, account, thread_id, ts, day, direction, from_name, from_addr, to_addr, cc,
-      to_ref, subject, snippet, category, body_text, body_html) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+      to_ref, subject, snippet, category, body_text, body_html, campaign) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
   ).bind(m.id, m.account, clean(m.thread_id, 64), m.ts, clean(m.day, 10),
     DIRECTIONS.has(m.direction) ? m.direction : '', clean(m.from_name, 200), clean(m.from_addr, 200).toLowerCase(),
     clean(m.to_addr, 1000), clean(m.cc, 1000), clean(m.to_ref, 32), clean(m.subject, 500), clean(m.snippet, 400),
-    clean(m.category, 30), String(m.body_text || '').slice(0, 100000), String(m.body_html || '').slice(0, 300000)));
+    clean(m.category, 30), String(m.body_text || '').slice(0, 100000), String(m.body_html || '').slice(0, 300000),
+    clean(m.campaign, 40)));
   for (let index = 0; index < statements.length; index += 25) await env.DB.batch(statements.slice(index, index + 25));
   return json({ok: true, stored: rows.length, skipped: items.length - rows.length});
 }
@@ -434,6 +435,7 @@ async function mailMessages(request, env) {
   if (MSG_ID.test(p.get('thread') || '')) add('thread_id = ?', p.get('thread'));
   if (/^[a-f0-9]{8,32}$/.test(p.get('ref') || '')) add('to_ref = ?', p.get('ref'));
   if (/^[a-z_]{2,30}$/.test(p.get('category') || '')) add('category = ?', p.get('category'));
+  if (/^[a-z0-9_]{2,40}$/.test(p.get('campaign') || '')) add('campaign = ?', p.get('campaign'));
   if (DIRECTIONS.has(p.get('direction') || '')) add('direction = ?', p.get('direction'));
   const q = clean(p.get('q') || '', 80).toLowerCase();
   if (q) {
@@ -445,7 +447,7 @@ async function mailMessages(request, env) {
   const order = p.get('order') === 'asc' ? 'ASC' : 'DESC';
   const sql = `FROM mail_messages WHERE ${where.join(' AND ')}`;
   const [list, total] = await env.DB.batch([
-    env.DB.prepare(`SELECT id, thread_id, ts, day, direction, from_name, from_addr, to_addr, subject, snippet, category
+    env.DB.prepare(`SELECT id, thread_id, ts, day, direction, from_name, from_addr, to_addr, subject, snippet, category, campaign
       ${sql} ORDER BY ts ${order} LIMIT ? OFFSET ?`).bind(...args, limit, offset),
     env.DB.prepare(`SELECT COUNT(*) AS n ${sql}`).bind(...args),
   ]);
