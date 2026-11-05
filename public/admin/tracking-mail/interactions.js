@@ -1,4 +1,4 @@
-/* Archive links for the existing dashboard; default layout stays unchanged. */
+/* Archive links + menu routing for the dashboard (every sidebar item opens its own hash page). */
 'use strict';
 window.MailInteractions=(()=>{
  const selected=()=>selectedAccount==='all'?'gmail':selectedAccount;
@@ -6,7 +6,7 @@ window.MailInteractions=(()=>{
  const read=(f={},direct=false)=>{if(selected()==='domain'&&!f.account){MailDetails.open($('[data-detail-card=accounts]'));return}MailReader.open({account:selected()==='harry'?'harry':'gmail',...f},direct)};
  const action=(f,label='อ่านเมล',direct=false)=>`<button type="button" class="read-mail-action" data-mail-filter="${esc(JSON.stringify(f))}" data-mail-direct="${direct}">${esc(label)}</button>`;
  function rowFilter(r,harry=selected()==='harry'){
-  return harry?(r.thread?{account:'harry',thread:r.thread,order:'asc'}:{account:'harry',q:r.subject||r.customer||''}):(r.ref?{account:'gmail',ref:r.ref}:{account:'gmail',q:r.company||r.subject||''});
+  return harry?(r.thread?{account:'harry',thread:r.thread,campaign:r.campaign,order:'asc'}:{account:'harry',q:r.subject||r.customer||'',campaign:r.campaign}):(r.ref?{account:'gmail',ref:r.ref}:{account:'gmail',q:r.company||r.subject||''});
  }
  function base(id){
   const h=selected()==='harry',s=snap();
@@ -44,6 +44,7 @@ window.MailInteractions=(()=>{
   });
   if(!h&&['groups','progress'].includes(id))target.querySelectorAll('.detail-item').forEach((el,i)=>{const g=(s.groups||[])[i];if(g)el.insertAdjacentHTML('beforeend',action({account:'gmail',category:g.key==='exhibitor_th'?'th':'en'},'อ่านเมลภาษา'+(g.key==='exhibitor_th'?'ไทย':'อังกฤษ')+' (รวมทุกกลุ่ม)'))});
   if(h&&id==='accounts')target.insertAdjacentHTML('beforeend',action({account:'harry',direction:'customer'},'อ่านลูกค้าตอบ'));
+  if(h&&id==='progress')target.querySelectorAll('[data-harry-campaign]').forEach(tr=>{const key=tr.dataset.harryCampaign;tr.lastElementChild.insertAdjacentHTML('beforeend',action({account:'harry',campaign:key},'อ่านแคมเปญ'))});
  }
  // The drawer's internal click handlers call its lexical open(), hence this event hook.
  document.addEventListener('mail-detail-open',e=>drawer(e.detail.card));
@@ -56,11 +57,10 @@ window.MailInteractions=(()=>{
   const date=target.closest('.date-pill');if(date){read({});return true}
   const all=target.closest('.all-link:not(.clear-category)');if(all){read({});return true}
   const nav=target.closest('.nav button');if(nav){
-   const i=$$('.nav button').indexOf(nav);$('.sidebar').classList.remove('open');$('.hamburger').setAttribute('aria-expanded','false');
-   if(i===0){MailReader.close();MailDetails.close();chooseAccount('all');window.scrollTo({top:0,behavior:'smooth'})}
-   else if(i===1)read({direction:selected()==='harry'?'harry':'sent'});
-   else if(i===3)read({});
-   else MailDetails.open($('[data-detail-card="'+({2:'groups',4:'groups',5:'accounts',6:'delivery'}[i])+'"]'));
+   // Every menu item is its own page (#sent, #leads, #history, #contacts, #campaigns, #protection); ภาพรวม resets to ทุกบัญชี.
+   const page=nav.dataset.page||'overview';$('.sidebar').classList.remove('open');$('.hamburger').setAttribute('aria-expanded','false');MailReader.close();MailDetails.close();
+   if(page==='overview'){location.hash='';chooseAccount('all');window.scrollTo({top:0,behavior:'smooth'})}
+   else location.hash=page;
    return true;
   }
   return false;

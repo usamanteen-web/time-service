@@ -1,25 +1,60 @@
-/* Scoped overlay styles: no default dashboard geometry or colors are changed. */
-#mail-reader{position:fixed;inset:0;margin:auto;width:min(1000px,calc(100% - 48px));height:min(900px,calc(100dvh - 48px));max-width:none;max-height:none;padding:0;border:1px solid #fff;border-radius:26px;background:linear-gradient(135deg,#f4fafff5,#d8e7f5f5);color:#021024;box-shadow:0 24px 80px #02102455,inset 0 1px 2px white;backdrop-filter:blur(30px);overflow:hidden;font:14px/1.7 'Manrope','Noto Sans Thai',sans-serif}
-#mail-reader::backdrop{background:#02102466;backdrop-filter:blur(5px)}
-#mail-reader[open]{display:flex;flex-direction:column}
-#mail-reader .reader-header{display:flex;align-items:center;gap:15px;flex-shrink:0;height:auto;margin:0;padding:17px 23px;border-bottom:1px solid #7da0ca44;background:#ffffff77}
-#mail-reader h2{font-size:23px;margin:0}#mail-reader small{color:#5483b3}#mail-reader h3{font-size:19px;line-height:1.6;overflow-wrap:anywhere}
-#mail-reader button,.read-mail-action{border:1px solid #7da0ca66;background:linear-gradient(145deg,#fff,#c1e8ff80);border-radius:12px;padding:7px 14px;color:#052659;font:inherit;cursor:pointer}
-#mail-reader button:hover,.read-mail-action:hover{background:#c1e8ff}#mail-reader button:focus-visible{outline:3px solid #5483b3;outline-offset:2px}
-#mail-reader button:disabled{opacity:.45;cursor:default}#mail-reader [data-reader-close]{margin-left:auto;font-size:25px;padding:0 13px}#mail-reader [data-reader-back]{font-size:23px}
-#mail-reader .reader-body{overflow:auto;overscroll-behavior:contain;padding:23px;min-height:0;flex:1;scrollbar-width:thin}
-#mail-reader label{display:grid;gap:4px;font-size:12px;min-width:0}#mail-reader input,#mail-reader select{min-width:0;width:100%;max-width:100%;border:1px solid #7da0ca77;border-radius:11px;background:#ffffffbb;padding:10px;color:#052659;font:inherit}
-#mail-reader .reader-search{display:flex;gap:10px;align-items:end;margin-bottom:12px}#mail-reader .reader-search label{flex:1}#mail-reader .reader-filters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
-#mail-reader .reader-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:13px}#mail-reader .reader-chips button{font-size:12px;padding:4px 12px}#mail-reader [aria-pressed=true]{background:#052659;color:#fff}
-#mail-reader .reader-count{font-weight:700;margin-bottom:2px}#mail-reader .reader-scope,#mail-reader .reader-privacy{font-size:11px;color:#5483b3;overflow-wrap:anywhere}
-#mail-reader .reader-list{display:grid;gap:8px;margin-top:15px}#mail-reader .reader-row{display:block;width:100%;text-align:left;padding:14px 17px;background:#ffffffaa}
-#mail-reader .reader-row strong,#mail-reader .reader-row small,#mail-reader summary strong,#mail-reader summary small{display:block;overflow-wrap:anywhere}#mail-reader .reader-row strong{font-size:15px}#mail-reader .reader-snippet{display:block;font-size:12px;color:#5483b3;overflow-wrap:anywhere}
-#mail-reader .reader-badge{display:inline-block;font-size:11px;border-radius:9px;background:#c1e8ff77;color:#052659;padding:2px 9px;margin-bottom:5px}#mail-reader .problem{color:#7d0018;background:#7d00180c}
-#mail-reader .reader-pages{display:flex;justify-content:space-between;margin-top:20px}#mail-reader .reader-empty{padding:35px 10px;text-align:center;overflow-wrap:anywhere}
-#mail-reader .reader-message{background:#ffffffbd;border:1px solid white;border-radius:17px;padding:20px;margin-top:13px;min-width:0}#mail-reader .reader-message h3{margin:0 0 8px}
-#mail-reader dl{display:grid;grid-template-columns:60px minmax(0,1fr);gap:4px 10px;font-size:12px}#mail-reader dt{color:#5483b3}#mail-reader dd{margin:0;overflow-wrap:anywhere}
-#mail-reader iframe{display:block;border:1px solid #7da0ca55;width:100%;height:480px;background:#fff;border-radius:10px;margin-top:16px}#mail-reader pre{white-space:pre-wrap;overflow-wrap:anywhere;font:14px/1.8 'Noto Sans Thai',sans-serif;background:white;border-radius:10px;padding:20px}
-#mail-reader details{background:#ffffff99;border:1px solid white;border-radius:15px;margin:10px 0;padding:14px}#mail-reader summary{cursor:pointer;overflow-wrap:anywhere}#mail-reader .reader-loading .skeleton{height:100px;margin-top:15px}
-.read-mail-action{font-size:12px;margin:7px 0}.detail-read-actions{display:flex;gap:8px;flex-wrap:wrap}.detail-read-actions label{display:grid;flex:1;font-size:12px}.detail-read-actions input{width:100%;min-width:0;border:1px solid #7da0ca77;border-radius:10px;padding:9px;font:inherit}
-[data-mail-bar]{cursor:pointer;outline:none}[data-mail-bar]:focus-visible{outline:2px solid #5483b3}.reader-chart-tooltip{position:fixed;z-index:80;pointer-events:none;background:#052659;color:white;border:1px solid #c1e8ff;border-radius:10px;padding:8px 12px;font-size:12px;max-width:280px}
-@media(max-width:650px){#mail-reader{width:100%;height:100dvh;border-radius:0;border:0}#mail-reader .reader-header{padding:12px 14px;gap:10px}#mail-reader h2{font-size:19px}#mail-reader .reader-body{padding:14px}#mail-reader .reader-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#mail-reader .reader-message{padding:13px}#mail-reader iframe{height:460px}#mail-reader pre{padding:12px}}
+/* Mail reader overlay + inline archive (ประวัติส่ง page) in the "แคมเปญ" theme. Overlay only — no page geometry changes. */
+#mail-reader{position:fixed;inset:0;margin:auto;width:min(1040px,calc(100% - 48px));height:min(900px,calc(100dvh - 48px));max-width:none;max-height:none;padding:0;border:1.5px solid rgba(255,255,255,.92);border-radius:30px;background:linear-gradient(160deg,rgba(247,250,255,.96) 0%,rgba(224,234,253,.94) 60%,rgba(237,243,255,.96) 100%);color:#13234a;box-shadow:0 30px 80px rgba(8,28,80,.42),inset 0 1px 0 #fff;-webkit-backdrop-filter:blur(30px) saturate(140%);backdrop-filter:blur(30px) saturate(140%);overflow:hidden;font:300 14px/1.7 'Kanit',sans-serif}
+#mail-reader::backdrop{background:rgba(9,28,80,.42);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px)}
+#mail-reader[open]{display:flex;flex-direction:column;animation:reader-in .32s cubic-bezier(.2,.8,.2,1)}
+@keyframes reader-in{from{opacity:0;transform:translateY(18px) scale(.985)}to{opacity:1;transform:none}}
+#mail-reader .reader-header{display:flex;align-items:center;gap:14px;flex-shrink:0;height:auto;margin:0;padding:15px 22px;border-bottom:1px solid rgba(160,185,230,.5);background:linear-gradient(180deg,rgba(255,255,255,.62),rgba(255,255,255,.18))}
+#mail-reader h2{margin:0;font-weight:600;font-size:23px;line-height:1.3;color:#0d1d42}
+#mail-reader .reader-header small{font-weight:400;font-size:12px;letter-spacing:.04em;color:#4a5d80}
+#mail-reader h3{font-weight:600;font-size:19px;line-height:1.5;color:#0d1d42;overflow-wrap:anywhere}
+#mail-reader .reader-body{flex:1;min-height:0;overflow:auto;overscroll-behavior:contain;padding:20px 22px;scrollbar-width:thin}
+#mail-reader button,.th-archive button:not(.th-btn),.read-mail-action{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:34px;padding:0 15px;border:1.5px solid rgba(255,255,255,.95);border-radius:17px;background:linear-gradient(180deg,#fff 0%,#f0f5ff 100%);box-shadow:0 4px 12px rgba(29,82,190,.14);color:#0d1d42;font:500 13.5px 'Kanit',sans-serif;cursor:pointer;transition:transform .2s,box-shadow .2s}
+#mail-reader button:hover,.th-archive button:not(.th-btn):hover,.read-mail-action:hover{transform:translateY(-1px);box-shadow:0 8px 18px rgba(29,82,190,.22)}
+#mail-reader button:focus-visible,.th-archive button:focus-visible,.read-mail-action:focus-visible{outline:2.5px solid #2f7bf0;outline-offset:2px}
+#mail-reader button:disabled,.th-archive button:disabled{opacity:.45;cursor:default;transform:none}
+#mail-reader [data-reader-back],#mail-reader [data-reader-close]{width:40px;height:40px;min-height:0;padding:0;border-radius:50%;font-weight:300;font-size:22px;line-height:1}
+#mail-reader [data-reader-close]{margin-left:auto;font-size:26px}
+:is(#mail-reader,.th-archive) label{display:grid;gap:4px;min-width:0;font-weight:400;font-size:12.5px;color:#1c2f55}
+:is(#mail-reader,.th-archive) input,:is(#mail-reader,.th-archive) select{width:100%;min-width:0;max-width:100%;height:40px;padding:0 14px;border:1.5px solid #fff;border-radius:20px;background:rgba(255,255,255,.82);box-shadow:inset 0 1px 3px rgba(30,70,160,.08);font:400 13.5px 'Kanit',sans-serif;color:#0d1d42;outline:0}
+:is(#mail-reader,.th-archive) input:focus,:is(#mail-reader,.th-archive) select:focus{border-color:#7fb0ff;box-shadow:0 0 0 3px rgba(47,123,240,.16)}
+:is(#mail-reader,.th-archive,#mail-detail) select{-webkit-appearance:none;appearance:none;padding-right:34px;background:rgba(255,255,255,.82) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310224d' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6.5 9.5 5.5 5.5 5.5-5.5'/%3E%3C/svg%3E") no-repeat right 12px center/14px 14px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+:is(#mail-reader,.th-archive) .reader-search{display:flex;align-items:end;gap:10px;margin-bottom:12px}
+:is(#mail-reader,.th-archive) .reader-search label{flex:1}
+:is(#mail-reader,.th-archive) [data-search-submit]{height:40px;padding:0 22px;border:0;color:#fff;background:linear-gradient(180deg,#2860c8 0%,#11399a 50%,#0a2a7a 100%);box-shadow:inset 0 1px 0 #8fb8ff,0 6px 16px rgba(11,42,122,.32)}
+:is(#mail-reader,.th-archive) .reader-filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+:is(#mail-reader,.th-archive) .reader-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+:is(#mail-reader,.th-archive) .reader-chips button{min-height:30px;padding:0 13px;font-weight:400;font-size:12.5px}
+:is(#mail-reader,.th-archive) .reader-chips [aria-pressed=true]{border-color:transparent;color:#fff;font-weight:500;background:linear-gradient(180deg,#3d8eff 0%,#2370f0 40%,#1259d8 100%);box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 4px 10px rgba(18,89,216,.35)}
+:is(#mail-reader,.th-archive) .reader-count{margin:14px 0 2px;font-weight:600;color:#0d1d42}
+:is(#mail-reader,.th-archive) .reader-scope,:is(#mail-reader,.th-archive) .reader-privacy{margin:4px 0;font-size:12px;color:#4a5d80;overflow-wrap:anywhere}
+:is(#mail-reader,.th-archive) .reader-list{display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;gap:8px;margin-top:12px}
+:is(#mail-reader,.th-archive) .reader-row{display:block;width:100%;min-height:0;padding:12px 16px;border:1.5px solid #fff;border-radius:15px;background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(249,251,255,.93));box-shadow:0 3px 10px rgba(27,74,160,.1);text-align:left;font-weight:300}
+:is(#mail-reader,.th-archive) .reader-row:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(27,74,160,.18)}
+:is(#mail-reader,.th-archive) .reader-row strong,:is(#mail-reader,.th-archive) .reader-row small,#mail-reader summary strong,#mail-reader summary small{display:block;overflow-wrap:anywhere}
+:is(#mail-reader,.th-archive) .reader-row strong,#mail-reader summary strong{font-weight:500;font-size:14.5px;color:#0d1d42}
+:is(#mail-reader,.th-archive) .reader-row small,#mail-reader summary small{font-size:12.5px;color:#33466b}
+:is(#mail-reader,.th-archive) .reader-snippet{display:block;font-size:12.5px;color:#4a5d80;overflow-wrap:anywhere}
+:is(#mail-reader,.th-archive) .reader-badge{display:inline-block;margin-bottom:4px;padding:0 10px;border-radius:11px;font-weight:500;font-size:11.5px;line-height:21px;color:#1556d4;background:linear-gradient(180deg,#e9f1ff,#d7e5ff)}
+:is(#mail-reader,.th-archive) .reader-badge.problem{color:#c81e33;background:linear-gradient(180deg,#fff0f1,#ffdfe3)}
+:is(#mail-reader,.th-archive) .problem{color:#c81e33}
+:is(#mail-reader,.th-archive) .reader-campaign-name{display:block;font-size:12px;color:#1556d4}
+:is(#mail-reader,.th-archive) .reader-pages{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+:is(#mail-reader,.th-archive) .reader-empty{padding:30px 10px;text-align:center;color:#4a5d80;overflow-wrap:anywhere}
+#mail-reader .reader-message{min-width:0;margin-top:12px;padding:20px 22px;border:1.5px solid #fff;border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.97),rgba(249,251,255,.94));box-shadow:0 6px 18px rgba(27,74,160,.12)}
+#mail-reader .reader-message h3{margin:0 0 8px}
+#mail-reader dl{display:grid;grid-template-columns:62px minmax(0,1fr);gap:4px 10px;font-size:12.5px}#mail-reader dt{color:#4a5d80}#mail-reader dd{margin:0;color:#0d1d42;overflow-wrap:anywhere}
+#mail-reader iframe{display:block;width:100%;height:480px;margin-top:16px;border:1.5px solid rgba(160,185,230,.5);border-radius:14px;background:#fff}
+#mail-reader pre{padding:20px;border-radius:14px;background:#fff;white-space:pre-wrap;overflow-wrap:anywhere;font:300 14.5px/1.8 'Kanit',sans-serif;color:#13234a}
+#mail-reader details{margin:10px 0;padding:13px 16px;border:1.5px solid #fff;border-radius:16px;background:rgba(255,255,255,.75);box-shadow:0 3px 10px rgba(27,74,160,.08)}
+#mail-reader summary{cursor:pointer;overflow-wrap:anywhere}
+:is(#mail-reader,.th-archive) .reader-loading{color:#4a5d80}:is(#mail-reader,.th-archive) .reader-loading .skeleton{height:96px;margin-top:14px;border-radius:15px}
+.read-mail-action{min-height:30px;margin:7px 6px 0 0;padding:0 13px;color:#1556d4;font-size:12.5px}
+.detail-read-actions{display:flex;flex-wrap:wrap;gap:8px}
+.detail-read-actions label{display:grid;flex:1;gap:5px;font-weight:400;font-size:12.5px;color:#1c2f55}
+.detail-read-actions input{width:100%;min-width:0}
+.detail-archive-search{display:flex;flex-wrap:wrap;align-items:end;gap:8px;width:100%;margin-top:4px}
+[data-mail-bar]{cursor:pointer;outline:none}[data-mail-bar]:focus-visible{outline:2px solid #2f7bf0}
+.reader-chart-tooltip{position:fixed;z-index:80;max-width:280px;padding:8px 12px;border-radius:12px;background:rgba(13,29,66,.93);box-shadow:0 8px 20px rgba(11,37,86,.3);color:#fff;font:300 12.5px/1.5 'Kanit',sans-serif;pointer-events:none}
+@media(max-width:1099px){.th-archive .reader-filters{grid-template-columns:repeat(2,minmax(0,1fr))}.th-archive .reader-search{margin-bottom:10px}}
+@media(max-width:650px){#mail-reader{width:100%;height:100dvh;border:0;border-radius:0}#mail-reader .reader-header{padding:12px 14px;gap:10px}#mail-reader h2{font-size:19px}#mail-reader .reader-body{padding:14px}#mail-reader .reader-filters{grid-template-columns:repeat(2,minmax(0,1fr))}#mail-reader .reader-message{padding:14px}#mail-reader iframe{height:460px}#mail-reader pre{padding:12px}}
+@media(prefers-reduced-motion:reduce){#mail-reader[open]{animation:none}}

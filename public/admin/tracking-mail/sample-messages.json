@@ -17,7 +17,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000001",
       "body_text": "เรียน Example Company 1\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -35,7 +36,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000001",
       "body_text": "เรียน Example Company 1\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -53,7 +55,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000001",
       "body_text": "เรียน Example Company 1\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -71,7 +74,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000002",
       "body_text": "เรียน Example Company 2\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -89,7 +93,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000002",
       "body_text": "เรียน Example Company 2\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -107,7 +112,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000002",
       "body_text": "เรียน Example Company 2\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -125,7 +131,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000003",
       "body_text": "เรียน Example Company 3\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -143,7 +150,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000003",
       "body_text": "เรียน Example Company 3\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -161,7 +169,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000003",
       "body_text": "เรียน Example Company 3\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -179,7 +188,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000004",
       "body_text": "เรียน Example Company 4\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -197,7 +207,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000004",
       "body_text": "เรียน Example Company 4\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -215,7 +226,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000004",
       "body_text": "เรียน Example Company 4\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -233,7 +245,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000005",
       "body_text": "เรียน Example Company 5\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -251,7 +264,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000005",
       "body_text": "เรียน Example Company 5\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -269,7 +283,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000005",
       "body_text": "เรียน Example Company 5\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -287,7 +302,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000006",
       "body_text": "เรียน Example Company 6\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -305,7 +321,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000006",
       "body_text": "เรียน Example Company 6\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -323,7 +340,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000006",
       "body_text": "เรียน Example Company 6\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -341,7 +359,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000007",
       "body_text": "เรียน Example Company 7\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -359,7 +378,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000007",
       "body_text": "เรียน Example Company 7\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -377,7 +397,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000007",
       "body_text": "เรียน Example Company 7\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -395,7 +416,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000008",
       "body_text": "เรียน Example Company 8\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -413,7 +435,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000008",
       "body_text": "เรียน Example Company 8\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -431,7 +454,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000008",
       "body_text": "เรียน Example Company 8\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -449,7 +473,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000009",
       "body_text": "เรียน Example Company 9\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -467,7 +492,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000009",
       "body_text": "เรียน Example Company 9\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -485,7 +511,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000009",
       "body_text": "เรียน Example Company 9\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -503,7 +530,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000a",
       "body_text": "เรียน Example Company 10\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -521,7 +549,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000a",
       "body_text": "เรียน Example Company 10\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -539,7 +568,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000a",
       "body_text": "เรียน Example Company 10\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -557,7 +587,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000b",
       "body_text": "เรียน Example Company 11\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -575,7 +606,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000b",
       "body_text": "เรียน Example Company 11\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -593,7 +625,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000b",
       "body_text": "เรียน Example Company 11\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -611,7 +644,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000c",
       "body_text": "เรียน Example Company 12\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -629,7 +663,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000c",
       "body_text": "เรียน Example Company 12\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -647,7 +682,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000c",
       "body_text": "เรียน Example Company 12\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -665,7 +701,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000d",
       "body_text": "เรียน Example Company 13\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -683,7 +720,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000d",
       "body_text": "เรียน Example Company 13\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -701,7 +739,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000d",
       "body_text": "เรียน Example Company 13\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -719,7 +758,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000e",
       "body_text": "เรียน Example Company 14\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -737,7 +777,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000e",
       "body_text": "เรียน Example Company 14\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -755,7 +796,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000e",
       "body_text": "เรียน Example Company 14\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -773,7 +815,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000f",
       "body_text": "เรียน Example Company 15\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -791,7 +834,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000f",
       "body_text": "เรียน Example Company 15\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -809,7 +853,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000f",
       "body_text": "เรียน Example Company 15\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -827,7 +872,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000010",
       "body_text": "เรียน Example Company 16\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -845,7 +891,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000010",
       "body_text": "เรียน Example Company 16\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -863,7 +910,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000010",
       "body_text": "เรียน Example Company 16\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -881,7 +929,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000011",
       "body_text": "เรียน Example Company 17\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -899,7 +948,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000011",
       "body_text": "เรียน Example Company 17\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -917,7 +967,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000011",
       "body_text": "เรียน Example Company 17\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -935,7 +986,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000012",
       "body_text": "เรียน Example Company 18\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -953,7 +1005,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000012",
       "body_text": "เรียน Example Company 18\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -971,7 +1024,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000012",
       "body_text": "เรียน Example Company 18\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -989,7 +1043,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000013",
       "body_text": "เรียน Example Company 19\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1007,7 +1062,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000013",
       "body_text": "เรียน Example Company 19\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1025,7 +1081,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000013",
       "body_text": "เรียน Example Company 19\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -1043,7 +1100,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000014",
       "body_text": "เรียน Example Company 20\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1061,7 +1119,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000014",
       "body_text": "เรียน Example Company 20\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1079,7 +1138,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000014",
       "body_text": "เรียน Example Company 20\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1097,7 +1157,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000015",
       "body_text": "เรียน Example Company 21\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1115,7 +1176,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000015",
       "body_text": "เรียน Example Company 21\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1133,7 +1195,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000015",
       "body_text": "เรียน Example Company 21\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1151,7 +1214,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000016",
       "body_text": "เรียน Example Company 22\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1169,7 +1233,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000016",
       "body_text": "เรียน Example Company 22\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -1187,7 +1252,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000016",
       "body_text": "เรียน Example Company 22\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1205,7 +1271,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000017",
       "body_text": "เรียน Example Company 23\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1223,7 +1290,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000017",
       "body_text": "เรียน Example Company 23\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1241,7 +1309,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000017",
       "body_text": "เรียน Example Company 23\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1259,7 +1328,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000018",
       "body_text": "เรียน Example Company 24\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1277,7 +1347,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000018",
       "body_text": "เรียน Example Company 24\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -1295,7 +1366,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000018",
       "body_text": "เรียน Example Company 24\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1313,7 +1385,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000019",
       "body_text": "เรียน Example Company 25\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1331,7 +1404,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000019",
       "body_text": "เรียน Example Company 25\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1349,7 +1423,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000019",
       "body_text": "เรียน Example Company 25\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1367,7 +1442,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001a",
       "body_text": "เรียน Example Company 26\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1385,7 +1461,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001a",
       "body_text": "เรียน Example Company 26\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1403,7 +1480,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001a",
       "body_text": "เรียน Example Company 26\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1421,7 +1499,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001b",
       "body_text": "เรียน Example Company 27\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -1439,7 +1518,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001b",
       "body_text": "เรียน Example Company 27\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1457,7 +1537,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001b",
       "body_text": "เรียน Example Company 27\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1475,7 +1556,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001c",
       "body_text": "เรียน Example Company 28\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1493,7 +1575,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001c",
       "body_text": "เรียน Example Company 28\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1511,7 +1594,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001c",
       "body_text": "เรียน Example Company 28\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1529,7 +1613,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001d",
       "body_text": "เรียน Example Company 29\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -1547,7 +1632,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001d",
       "body_text": "เรียน Example Company 29\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1565,7 +1651,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001d",
       "body_text": "เรียน Example Company 29\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1583,7 +1670,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001e",
       "body_text": "เรียน Example Company 30\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1601,7 +1689,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001e",
       "body_text": "เรียน Example Company 30\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1619,7 +1708,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001e",
       "body_text": "เรียน Example Company 30\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1637,7 +1727,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001f",
       "body_text": "เรียน Example Company 31\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1655,7 +1746,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001f",
       "body_text": "เรียน Example Company 31\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1673,7 +1765,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001f",
       "body_text": "เรียน Example Company 31\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -1691,7 +1784,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000020",
       "body_text": "เรียน Example Company 32\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1709,7 +1803,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000020",
       "body_text": "เรียน Example Company 32\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1727,7 +1822,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000020",
       "body_text": "เรียน Example Company 32\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1745,7 +1841,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000021",
       "body_text": "เรียน Example Company 33\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1763,7 +1860,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000021",
       "body_text": "เรียน Example Company 33\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1781,7 +1879,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000021",
       "body_text": "เรียน Example Company 33\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "intro_2026q4_intro"
     },
     {
       "account": "gmail",
@@ -1799,7 +1898,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000022",
       "body_text": "เรียน Example Company 34\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "viv_asia_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1817,7 +1917,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000022",
       "body_text": "เรียน Example Company 34\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "cosmex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1835,7 +1936,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000022",
       "body_text": "เรียน Example Company 34\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "vitafoods_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1853,7 +1955,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000023",
       "body_text": "เรียน Example Company 35\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "metalex_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1871,7 +1974,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000023",
       "body_text": "เรียน Example Company 35\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "sportec_2027_coldmail"
     },
     {
       "account": "gmail",
@@ -1889,7 +1993,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000023",
       "body_text": "เรียน Example Company 35\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "petfair_sea_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1907,7 +2012,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000024",
       "body_text": "เรียน Example Company 36\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "fht_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1925,7 +2031,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000024",
       "body_text": "เรียน Example Company 36\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "vitafoods_2026_followup"
     },
     {
       "account": "gmail",
@@ -1943,7 +2050,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000024",
       "body_text": "เรียน Example Company 36\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "aihef_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1961,7 +2069,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000025",
       "body_text": "เรียน Example Company 37\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "aseanopticsexpo_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1979,7 +2088,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000025",
       "body_text": "เรียน Example Company 37\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "bkkadsign_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -1997,7 +2107,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000025",
       "body_text": "เรียน Example Company 37\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "incosmeticsasia_2026_coldmail"
     },
     {
       "account": "gmail",
@@ -2015,7 +2126,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000026",
       "body_text": "เรียน Example Company 38\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "oga_asia_2026_coldmail"
     },
     {
       "account": "harry",
@@ -2033,7 +2145,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000001",
       "body_text": "เรียน Example Company 1\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -2051,7 +2164,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000001",
       "body_text": "เรียน Example Company 1\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -2069,7 +2183,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000001",
       "body_text": "เรียน Example Company 1\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -2087,7 +2202,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000002",
       "body_text": "เรียน Example Company 2\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -2105,7 +2221,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000002",
       "body_text": "เรียน Example Company 2\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -2123,7 +2240,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000002",
       "body_text": "เรียน Example Company 2\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -2141,7 +2259,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000003",
       "body_text": "เรียน Example Company 3\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -2159,7 +2278,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000003",
       "body_text": "เรียน Example Company 3\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -2177,7 +2297,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000003",
       "body_text": "เรียน Example Company 3\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -2195,7 +2316,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000004",
       "body_text": "เรียน Example Company 4\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -2213,7 +2335,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000004",
       "body_text": "เรียน Example Company 4\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -2231,7 +2354,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000004",
       "body_text": "เรียน Example Company 4\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -2249,7 +2373,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000005",
       "body_text": "เรียน Example Company 5\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -2267,7 +2392,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000005",
       "body_text": "เรียน Example Company 5\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -2285,7 +2411,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000005",
       "body_text": "เรียน Example Company 5\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -2303,7 +2430,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000006",
       "body_text": "เรียน Example Company 6\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -2321,7 +2449,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000006",
       "body_text": "เรียน Example Company 6\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -2339,7 +2468,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000006",
       "body_text": "เรียน Example Company 6\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -2357,7 +2487,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000007",
       "body_text": "เรียน Example Company 7\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -2375,7 +2506,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000007",
       "body_text": "เรียน Example Company 7\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -2393,7 +2525,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000007",
       "body_text": "เรียน Example Company 7\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -2411,7 +2544,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000008",
       "body_text": "เรียน Example Company 8\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -2429,7 +2563,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000008",
       "body_text": "เรียน Example Company 8\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -2447,7 +2582,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000008",
       "body_text": "เรียน Example Company 8\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -2465,7 +2601,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000009",
       "body_text": "เรียน Example Company 9\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -2483,7 +2620,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000009",
       "body_text": "เรียน Example Company 9\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -2501,7 +2639,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000009",
       "body_text": "เรียน Example Company 9\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -2519,7 +2658,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000a",
       "body_text": "เรียน Example Company 10\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -2537,7 +2677,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000a",
       "body_text": "เรียน Example Company 10\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -2555,7 +2696,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000a",
       "body_text": "เรียน Example Company 10\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -2573,7 +2715,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000b",
       "body_text": "เรียน Example Company 11\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -2591,7 +2734,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000b",
       "body_text": "เรียน Example Company 11\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -2609,7 +2753,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000b",
       "body_text": "เรียน Example Company 11\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -2627,7 +2772,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000c",
       "body_text": "เรียน Example Company 12\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -2645,7 +2791,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000c",
       "body_text": "เรียน Example Company 12\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -2663,7 +2810,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000c",
       "body_text": "เรียน Example Company 12\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -2681,7 +2829,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000d",
       "body_text": "เรียน Example Company 13\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -2699,7 +2848,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000d",
       "body_text": "เรียน Example Company 13\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -2717,7 +2867,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000d",
       "body_text": "เรียน Example Company 13\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -2735,7 +2886,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000e",
       "body_text": "เรียน Example Company 14\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -2753,7 +2905,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000e",
       "body_text": "เรียน Example Company 14\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -2771,7 +2924,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000e",
       "body_text": "เรียน Example Company 14\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -2789,7 +2943,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000f",
       "body_text": "เรียน Example Company 15\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -2807,7 +2962,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000f",
       "body_text": "เรียน Example Company 15\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -2825,7 +2981,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000000f",
       "body_text": "เรียน Example Company 15\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -2843,7 +3000,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000010",
       "body_text": "เรียน Example Company 16\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -2861,7 +3019,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000010",
       "body_text": "เรียน Example Company 16\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -2879,7 +3038,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000010",
       "body_text": "เรียน Example Company 16\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -2897,7 +3057,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000011",
       "body_text": "เรียน Example Company 17\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -2915,7 +3076,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000011",
       "body_text": "เรียน Example Company 17\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -2933,7 +3095,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000011",
       "body_text": "เรียน Example Company 17\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -2951,7 +3114,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000012",
       "body_text": "เรียน Example Company 18\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -2969,7 +3133,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000012",
       "body_text": "เรียน Example Company 18\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -2987,7 +3152,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000012",
       "body_text": "เรียน Example Company 18\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -3005,7 +3171,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000013",
       "body_text": "เรียน Example Company 19\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -3023,7 +3190,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000013",
       "body_text": "เรียน Example Company 19\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -3041,7 +3209,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000013",
       "body_text": "เรียน Example Company 19\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -3059,7 +3228,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000014",
       "body_text": "เรียน Example Company 20\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -3077,7 +3247,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000014",
       "body_text": "เรียน Example Company 20\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -3095,7 +3266,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000014",
       "body_text": "เรียน Example Company 20\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -3113,7 +3285,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000015",
       "body_text": "เรียน Example Company 21\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -3131,7 +3304,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000015",
       "body_text": "เรียน Example Company 21\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -3149,7 +3323,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000015",
       "body_text": "เรียน Example Company 21\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -3167,7 +3342,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000016",
       "body_text": "เรียน Example Company 22\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -3185,7 +3361,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000016",
       "body_text": "เรียน Example Company 22\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -3203,7 +3380,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000016",
       "body_text": "เรียน Example Company 22\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -3221,7 +3399,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000017",
       "body_text": "เรียน Example Company 23\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -3239,7 +3418,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000017",
       "body_text": "เรียน Example Company 23\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -3257,7 +3437,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000017",
       "body_text": "เรียน Example Company 23\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -3275,7 +3456,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000018",
       "body_text": "เรียน Example Company 24\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -3293,7 +3475,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000018",
       "body_text": "เรียน Example Company 24\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -3311,7 +3494,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000018",
       "body_text": "เรียน Example Company 24\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -3329,7 +3513,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000019",
       "body_text": "เรียน Example Company 25\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -3347,7 +3532,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000019",
       "body_text": "เรียน Example Company 25\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -3365,7 +3551,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000019",
       "body_text": "เรียน Example Company 25\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -3383,7 +3570,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001a",
       "body_text": "เรียน Example Company 26\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -3401,7 +3589,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001a",
       "body_text": "เรียน Example Company 26\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -3419,7 +3608,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001a",
       "body_text": "เรียน Example Company 26\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -3437,7 +3627,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001b",
       "body_text": "เรียน Example Company 27\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -3455,7 +3646,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001b",
       "body_text": "เรียน Example Company 27\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -3473,7 +3665,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001b",
       "body_text": "เรียน Example Company 27\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -3491,7 +3684,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001c",
       "body_text": "เรียน Example Company 28\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -3509,7 +3703,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001c",
       "body_text": "เรียน Example Company 28\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -3527,7 +3722,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001c",
       "body_text": "เรียน Example Company 28\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -3545,7 +3741,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001d",
       "body_text": "เรียน Example Company 29\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -3563,7 +3760,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001d",
       "body_text": "เรียน Example Company 29\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -3581,7 +3779,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001d",
       "body_text": "เรียน Example Company 29\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -3599,7 +3798,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001e",
       "body_text": "เรียน Example Company 30\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -3617,7 +3817,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001e",
       "body_text": "เรียน Example Company 30\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -3635,7 +3836,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001e",
       "body_text": "เรียน Example Company 30\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -3653,7 +3855,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001f",
       "body_text": "เรียน Example Company 31\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -3671,7 +3874,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001f",
       "body_text": "เรียน Example Company 31\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -3689,7 +3893,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "000000000000001f",
       "body_text": "เรียน Example Company 31\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -3707,7 +3912,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000020",
       "body_text": "เรียน Example Company 32\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -3725,7 +3931,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000020",
       "body_text": "เรียน Example Company 32\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -3743,7 +3950,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000020",
       "body_text": "เรียน Example Company 32\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -3761,7 +3969,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000021",
       "body_text": "เรียน Example Company 33\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -3779,7 +3988,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000021",
       "body_text": "เรียน Example Company 33\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     },
     {
       "account": "harry",
@@ -3797,7 +4007,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000021",
       "body_text": "เรียน Example Company 33\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_request_for_a_meeting_to_20261019"
     },
     {
       "account": "harry",
@@ -3815,7 +4026,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000022",
       "body_text": "เรียน Example Company 34\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260928"
     },
     {
       "account": "harry",
@@ -3833,7 +4045,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000022",
       "body_text": "เรียน Example Company 34\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introduce_the_service_an_20260922"
     },
     {
       "account": "harry",
@@ -3851,7 +4064,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000022",
       "body_text": "เรียน Example Company 34\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_great_meeting_you_at_the_20260813"
     },
     {
       "account": "harry",
@@ -3869,7 +4083,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000023",
       "body_text": "เรียน Example Company 35\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260727"
     },
     {
       "account": "harry",
@@ -3887,7 +4102,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000023",
       "body_text": "เรียน Example Company 35\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260701"
     },
     {
       "account": "harry",
@@ -3905,7 +4121,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000023",
       "body_text": "เรียน Example Company 35\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260604"
     },
     {
       "account": "harry",
@@ -3923,7 +4140,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000024",
       "body_text": "เรียน Example Company 36\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260520"
     },
     {
       "account": "harry",
@@ -3941,7 +4159,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000024",
       "body_text": "เรียน Example Company 36\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_great_meeting_you_at_the_20260403"
     },
     {
       "account": "harry",
@@ -3959,7 +4178,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000024",
       "body_text": "เรียน Example Company 36\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_exhibition_booth_design__20260402"
     },
     {
       "account": "harry",
@@ -3977,7 +4197,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000025",
       "body_text": "เรียน Example Company 37\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_vitafoods_europe_discuss_20260319"
     },
     {
       "account": "harry",
@@ -3995,7 +4216,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000025",
       "body_text": "เรียน Example Company 37\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_meeting_request_exhibiti_20260224"
     },
     {
       "account": "harry",
@@ -4013,7 +4235,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000025",
       "body_text": "เรียน Example Company 37\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>"
+      "body_html": "<h2>ตัวอย่างอีเมล · ไม่ใช่ข้อมูลจริง</h2><p>เรียนทีมงาน</p><p>ขอส่งรายละเอียดบูธเพื่อพิจารณา</p><a href=\"https://example.com\">ลิงก์ตัวอย่าง</a>",
+      "campaign": "h_introducing_time_service_20260126"
     },
     {
       "account": "harry",
@@ -4031,7 +4254,8 @@
       "cc": "copy@example-time.test",
       "to_ref": "0000000000000026",
       "body_text": "เรียน Example Company 38\n\nนี่คืออีเมลสังเคราะห์สำหรับทดสอบ ไม่ใช่ข้อความของลูกค้าจริง\n\nขอบคุณ\nทีมตัวอย่าง",
-      "body_html": ""
+      "body_html": "",
+      "campaign": "h_introducing_time_service_20251114"
     }
   ]
 }
